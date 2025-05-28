@@ -1,0 +1,4 @@
+DOMAIN-SUFFIX,appmetrica.yandex.ru
+DOMAIN-SUFFIX,browser.sentry-cdn.com
+DOMAIN-SUFFIX,app.getsentry.com
+DOMAIN-SUFFIX,cctv.com
