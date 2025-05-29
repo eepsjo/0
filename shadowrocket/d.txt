@@ -1,5 +1,9 @@
 DOMAIN-SUFFIX,maj-soul.com
 DOMAIN-SUFFIX,daai.fun
+DOMAIN-SUFFIX,bsdayo.moe
 DOMAIN-SUFFIX,openfrp.net
 DOMAIN-SUFFIX,naids.com
 DOMAIN-SUFFIX,iios.club
+DOMAIN-SUFFIX,runoob.com
+DOMAIN-KEYWORD,touchgal
+DOMAIN,ntp.ubuntu.com
