@@ -1,9 +1,7 @@
 payload:
-  # 广告
   - DOMAIN-SUFFIX,appmetrica.yandex.ru
   - DOMAIN-SUFFIX,browser.sentry-cdn.com
   - DOMAIN-SUFFIX,app.getsentry.com
-  # 测试用
   - DOMAIN-SUFFIX,cctv.com
   - DOMAIN-SUFFIX,wps.cn
   - DOMAIN-SUFFIX,wpscdn.cn
