@@ -22,7 +22,6 @@ DOMAIN-SUFFIX,wpske.com
 DOMAIN-SUFFIX,wpspay.cn
 DOMAIN-SUFFIX,wpsplus.com
 DOMAIN-SUFFIX,d4z1onkegyrs5.cloudfront.net
-DOMAIN-SUFFIX,kmail.com
 DOMAIN-SUFFIX,wpsmail.net
 DOMAIN-SUFFIX,apmplus.volces.com
 DOMAIN-SUFFIX,gator.volces.com
