@@ -1,0 +1,213 @@
+# 模板，不能直接使用。通读并按照自己的需求自定义
+# 和内核放在同一个文件夹
+# 新建两个子文件夹 rulesets 和 subscribes 用来存放规则集和订阅
+# 运行内核时用 -d 来定义 mihomo 的工作路径
+
+# 杂项
+mode: rule
+ipv6: false
+log-level: warning
+allow-lan: false # 关闭局域网访问
+lan-allowed-ips:
+  - 0.0.0.0/0
+  - ::/0
+lan-disallowed-ips: []
+mixed-port: 0 # 混合端口，请自定义
+secret: 0 # Web UI 访问密钥，请自定义。Web UI 推荐 mihomo 官方的 metacubeXD
+external-controller: 127.0.0.1:0 # Web UI 访问地址，请自定义
+authentication: [] # 认证
+skip-auth-prefixes: # 认证白名单（本机 IP）
+  - 127.0.0.1/8
+  - ::1/128
+tls: # HTTPS 解密的证书
+  certificate: ""
+  private-key: ""
+profile:
+  store-selected: true # 保存各种选项
+  store-fake-ip: true # 启用 Fake-IP 缓存
+keep-alive-interval: 30 # 与机场保活间隔，单位：秒。下（interval）同
+find-process-mode: strict
+global-client-fingerprint: chrome # UA
+unified-delay: true
+tcp-concurrent: true
+# GEO
+geodata-mode: true
+geo-auto-update: true
+geo-update-interval: 24
+geodata-loader: standard
+geosite-matcher: mph
+geox-url:
+  geoip: https://raw.githubusercontent.com/Loyalsoldier/geoip/release/geoip-only-cn-private.dat # 精简版，只包含 CN 和 PRIVATE，下同
+  geosite: ""
+  mmdb: https://raw.githubusercontent.com/Loyalsoldier/geoip/release/Country-only-cn-private.mmdb
+  asn: ""
+# TUN
+tun:
+  enable: true
+  stack: Mixed
+  auto-route: true
+  route-address:
+    - 0.0.0.0/1
+    - 128.0.0.0/1
+    - ::/1
+    - 8000::/1
+  auto-detect-interface: true
+  dns-hijack:
+    - any:53
+  device: utun # 虚拟网卡
+  mtu: 9000
+  strict-route: true
+  endpoint-independent-nat: false
+# DNS
+dns:
+  enable: true
+  ipv6: false
+  prefer-h3: false # 禁用 QUIC 的 HTTP3
+  use-hosts: false
+  use-system-hosts: true
+  enhanced-mode: fake-ip
+  fake-ip-range: 198.18.0.1/16
+  fake-ip-filter-mode: blacklist
+  fake-ip-filter:
+    - "*.lan"
+    - "*.localdomain"
+    - "*.example"
+    - "*.invalid"
+    - "*.localhost"
+    - "*.test"
+    - "*.local"
+    - "*.home.arpa"
+    - "*.msftconnecttest.com"
+    - "*.msftncsi.com"
+# 机场订阅，请自定义
+proxy-providers:
+  机场名字:
+    type: http
+    url:  # 订阅链接
+    path: ./subscribes/0.yaml
+    interval: 21600
+  机场名字1:
+    type: http
+    url:  # 订阅链接
+    path: ./subscribes/1.yaml
+    interval: 21600
+# 代理组，请自定义
+proxy-groups:
+  - name: PROXY
+    type: select
+    proxies:
+    - 组
+    - 组1
+    disable-udp: false # 全局不禁用 UDP。下面的代理组可根据节点不同选择是否禁用
+ - name: 组
+    type: url-test
+    filter: ""
+    exclude-filter: ""
+    use:
+      - 机场名字
+    url: https://www.gstatic.com/generate_204
+    interval: 3600
+    tolerance: 150
+    lazy: true
+    disable-udp: false # 不禁用
+ - name: 组1
+    type: url-test
+    filter: ""
+    exclude-filter: ""
+    use:
+      - 机场名字1
+    url: https://www.gstatic.com/generate_204
+    interval: 3600
+    tolerance: 150
+    lazy: true
+    disable-udp: true # 禁用
+# RULE 管理，请自定义
+# 这里给出我自己用的。不清楚就自己打开远程链接看一下是什么
+rule-providers:
+# 自定义 R P D，来自我自己的仓库。classical
+  R:
+    behavior: classical
+    type: http
+    format: yaml
+    url: https://raw.githubusercontent.com/eepsjo/proxy_rules/main/r.yaml
+    path: ./rulesets/E/reject.yaml
+    interval: 21600
+  P:
+    behavior: classical
+    type: http
+    format: yaml
+    url: https://raw.githubusercontent.com/eepsjo/proxy_rules/main/p.yaml
+    path: ./rulesets/E/proxy.yaml
+    interval: 21600
+  D:
+    behavior: classical
+    type: http
+    format: yaml
+    url: https://raw.githubusercontent.com/eepsjo/proxy_rules/main/d.yaml
+    path: ./rulesets/E/direct.yaml
+    interval: 21600
+# classical
+  a:
+    behavior: classical
+    type: http
+    format: yaml # 不支持 txt，下同
+    url: https://raw.githubusercontent.com/Loyalsoldier/clash-rules/release/applications.txt
+    path: ./rulesets/applications.yaml # 需要修改文件后缀为 yaml，下同
+    interval: 21600
+# domain
+  r:
+    behavior: domain
+    type: http
+    format: yaml
+    url: https://anti-ad.net/clash.yaml
+    path: ./rulesets/antiadnet.yaml
+    interval: 21600
+  d:
+    behavior: domain
+    type: http
+    format: yaml
+    url: https://raw.githubusercontent.com/Loyalsoldier/clash-rules/release/direct.txt
+    path: ./rulesets/direct.yaml
+    interval: 21600
+  d1:
+    behavior: domain
+    type: http
+    format: yaml
+    url: https://raw.githubusercontent.com/Loyalsoldier/clash-rules/release/private.txt
+    path: ./rulesets/private.yaml
+    interval: 21600
+# ipcidr。注意 DNS 泄露
+  di:
+    behavior: ipcidr
+    type: http
+    format: yaml
+    url: https://raw.githubusercontent.com/Loyalsoldier/clash-rules/release/cncidr.txt
+    path: ./rulesets/cncidr.yaml
+    interval: 21600
+  di1:
+    behavior: ipcidr
+    type: http
+    format: yaml
+    url: https://raw.githubusercontent.com/Loyalsoldier/clash-rules/release/lancidr.txt
+    path: ./rulesets/lancidr.yaml
+    interval: 21600
+# RULE，请自定义
+rules:
+# 原则：
+#   优先自定义规则，其次远程规则
+#   优先 DOMAIN，其次 IPCIDR
+#   优先 REJECT，其次 DIRECT，最后 PROXY
+#   no-resolve 表示不解析 DNS，用于 IPCIDR 和屏蔽规则
+  - AND,((DST-PORT,443),(NETWORK,UDP)),REJECT # 禁用 443 端口的 UDP 协议
+  - RULE-SET,r,REJECT,no-resolve
+  - RULE-SET,R,REJECT,no-resolve
+  - RULE-SET,P,PROXY
+  - RULE-SET,a,DIRECT
+  - RULE-SET,D,DIRECT
+  - RULE-SET,d,DIRECT
+  - RULE-SET,d1,DIRECT
+  - RULE-SET,di,DIRECT,no-resolve
+  - RULE-SET,di1,DIRECT,no-resolve
+  - GEOIP,CN,DIRECT,no-resolve
+  - GEOIP,private,DIRECT,no-resolve
+  - MATCH,PROXY
