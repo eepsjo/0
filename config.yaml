@@ -1,209 +1,179 @@
-# 模板，不能直接使用。通读并按照自己的需求自定义
+# 模板，不能直接使用。通读并按照需求自定义
 # 和内核放在同一个文件夹
-# 新建两个子文件夹 rulesets 和 subscribes 用来存放规则集和订阅
 # 运行内核时用 -d 来定义 mihomo 的工作路径
+# 例如，./mihomo-linux-amd64 -d ./
 
-# 杂项
+# 250704
+
 mode: rule
-ipv6: false
+ipv6: true
 log-level: warning
 allow-lan: false # 关闭局域网访问
-lan-allowed-ips:
-  - 0.0.0.0/0
-  - ::/0
-lan-disallowed-ips: []
-mixed-port: 0 # 混合端口，请自定义
-secret: 0 # Web UI 访问密钥，请自定义。Web UI 推荐 mihomo 官方的 metacubeXD
-external-controller: 127.0.0.1:0 # Web UI 访问地址，请自定义
-authentication: [] # 认证
-skip-auth-prefixes: # 认证白名单（本机 IP）
-  - 127.0.0.1/8
-  - ::1/128
-tls: # HTTPS 解密的证书
-  certificate: ""
-  private-key: ""
+mixed-port: 00000
+external-controller: 127.0.0.1:00000 # RESTful API 监听地址
+secret: 00000 # RESTful API 密钥
+unified-delay: true # 获得较为真实的延迟
+tcp-concurrent: true # TCP 并发连接所有 IP, 将使用最快握手的 TCP
+global-client-fingerprint: chrome # 全局 TLS 指纹
 profile:
-  store-selected: true # 保存各种选项
-  store-fake-ip: true # 启用 Fake-IP 缓存
-keep-alive-interval: 30 # 与机场保活间隔，单位：秒。下（interval）同
-find-process-mode: strict
-global-client-fingerprint: chrome # UA
-unified-delay: true
-tcp-concurrent: true
+  store-selected: true # 存储 select 记录
+  store-fake-ip: true # 持久化 fake-ip
+
 # GEO
 geodata-mode: true
-geo-auto-update: true
-geo-update-interval: 24
-geodata-loader: standard
-geosite-matcher: mph
+geo-auto-update: true # 自动更新
+geo-update-interval: 3 # 单位：小时
 geox-url:
   geoip: https://raw.githubusercontent.com/Loyalsoldier/geoip/release/geoip-only-cn-private.dat # 精简版，只包含 CN 和 PRIVATE，下同
-  geosite: ""
   mmdb: https://raw.githubusercontent.com/Loyalsoldier/geoip/release/Country-only-cn-private.mmdb
-  asn: ""
+  geosite: # 默认的 GeoSite
+
+# SNIFF
+sniffer:
+  enable: true
+  sniff: # 嗅探网络类型
+    HTTP:
+      ports: [80, 8080-8880] # 指定嗅探端口，下同
+      override-destination: true # 使用嗅探结果作为实际访问
+    TLS: # https
+      ports: [443, 8443]
+    QUIC:
+      ports: [443]
+  skip-domain:
+    - "Mijia Cloud" # 米家设备
+    - "+.apple.com" # 苹果
+
 # TUN
 tun:
   enable: true
-  stack: Mixed
-  auto-route: true
-  route-address:
-    - 0.0.0.0/1
-    - 128.0.0.0/1
-    - ::/1
-    - 8000::/1
-  auto-detect-interface: true
+  stack: mixed # 模式堆栈
+  auto-redirect: true # 仅支持 Linux⚠️自动配置 iptables 以重定向 TCP 连接
+  auto-detect-interface: true # 自动识别出口网卡
+  auto-route: true # 自动配置路由表
+  mtu: 9000 # 最大传输单元
+  strict-route: true # 将所有连接路由到 tun 来防止泄漏。将无法被其他设备访问
   dns-hijack:
-    - any:53
-  device: utun # 虚拟网卡
-  mtu: 9000
-  strict-route: true
-  endpoint-independent-nat: false
+    - "any:53"
+    - "tcp://any:53"
+  device: 00000 # 虚拟网卡名称
+
 # DNS
 dns:
   enable: true
-  ipv6: false
-  prefer-h3: false # 禁用 QUIC 的 HTTP3
-  use-hosts: false
-  use-system-hosts: true
+  prefer-h3: false # 关闭 DoH 的 HTTP3 支持
+  ipv6: true
   enhanced-mode: fake-ip
-  fake-ip-range: 198.18.0.1/16
+  fake-ip-range: 198.18.0.1/16 # fake-ip 池
   fake-ip-filter-mode: blacklist
   fake-ip-filter:
-    - "*.lan"
-    - "*.localdomain"
-    - "*.example"
-    - "*.invalid"
-    - "*.localhost"
-    - "*.test"
-    - "*.local"
-    - "*.home.arpa"
-    - "*.msftconnecttest.com"
-    - "*.msftncsi.com"
-# 机场订阅，请自定义
-proxy-providers:
-  机场名字:
-    type: http
-    url:  # 订阅链接
-    path: ./subscribes/0.yaml
-    interval: 21600
-  机场名字1:
-    type: http
-    url:  # 订阅链接
-    path: ./subscribes/1.yaml
-    interval: 21600
-# 代理组，请自定义
-proxy-groups:
+    - "+.lan"
+
+# 代理和代理组
+proxy-providers: # 机场订阅
+  # 示例订阅: # 订阅名称不可相同
+    # type: http
+    # filter: 关键词 # 关键词过滤
+    # url: url # 机场订阅链接
+    # path: ./ # http 的 path 可以为空。文件储存路径。默认只允许存在 mihomo 所在的文件夹或子文件夹，如果要存到其他位置，要设置 SAFE_PATHS 环境变量指定额外的安全路径。环境变量的语法同操作系统的PATH环境变量规则（即 Windows 下以分号分割，其他系统下以冒号分割）。下同
+    # interval: 6666 # 单位：秒。下同
+    # override: # 节点加载时的覆写配置项
+      # skip-cert-verify: true
+      # udp: true # UDP
+proxy-groups: # 代理组
   - name: PROXY
-    type: select
+    type: select # 手动选择
     proxies:
-    - 组
-    - 组1
-    disable-udp: false # 全局不禁用 UDP。下面的代理组可根据节点不同选择是否禁用
- - name: 组
-    type: url-test
-    filter: ""
-    exclude-filter: ""
-    use:
-      - 机场名字
-    url: https://www.gstatic.com/generate_204
-    interval: 3600
-    tolerance: 150
-    lazy: true
-    disable-udp: false # 不禁用
- - name: 组1
-    type: url-test
-    filter: ""
-    exclude-filter: ""
-    use:
-      - 机场名字1
-    url: https://www.gstatic.com/generate_204
-    interval: 3600
-    tolerance: 150
-    lazy: true
-    disable-udp: true # 禁用
-# RULE 管理，请自定义
-# 这里给出我自己用的。不清楚就自己打开远程链接看一下是什么
-rule-providers:
-# 自定义 R P D，来自我自己的仓库。classical
-  R:
+      # - 示例组
+  # - name: 示例组
+    # type: url-test # 根据延迟自动选择。下同
+    # filter: 关键词
+    # use:
+      # - 示例订阅
+    # url: https://www.gstatic.com/generate_204
+    # tolerance: 150 # 公差，单位：毫秒。延迟检测后，只有当延迟更低的节点的延迟+公差，比正在使用节点的延迟还要低，才会自动切换节点
+    # interval: 666
+    # lazy: true # 懒惰模式
+    
+# RULE
+rule-providers: # 规则来源
+  # 示例规则：
+    # behavior: classical # 规则行为
+    # type: http
+    # format: yaml # 不支持 txt，下同
+    # url: url # 规则链接。如果链接指向一个 txt 文件，需修改 path 的文件后缀为 yaml。下同
+    # path: ./示例.yaml
+    # interval: 6666
+  # R: # 以下 classical。自定义 R P D，来自我自己的仓库
+    # behavior: classical
+    # type: http
+    # format: yaml
+    # url: https://raw.githubusercontent.com/eepsjo/proxy_rules/main/r.yaml
+    # path: ./rulesets/E/reject.yaml
+    # interval: 10800
+  # P:
+    # behavior: classical
+    # type: http
+    # format: yaml
+    # url: https://raw.githubusercontent.com/eepsjo/proxy_rules/main/p.yaml
+    # path: ./rulesets/E/proxy.yaml
+    # interval: 10800
+  # D:
+    # behavior: classical
+    # type: http
+    # format: yaml
+    # url: https://raw.githubusercontent.com/eepsjo/proxy_rules/main/d.yaml
+    # path: ./rulesets/E/direct.yaml
+    # interval: 10800
+  a: # 以下 classical
     behavior: classical
     type: http
     format: yaml
-    url: https://raw.githubusercontent.com/eepsjo/proxy_rules/main/r.yaml
-    path: ./rulesets/E/reject.yaml
-    interval: 21600
-  P:
-    behavior: classical
-    type: http
-    format: yaml
-    url: https://raw.githubusercontent.com/eepsjo/proxy_rules/main/p.yaml
-    path: ./rulesets/E/proxy.yaml
-    interval: 21600
-  D:
-    behavior: classical
-    type: http
-    format: yaml
-    url: https://raw.githubusercontent.com/eepsjo/proxy_rules/main/d.yaml
-    path: ./rulesets/E/direct.yaml
-    interval: 21600
-# classical
-  a:
-    behavior: classical
-    type: http
-    format: yaml # 不支持 txt，下同
     url: https://raw.githubusercontent.com/Loyalsoldier/clash-rules/release/applications.txt
-    path: ./rulesets/applications.yaml # 需要修改文件后缀为 yaml，下同
-    interval: 21600
-# domain
-  r:
+    path: ./rulesets/applications.yaml
+    interval: 10800
+  r: # 以下：domain
     behavior: domain
     type: http
     format: yaml
     url: https://anti-ad.net/clash.yaml
     path: ./rulesets/antiadnet.yaml
-    interval: 21600
+    interval: 10800
   d:
     behavior: domain
     type: http
     format: yaml
     url: https://raw.githubusercontent.com/Loyalsoldier/clash-rules/release/direct.txt
     path: ./rulesets/direct.yaml
-    interval: 21600
+    interval: 10800
   d1:
     behavior: domain
     type: http
     format: yaml
     url: https://raw.githubusercontent.com/Loyalsoldier/clash-rules/release/private.txt
     path: ./rulesets/private.yaml
-    interval: 21600
-# ipcidr。注意 DNS 泄露
-  di:
+    interval: 10800
+  di: # 以下：ipcidr。小心 DNS 泄露
     behavior: ipcidr
     type: http
     format: yaml
     url: https://raw.githubusercontent.com/Loyalsoldier/clash-rules/release/cncidr.txt
     path: ./rulesets/cncidr.yaml
-    interval: 21600
+    interval: 10800
   di1:
     behavior: ipcidr
     type: http
     format: yaml
     url: https://raw.githubusercontent.com/Loyalsoldier/clash-rules/release/lancidr.txt
     path: ./rulesets/lancidr.yaml
-    interval: 21600
-# RULE，请自定义
-rules:
-# 原则：
-#   优先自定义规则，其次远程规则
-#   优先 DOMAIN，其次 IPCIDR
-#   优先 REJECT，其次 DIRECT，最后 PROXY
-#   no-resolve 表示不解析 DNS，用于 IPCIDR 和屏蔽规则
+    interval: 10800
+rules: # 分流
+  # - RULE-SET,示例规则,DIRECT
   - AND,((DST-PORT,443),(NETWORK,UDP)),REJECT # 禁用 443 端口的 UDP 协议
   - RULE-SET,r,REJECT,no-resolve
-  - RULE-SET,R,REJECT,no-resolve
-  - RULE-SET,P,PROXY
+  # - RULE-SET,R,REJECT,no-resolve
+  # - RULE-SET,P,PROXY
   - RULE-SET,a,DIRECT
-  - RULE-SET,D,DIRECT
+  # - RULE-SET,D,DIRECT
   - RULE-SET,d,DIRECT
   - RULE-SET,d1,DIRECT
   - RULE-SET,di,DIRECT,no-resolve
@@ -211,3 +181,7 @@ rules:
   - GEOIP,CN,DIRECT,no-resolve
   - GEOIP,private,DIRECT,no-resolve
   - MATCH,PROXY
+  # 优先自定义，其次远程规则
+  # 优先 DOMAIN，其次 IPCIDR
+  # 优先 REJECT，其次 DIRECT，最后 PROXY
+  # no-resolve 表示不解析 DNS，用于 IPCIDR, GeoIP 和屏蔽规则
