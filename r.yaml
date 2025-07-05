@@ -65,6 +65,6 @@ payload:
   - DOMAIN-SUFFIX,wpsplus.com
   - DOMAIN-SUFFIX,d4z1onkegyrs5.cloudfront.net
   - DOMAIN-SUFFIX,wpsmail.net
-  - DOMAIN-SUFFIX,apmplus.volces.com # 以下为 talkatone 规则
+  - DOMAIN-SUFFIX,apmplus.volces.com # 以下为 Deepseek 规则
   - DOMAIN-SUFFIX,gator.volces.com
   - DOMAIN-SUFFIX,guh50jw4-ios.mobile-messenger.intercom.com
