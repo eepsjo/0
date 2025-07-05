@@ -1,7 +1,7 @@
 payload:
   - DOMAIN-SUFFIX,githubusercontent.com
   - DOMAIN-SUFFIX,asmr.one
-  - DOMAIN-KEYWORD,deepseek # 以下为 deepseek 规则。代理以实现不使用 +86 手机号注册
+  - DOMAIN-KEYWORD,deepseek # 以下为 Deepseek 规则
   - DOMAIN-SUFFIX,fengkongcloud.cn
   - DOMAIN-SUFFIX,fengkongcloud.com
   - DOMAIN-SUFFIX,portal101.cn
