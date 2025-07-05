@@ -55,7 +55,6 @@ tun:
   auto-redirect: true # 仅支持 Linux⚠️自动配置 iptables 以重定向 TCP 连接
   auto-detect-interface: true # 自动识别出口网卡
   auto-route: true # 自动配置路由表
-  mtu: 9000 # 最大传输单元
   strict-route: true # 将所有连接路由到 tun 来防止泄漏。将无法被其他设备访问
   dns-hijack:
     - "any:53"
