@@ -5,11 +5,11 @@
 
 # 250705
 
-# ⚠️重要配置
+# ⚠️
 allow-lan: false # 局域网访问
 secret: 00000 # API 鉴权。建议复杂一点
 authentication:
-- username:pwd
+  - username:pwd
 
 # 一般
 mode: rule
@@ -31,7 +31,7 @@ geo-update-interval: 3 # 单位：小时
 geox-url:
   geoip: https://raw.githubusercontent.com/Loyalsoldier/geoip/release/geoip-only-cn-private.dat # 精简版，只包含 CN 和 PRIVATE，下同
   mmdb: https://raw.githubusercontent.com/Loyalsoldier/geoip/release/Country-only-cn-private.mmdb
-  geosite: # 默认的 GeoSite
+  geosite: # 不填写 url 即使用默认的 GeoSite
 
 # SNIFF
 sniffer:
@@ -52,14 +52,14 @@ sniffer:
 tun:
   enable: true
   stack: mixed # 模式堆栈
-  auto-redirect: true # 仅支持 Linux⚠️自动配置 iptables 以重定向 TCP 连接
+  auto-redirect: true # 仅 Linux ⚠️ 自动配置 iptables 以重定向 TCP 连接
   auto-detect-interface: true # 自动识别出口网卡
   auto-route: true # 自动配置路由表
-  strict-route: true # 将所有连接路由到 tun 来防止泄漏。将无法被其他设备访问
+  strict-route: true # 所有连接路由到 tun。将无法被其他设备访问
   dns-hijack:
     - "any:53"
     - "tcp://any:53"
-  device: 00000 # 虚拟网卡名称
+  device: utun # 虚拟网卡名称
 
 # DNS
 dns:
@@ -70,7 +70,7 @@ dns:
   fake-ip-range: 198.18.0.1/16 # fake-ip 池
   fake-ip-filter-mode: blacklist
   fake-ip-filter:
-    - "+.lan"
+    - "rule-set:d1"
 
 # 代理和代理组
 proxy-providers: # 机场订阅
@@ -84,8 +84,12 @@ proxy-providers: # 机场订阅
       # skip-cert-verify: true
       # udp: true # UDP
 proxy-groups: # 代理组
-  - name: PROXY
+  - name: GLOBAL # 全局模式使用的代理组
     type: select # 手动选择
+    proxies:
+      - PROXY # 令全局模式为所有流量全部代理
+  - name: PROXY
+    type: select
     proxies:
       # - 示例组
   # - name: 示例组
@@ -103,11 +107,11 @@ rule-providers: # 规则来源
   # 示例规则：
     # behavior: classical # 规则行为
     # type: http
-    # format: yaml # 不支持 txt，下同
+    # format: yaml # 支持 text，但是部分配置只能在 yaml 的情况下被 mihomo 解析。下同
     # url: url # 规则链接。如果链接指向一个 txt 文件，需修改 path 的文件后缀为 yaml。下同
     # path: ./示例.yaml
     # interval: 6666
-  # R: # 以下 classical。自定义 R P D，来自我自己的仓库
+  # R: # 以下 classical。自定义 R P D，来自我的仓库
     # behavior: classical
     # type: http
     # format: yaml
