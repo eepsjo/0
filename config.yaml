@@ -3,15 +3,20 @@
 # 运行内核时用 -d 来定义 mihomo 的工作路径
 # 例如，./mihomo-linux-amd64 -d ./
 
-# 250704
+# 250705
 
+# ⚠️重要配置
+allow-lan: false # 局域网访问
+secret: 00000 # API 鉴权。建议复杂一点
+authentication:
+- username:pwd
+
+# 一般
 mode: rule
-ipv6: true
+ipv6: false
 log-level: warning
-allow-lan: false # 关闭局域网访问
 mixed-port: 00000
 external-controller: 127.0.0.1:00000 # RESTful API 监听地址
-secret: 00000 # RESTful API 密钥
 unified-delay: true # 获得较为真实的延迟
 tcp-concurrent: true # TCP 并发连接所有 IP, 将使用最快握手的 TCP
 global-client-fingerprint: chrome # 全局 TLS 指纹
@@ -61,7 +66,7 @@ tun:
 dns:
   enable: true
   prefer-h3: false # 关闭 DoH 的 HTTP3 支持
-  ipv6: true
+  ipv6: false
   enhanced-mode: fake-ip
   fake-ip-range: 198.18.0.1/16 # fake-ip 池
   fake-ip-filter-mode: blacklist
