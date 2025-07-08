@@ -14,7 +14,7 @@ secret: 00000 # API 鉴权。建议设置得复杂一点
 authentication: # socks 代理认证
   - username:pwd
 
-# 一般
+# GENERAL
 mode: rule
 ipv6: false
 log-level: warning
@@ -37,7 +37,8 @@ profile:
 #   geosite: "" # 不填写 url 即使用默认的 GeoSite
 #   ASN: ""
 
-# sniffer: # ♻️ 已弃用
+# SNIFF # ♻️ 已弃用
+# sniffer:
 #   enable: true
 #   force-dns-mapping: true # 对 redir-host 类型识别的流量进行强制嗅探
 #   parse-pure-ip: true # 对所有未获取到域名的流量进行强制嗅探
@@ -84,7 +85,7 @@ dns:
   fake-ip-filter: # 以下域名、规则集的地址不使用 fake-ip
     - "rule-set:d1"
 
-# 代理和代理组
+# PROXY
 proxy-anchor: # 引用，用于简化代码
   url-test: # url-test 的通用行为
     &url_test {
