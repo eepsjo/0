@@ -83,15 +83,15 @@ dns:
 
 # 代理和代理组
 proxy-providers: # 机场订阅
-  # 示例订阅: # 订阅名称不可相同
-    # type: http
-    # filter: 关键词 # 关键词过滤
-    # url: url # 机场订阅链接
-    # path: ./ # http 的 path 可以为空。文件储存路径。默认只允许存在 mihomo 所在的文件夹或子文件夹，如果要存到其他位置，要设置 SAFE_PATHS 环境变量指定额外的安全路径。环境变量的语法同操作系统的PATH环境变量规则（即 Windows 下以分号分割，其他系统下以冒号分割）。下同
-    # interval: 6666 # 单位：秒。下同
-    # override: # 节点加载时的覆写配置项
-      # skip-cert-verify: true
-      # udp: true # UDP
+#   示例订阅: # 订阅名称不可相同
+#     type: http
+#     filter: 关键词 # 关键词过滤
+#     url: url # 机场订阅链接
+#     path: ./ # http 的 path 可以为空。文件储存路径。默认只允许存在 mihomo 所在的文件夹或子文件夹，如果要存到其他位置，要设置 SAFE_PATHS 环境变量指定额外的安全路径。环境变量的语法同操作系统的PATH环境变量规则（即 Windows 下以分号分割，其他系统下以冒号分割）。下同
+#     interval: 6666 # 单位：秒。下同
+#     override: # 节点加载时的覆写配置项
+#       skip-cert-verify: true
+#       udp: true # UDP
 proxy-groups: # 代理组
   - name: GLOBAL # 全局模式使用的代理组
     type: select # 手动选择
@@ -101,47 +101,47 @@ proxy-groups: # 代理组
   - name: PROXY
     type: select
     proxies:
-      # - 示例组
-  # - name: 示例组
-    # type: url-test # 根据延迟自动选择。下同
-    # filter: 关键词
-    # use:
-      # - 示例订阅
-    # url: https://www.gstatic.com/generate_204
-    # tolerance: 150 # 公差，单位：毫秒。延迟检测后，只有当延迟更低的节点的延迟+公差，比正在使用节点的延迟还要低，才会自动切换节点
-    # interval: 666
-    # lazy: true # 懒惰模式
+#       - 示例组
+#   - name: 示例组
+#     type: url-test # 根据延迟自动选择。下同
+#     filter: 关键词
+#     use:
+#       - 示例订阅
+#     url: https://www.gstatic.com/generate_204
+#     tolerance: 150 # 公差，单位：毫秒。延迟检测后，只有当延迟更低的节点的延迟+公差，比正在使用节点的延迟还要低，才会自动切换节点
+#     interval: 666
+#     lazy: true # 懒惰模式
     
 # RULE
 rule-providers: # 规则来源
-  # 示例规则：
-    # behavior: classical # 规则行为
-    # type: http
-    # format: yaml # 支持 text，但是部分配置只能在 yaml 的情况下被 mihomo 解析。下同
-    # url: url # 规则链接。如果链接指向一个 txt 文件，需修改 path 的文件后缀为 yaml。下同
-    # path: ./示例.yaml
-    # interval: 6666
-  # R: # 以下 classical。自定义 R P D，来自我的仓库
-    # behavior: classical
-    # type: http
-    # format: yaml
-    # url: https://raw.githubusercontent.com/eepsjo/proxy_rules/main/r.yaml
-    # path: ./rulesets/E/reject.yaml
-    # interval: 10800
-  # P:
-    # behavior: classical
-    # type: http
-    # format: yaml
-    # url: https://raw.githubusercontent.com/eepsjo/proxy_rules/main/p.yaml
-    # path: ./rulesets/E/proxy.yaml
-    # interval: 10800
-  # D:
-    # behavior: classical
-    # type: http
-    # format: yaml
-    # url: https://raw.githubusercontent.com/eepsjo/proxy_rules/main/d.yaml
-    # path: ./rulesets/E/direct.yaml
-    # interval: 10800
+#   示例规则：
+#     behavior: classical # 规则行为
+#     type: http
+#     format: yaml # 支持 text，但是部分配置只能在 yaml 的情况下被 mihomo 解析。下同
+#     url: url # 规则链接。如果链接指向一个 txt 文件，需修改 path 的文件后缀为 yaml。下同
+#     path: ./示例.yaml
+#     interval: 6666
+#   R: # 以下 classical。自定义 R P D，来自我的仓库
+#     behavior: classical
+#     type: http
+#     format: yaml
+#     url: https://raw.githubusercontent.com/eepsjo/proxy_rules/main/r.yaml
+#     path: ./rulesets/E/reject.yaml
+#     interval: 10800
+#   P:
+#     behavior: classical
+#     type: http
+#     format: yaml
+#     url: https://raw.githubusercontent.com/eepsjo/proxy_rules/main/p.yaml
+#     path: ./rulesets/E/proxy.yaml
+#     interval: 10800
+#   D:
+#     behavior: classical
+#     type: http
+#     format: yaml
+#     url: https://raw.githubusercontent.com/eepsjo/proxy_rules/main/d.yaml
+#     path: ./rulesets/E/direct.yaml
+#     interval: 10800
   a: # 以下 classical
     behavior: classical
     type: http
@@ -185,21 +185,21 @@ rule-providers: # 规则来源
     path: ./rulesets/lancidr.yaml
     interval: 10800
 rules: # 分流
-  # - RULE-SET,示例规则,DIRECT
+# - RULE-SET,示例规则,DIRECT
   - AND,((DST-PORT,443),(NETWORK,UDP)),REJECT # 禁用 443 端口的 UDP 协议
   - RULE-SET,r,REJECT,no-resolve
-  # - RULE-SET,R,REJECT,no-resolve
-  # - RULE-SET,P,PROXY
+# - RULE-SET,R,REJECT,no-resolve
+# - RULE-SET,P,PROXY
   - RULE-SET,a,DIRECT
-  # - RULE-SET,D,DIRECT
+# - RULE-SET,D,DIRECT
   - RULE-SET,d,DIRECT
   - RULE-SET,d1,DIRECT
   - RULE-SET,di,DIRECT,no-resolve
   - RULE-SET,di1,DIRECT,no-resolve
-  # - GEOIP,CN,DIRECT,no-resolve # 如需启用，需解除上面的 GEO 部分的注释。下同
-  # - GEOIP,private,DIRECT,no-resolve
+# - GEOIP,CN,DIRECT,no-resolve # 如需启用，需解除上面的 GEO 部分的注释。下同
+# - GEOIP,private,DIRECT,no-resolve
   - MATCH,PROXY
-  # 优先自定义，其次远程规则
-  # 优先 DOMAIN，其次 IPCIDR
-  # 优先 REJECT，其次 DIRECT，最后 PROXY
-  # no-resolve 表示不解析 DNS，用于 IPCIDR, GeoIP 和屏蔽规则
+# 优先自定义，其次远程规则
+# 优先 DOMAIN，其次 IPCIDR
+# 优先 REJECT，其次 DIRECT，最后 PROXY
+# no-resolve 表示不解析 DNS，用于 IPCIDR, GeoIP 和屏蔽规则
