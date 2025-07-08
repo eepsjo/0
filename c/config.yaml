@@ -1,22 +1,25 @@
-# 模板，不能直接使用。通读并按照需求自定义
-# 和内核放在同一个文件夹
-# 运行内核时用 -d 来定义 mihomo 的工作路径
-# 例如，./mihomo-linux-amd64 -d ./
+# 模板。通读并按需自定义后方可使用
+# mihomo 的语法：https://wiki.metacubex.one/handbook/syntax/
+# 运行时，用 -d 来定义 mihomo 的工作路径，否则内核会根据系统自动选择路径
+# 建议把 config 和内核放在同一文件夹内，并用 -d 指定该文件夹为工作路径
+# Linux 示例:
+# #!/bin/bash
+# ./mihomo-linux-amd64 -d ./
 
 # 250708
 
 # ⚠️
 allow-lan: false # 局域网访问
-secret: 00000 # API 鉴权。建议复杂一点
-authentication:
+secret: 00000 # API 鉴权。建议设置得复杂一点
+authentication: # socks 代理认证
   - username:pwd
 
 # 一般
 mode: rule
 ipv6: false
 log-level: warning
-mixed-port: 00000
-external-controller: 127.0.0.1:00000 # RESTful API 监听地址
+mixed-port: 00000 # 混合端口，需自定义
+external-controller: 127.0.0.1:99999 # RESTful API 监听地址
 unified-delay: true # 获得较为真实的延迟
 tcp-concurrent: true # TCP 并发连接所有 IP, 将使用最快握手的 TCP
 global-client-fingerprint: chrome # 全局 TLS 指纹
@@ -29,9 +32,9 @@ profile:
 # geo-auto-update: true # 自动更新
 # geo-update-interval: 3 # 单位：小时
 # geox-url:
-#   geoip: "https://raw.githubusercontent.com/Loyalsoldier/geoip/release/geoip-only-cn-private.dat" # 精简版，只包含 CN 和 PRIVATE，下同
+#   geoip: "https://raw.githubusercontent.com/Loyalsoldier/geoip/release/geoip-only-cn-private.dat" # 精简版，只包含 CN 和 PRIVATE
 #   mmdb: "https://raw.githubusercontent.com/Loyalsoldier/geoip/release/Country-only-cn-private.mmdb"
-#   geosite: "" # 不填写 url 即使用默认的 GeoSite，下同
+#   geosite: "" # 不填写 url 即使用默认的 GeoSite
 #   ASN: ""
 
 # sniffer: # ♻️ 已弃用
@@ -78,112 +81,112 @@ dns:
   enhanced-mode: fake-ip
   fake-ip-range: 198.18.0.1/16 # fake-ip 池
   fake-ip-filter-mode: blacklist
-  fake-ip-filter:
+  fake-ip-filter: # 以下域名、规则集的地址不使用 fake-ip
     - "rule-set:d1"
 
 # 代理和代理组
+proxy-anchor: # 引用，用于简化代码
+  url-test: # url-test 的通用行为
+    &url_test {
+      type: url-test,
+      url: https://www.gstatic.com/generate_204,
+      tolerance: 150, # 容忍公差，单位：毫秒。延迟检测后，只有当延迟更低的节点的延迟+公差，比正在使用节点的延迟还要低，才会自动切换节点
+      interval: 3600,
+      lazy: true, # 懒惰模式，只有当前代理组在使用状态时才发起 url-test
+    }
 proxy-providers: # 机场订阅
-#   示例订阅: # 订阅名称不可相同
-#     type: http
-#     filter: 关键词 # 关键词过滤
-#     url: url # 机场订阅链接
-#     path: ./ # http 的 path 可以为空。文件储存路径。默认只允许存在 mihomo 所在的文件夹或子文件夹，如果要存到其他位置，要设置 SAFE_PATHS 环境变量指定额外的安全路径。环境变量的语法同操作系统的PATH环境变量规则（即 Windows 下以分号分割，其他系统下以冒号分割）。下同
-#     interval: 6666 # 单位：秒。下同
-#     override: # 节点加载时的覆写配置项
-#       skip-cert-verify: true
-#       udp: true # UDP
+# 示例订阅 1: # 订阅名称不可相同
+#   type: http
+#   filter: 关键词 # 关键词过滤
+#   url: url # 机场订阅链接，http 的 url 不可为空
+#   path: ./subscribes/1.yaml # http 的 path 可以为空。文件储存路径。默认只允许存在 mihomo 所在的文件夹或子文件夹，如果要存到其他位置，要设置 SAFE_PATHS 环境变量指定额外的安全路径。环境变量的语法同操作系统的 PATH 环境变量规则（即 Windows 下以分号分割，其他系统下以冒号分割）
+#   interval: 6666 # 单位：秒
+#   override: # 节点加载时的覆写配置项
+#     skip-cert-verify: true
+#     udp: true # 启用 UDP
+# 示例订阅 2:
+#   type: file
+#   path: ./subscribes/2.yaml # file 的 path 不能为空
 proxy-groups: # 代理组
   - name: GLOBAL # 全局模式使用的代理组
-    type: select # 手动选择
     proxies:
       - PROXY # 令全局模式为所有流量全部代理
-    hidden: true # 隐藏代理组
+    type: select # 手动选择
+    hidden: true # 隐藏代理组。体现在 ui 等外部控制器上
   - name: PROXY
-    type: select
     proxies:
-#       - 示例组
-#   - name: 示例组
-#     type: url-test # 根据延迟自动选择。下同
-#     filter: 关键词
-#     use:
-#       - 示例订阅
-#     url: https://www.gstatic.com/generate_204
-#     tolerance: 150 # 公差，单位：毫秒。延迟检测后，只有当延迟更低的节点的延迟+公差，比正在使用节点的延迟还要低，才会自动切换节点
-#     interval: 666
-#     lazy: true # 懒惰模式
+#     - 示例组 1
+#     - 示例组 2
+    type: select
+# - name: 示例组 1
+#   use:
+#   - 示例订阅 1
+#   <<: *url_test
+# - name: 示例组 2
+#   use:
+#   - 示例订阅 2
+#   filter: 过滤关键词
+#   <<: *url_test
     
 # RULE
+rule-anchor:
+  defalut:
+    &defalut { 
+      type: http, 
+      interval: 10800, 
+      format: yaml, # 支持 text，但是部分配置只能在 yaml 的情况下被 mihomo 解析
+    }
 rule-providers: # 规则来源
-#   示例规则：
-#     behavior: classical # 规则行为
-#     type: http
-#     format: yaml # 支持 text，但是部分配置只能在 yaml 的情况下被 mihomo 解析。下同
-#     url: url # 规则链接。如果链接指向一个 txt 文件，需修改 path 的文件后缀为 yaml。下同
-#     path: ./示例.yaml
-#     interval: 6666
-#   R: # 以下 classical。自定义 R P D，来自我的仓库
-#     behavior: classical
-#     type: http
-#     format: yaml
-#     url: https://raw.githubusercontent.com/eepsjo/0/main/c/r.yaml
-#     path: ./rulesets/E/reject.yaml
-#     interval: 10800
-#   P:
-#     behavior: classical
-#     type: http
-#     format: yaml
-#     url: https://raw.githubusercontent.com/eepsjo/0/main/c/p.yaml
-#     path: ./rulesets/E/proxy.yaml
-#     interval: 10800
-#   D:
-#     behavior: classical
-#     type: http
-#     format: yaml
-#     url: https://raw.githubusercontent.com/eepsjo/0/main/c/d.yaml
-#     path: ./rulesets/E/direct.yaml
-#     interval: 10800
-  a: # 以下 classical
+# 示例规则 1:
+#   behavior: classical # 规则行为
+#   url: url # 规则链接。如果链接指向一个 txt 文件，需修改 path 的文件后缀为 yaml
+#   path: ./rulesets/示例规则 1.yaml
+#   <<: *defalut
+# R: # 以下来自我的仓库，我自用的规则。保存路径 ./rulesets/E/ 。行为 classical
+#   behavior: classical
+#   url: https://raw.githubusercontent.com/eepsjo/0/main/c/r.yaml
+#   path: ./rulesets/E/reject.yaml
+#   <<: *defalut
+# P:
+#   behavior: classical
+#   url: https://raw.githubusercontent.com/eepsjo/0/main/c/p.yaml
+#   path: ./rulesets/E/proxy.yaml
+#   <<: *defalut
+# D:
+#   behavior: classical
+#   url: https://raw.githubusercontent.com/eepsjo/0/main/c/d.yaml
+#   path: ./rulesets/E/direct.yaml
+#   <<: *defalut
+  a: # 以下行为 classical
     behavior: classical
-    type: http
-    format: yaml
     url: https://raw.githubusercontent.com/Loyalsoldier/clash-rules/release/applications.txt
     path: ./rulesets/applications.yaml
-    interval: 10800
-  r: # 以下：domain
+    <<: *defalut
+  r: # 以下行为 domain
     behavior: domain
-    type: http
-    format: yaml
     url: https://anti-ad.net/clash.yaml
     path: ./rulesets/antiadnet.yaml
-    interval: 10800
+    <<: *defalut
   d:
     behavior: domain
-    type: http
-    format: yaml
     url: https://raw.githubusercontent.com/Loyalsoldier/clash-rules/release/direct.txt
     path: ./rulesets/direct.yaml
-    interval: 10800
+    <<: *defalut
   d1:
     behavior: domain
-    type: http
-    format: yaml
     url: https://raw.githubusercontent.com/Loyalsoldier/clash-rules/release/private.txt
     path: ./rulesets/private.yaml
-    interval: 10800
-  di: # 以下：ipcidr。小心 DNS 泄露
+    <<: *defalut
+  di: # 以下行为 ipcidr。小心 DNS 泄露
     behavior: ipcidr
-    type: http
-    format: yaml
     url: https://raw.githubusercontent.com/Loyalsoldier/clash-rules/release/cncidr.txt
     path: ./rulesets/cncidr.yaml
-    interval: 10800
+    <<: *defalut
   di1:
     behavior: ipcidr
-    type: http
-    format: yaml
     url: https://raw.githubusercontent.com/Loyalsoldier/clash-rules/release/lancidr.txt
     path: ./rulesets/lancidr.yaml
-    interval: 10800
+    <<: *defalut
 rules: # 分流
 # - RULE-SET,示例规则,DIRECT
   - AND,((DST-PORT,443),(NETWORK,UDP)),REJECT # 禁用 443 端口的 UDP 协议
@@ -196,10 +199,10 @@ rules: # 分流
   - RULE-SET,d1,DIRECT
   - RULE-SET,di,DIRECT,no-resolve
   - RULE-SET,di1,DIRECT,no-resolve
-# - GEOIP,CN,DIRECT,no-resolve # 如需启用，需解除上面的 GEO 部分的注释。下同
+# - GEOIP,CN,DIRECT,no-resolve # 如需启用，需解除上面的 GEO 部分的注释
 # - GEOIP,private,DIRECT,no-resolve
   - MATCH,PROXY
-# 优先自定义，其次远程规则
+# 优先自定义，其次外部来源
 # 优先 DOMAIN，其次 IPCIDR
 # 优先 REJECT，其次 DIRECT，最后 PROXY
-# no-resolve 表示不解析 DNS，用于 IPCIDR, GeoIP 和屏蔽规则
+# no-resolve 表示不解析 DNS，用于 IPCIDR 和屏蔽规则
