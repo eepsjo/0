@@ -96,6 +96,7 @@ proxy-groups: # 代理组
     type: select # 手动选择
     proxies:
       - PROXY # 令全局模式为所有流量全部代理
+    hidden: true # 隐藏代理组
   - name: PROXY
     type: select
     proxies:
