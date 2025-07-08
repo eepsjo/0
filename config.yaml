@@ -24,7 +24,7 @@ profile:
   store-selected: true # 存储 select 记录
   store-fake-ip: true # 持久化 fake-ip
 
-# GEO # 已启用，下次更新时删除
+# GEO # ♻️ 已弃用
 # geodata-mode: true
 # geo-auto-update: true # 自动更新
 # geo-update-interval: 3 # 单位：小时
@@ -34,28 +34,28 @@ profile:
   # geosite: "" # 不填写 url 即使用默认的 GeoSite，下同
   # ASN: ""
 
-sniffer:
-  enable: true
-  force-dns-mapping: true # 对 redir-host 类型识别的流量进行强制嗅探
-  parse-pure-ip: true # 对所有未获取到域名的流量进行强制嗅探
-  override-destination: false # 默认不使用嗅探结果作为实际访问
-  sniff: # 嗅探范围
-    HTTP:
-      ports: [80, 8080-8880]
-      override-destination: true # 使用嗅探结果作为实际访问
-    TLS: # https
-      ports: [443, 8443]
-    QUIC: # http3
-      ports: [443, 8443]
-  force-domain: # 强制进行嗅探的域名列表
-    - +.v2ex.com
-  skip-domain: # 跳过嗅探的域名列表
-    - Mijia Cloud # 米家设备
-    - +.apple.com # 苹果
-  skip-src-address: # 跳过嗅探的来源 IP 段列表
-    - 192.168.0.3/32
-  skip-dst-address: # 跳过嗅探的目标 IP 段列表
-    - 192.168.0.3/32
+# sniffer: # ♻️ 已弃用
+#   enable: true
+#   force-dns-mapping: true # 对 redir-host 类型识别的流量进行强制嗅探
+#   parse-pure-ip: true # 对所有未获取到域名的流量进行强制嗅探
+#   override-destination: false # 默认不使用嗅探结果作为实际访问
+#   sniff: # 嗅探范围
+#     HTTP:
+#       ports: [80, 8080-8880]
+#       override-destination: true # 使用嗅探结果作为实际访问
+#     TLS: # https
+#       ports: [443, 8443]
+#     QUIC: # http3
+#       ports: [443, 8443]
+#   force-domain: # 强制进行嗅探的域名列表
+#     - +.v2ex.com
+#   skip-domain: # 跳过嗅探的域名列表
+#     - Mijia Cloud # 米家设备
+#     - +.apple.com # 苹果
+#   skip-src-address: # 跳过嗅探的来源 IP 段列表
+#     - 192.168.0.3/32
+#   skip-dst-address: # 跳过嗅探的目标 IP 段列表
+#     - 192.168.0.3/32
 
 # TUN
 tun:
