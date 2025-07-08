@@ -1,7 +1,7 @@
 payload:
   - DOMAIN-SUFFIX,githubusercontent.com
   - DOMAIN-SUFFIX,asmr.one
-  - DOMAIN-KEYWORD,deepseek # 以下为 Deepseek 规则
+  - DOMAIN-KEYWORD,deepseek # 以下 Deepseek
   - DOMAIN-SUFFIX,fengkongcloud.cn
   - DOMAIN-SUFFIX,fengkongcloud.com
   - DOMAIN-SUFFIX,portal101.cn
