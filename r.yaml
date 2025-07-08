@@ -2,7 +2,7 @@ payload:
   - DOMAIN-SUFFIX,appmetrica.yandex.ru
   - DOMAIN-SUFFIX,browser.sentry-cdn.com
   - DOMAIN-SUFFIX,app.getsentry.com
-  - DOMAIN-SUFFIX,cctv.cn # 以下为 中国中央电视台 规则
+  - DOMAIN-SUFFIX,cctv.cn # 以下 中国中央电视台
   - DOMAIN-SUFFIX,cctv.com
   - DOMAIN-SUFFIX,cctvlib.cn
   - DOMAIN-SUFFIX,cctvlib.com.cn
@@ -44,7 +44,7 @@ payload:
   - DOMAIN-SUFFIX,国家广播电视总台.cn
   - DOMAIN-SUFFIX,xn--kprv4ewxfr9cpxcc7joo6apn8a.xn--fiqs8s
   - DOMAIN-SUFFIX,国家广播电视总台.中国
-  - DOMAIN-SUFFIX,docer.com # 以下为 金山WPS 规则
+  - DOMAIN-SUFFIX,docer.com # 以下 金山WPS
   - DOMAIN-SUFFIX,ixiede.com
   - DOMAIN-SUFFIX,papocket.com
   - DOMAIN-SUFFIX,qwps.cn
@@ -65,6 +65,6 @@ payload:
   - DOMAIN-SUFFIX,wpsplus.com
   - DOMAIN-SUFFIX,d4z1onkegyrs5.cloudfront.net
   - DOMAIN-SUFFIX,wpsmail.net
-  - DOMAIN-SUFFIX,apmplus.volces.com # 以下为 Deepseek 规则
+  - DOMAIN-SUFFIX,apmplus.volces.com # 以下 Deepseek
   - DOMAIN-SUFFIX,gator.volces.com
   - DOMAIN-SUFFIX,guh50jw4-ios.mobile-messenger.intercom.com
