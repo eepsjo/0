@@ -3,7 +3,7 @@
 # 运行内核时用 -d 来定义 mihomo 的工作路径
 # 例如，./mihomo-linux-amd64 -d ./
 
-# 250705
+# 250708
 
 # ⚠️
 allow-lan: false # 局域网访问
@@ -24,14 +24,15 @@ profile:
   store-selected: true # 存储 select 记录
   store-fake-ip: true # 持久化 fake-ip
 
-# GEO
-geodata-mode: true
-geo-auto-update: true # 自动更新
-geo-update-interval: 3 # 单位：小时
-geox-url:
-  geoip: https://raw.githubusercontent.com/Loyalsoldier/geoip/release/geoip-only-cn-private.dat # 精简版，只包含 CN 和 PRIVATE，下同
-  mmdb: https://raw.githubusercontent.com/Loyalsoldier/geoip/release/Country-only-cn-private.mmdb
-  geosite: # 不填写 url 即使用默认的 GeoSite
+# GEO # 已启用，下次更新时删除
+# geodata-mode: true
+# geo-auto-update: true # 自动更新
+# geo-update-interval: 3 # 单位：小时
+# geox-url:
+  # geoip: "https://raw.githubusercontent.com/Loyalsoldier/geoip/release/geoip-only-cn-private.dat" # 精简版，只包含 CN 和 PRIVATE，下同
+  # mmdb: "https://raw.githubusercontent.com/Loyalsoldier/geoip/release/Country-only-cn-private.mmdb"
+  # geosite: "" # 不填写 url 即使用默认的 GeoSite，下同
+  # ASN: ""
 
 sniffer:
   enable: true
@@ -195,8 +196,8 @@ rules: # 分流
   - RULE-SET,d1,DIRECT
   - RULE-SET,di,DIRECT,no-resolve
   - RULE-SET,di1,DIRECT,no-resolve
-  - GEOIP,CN,DIRECT,no-resolve
-  - GEOIP,private,DIRECT,no-resolve
+  # - GEOIP,CN,DIRECT,no-resolve # 如需启用，需解除上面的 GEO 部分的注释。下同
+  # - GEOIP,private,DIRECT,no-resolve
   - MATCH,PROXY
   # 优先自定义，其次远程规则
   # 优先 DOMAIN，其次 IPCIDR
