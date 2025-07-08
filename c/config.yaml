@@ -125,21 +125,21 @@ rule-providers: # 规则来源
 #     behavior: classical
 #     type: http
 #     format: yaml
-#     url: https://raw.githubusercontent.com/eepsjo/proxy_rules/main/r.yaml
+#     url: https://raw.githubusercontent.com/eepsjo/0/main/c/r.yaml
 #     path: ./rulesets/E/reject.yaml
 #     interval: 10800
 #   P:
 #     behavior: classical
 #     type: http
 #     format: yaml
-#     url: https://raw.githubusercontent.com/eepsjo/proxy_rules/main/p.yaml
+#     url: https://raw.githubusercontent.com/eepsjo/0/main/c/p.yaml
 #     path: ./rulesets/E/proxy.yaml
 #     interval: 10800
 #   D:
 #     behavior: classical
 #     type: http
 #     format: yaml
-#     url: https://raw.githubusercontent.com/eepsjo/proxy_rules/main/d.yaml
+#     url: https://raw.githubusercontent.com/eepsjo/0/main/c/d.yaml
 #     path: ./rulesets/E/direct.yaml
 #     interval: 10800
   a: # 以下 classical
