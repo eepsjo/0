@@ -3,8 +3,8 @@
 # 运行时，用 -d 来定义 mihomo 的工作路径，否则内核会根据系统自动选择路径
 # 建议把 config 和内核放在同一文件夹内，并用 -d 指定该文件夹为工作路径
 # Linux 示例:
-# #!/bin/bash
-# ./mihomo-linux-amd64 -d ./
+#   #!/bin/bash
+#   ./mihomo-linux-amd64 -d ./
 
 # 250708
 
