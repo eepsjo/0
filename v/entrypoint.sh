@@ -1,7 +1,7 @@
 #!/bin/bash
 
-# --- 脚本自更新检查 ---
-# SCRIPT_UPDATE_URL 环境变量应指向此脚本的原始文件链接
+# 脚本自更新
+SCRIPT_UPDATE_URL="${SCRIPT_UPDATE_URL:-https://raw.githubusercontent.com/eepsjo/0/main/v/entrypoint.sh}" # 指向此脚本的原始文件链接。可利用环境变量在外部修改
 if [ -n "$SCRIPT_UPDATE_URL" ]; then
     echo "--------------------------------------------------"
     echo "检查脚本更新..."
@@ -24,13 +24,13 @@ if [ -n "$SCRIPT_UPDATE_URL" ]; then
     echo "--------------------------------------------------"
 fi
 
-# --- 启动前检查 ---
+# 启动前检查
 echo "--------------------------------------------------"
 echo "服务启动中..."
 command -v /app/sing-box >/dev/null 2>&1 || { echo "错误：未找到 sing-box"; exit 1; }
-command -v /app/cloudflared >/dev/null 2>&1 || { echo "错误：未找到 cloudflared"; exit 1; } # 修正大小写
+command -v /app/cloudflared >/dev/null 2>&1 || { echo "错误：未找到 cloudflared"; exit 1; }
 
-# --- UUID 处理 ---
+# UUID
 EFFECTIVE_UUID=""
 if [ -n "$uuid" ]; then
     EFFECTIVE_UUID="$uuid"
@@ -41,13 +41,12 @@ else
 fi
 echo "--------------------------------------------------"
 
-# --- 端口处理 ---
-# LISTEN_PORT 环境变量可由用户设置，默认 2799
+# PORT
 LISTEN_PORT="${LISTEN_PORT:-2799}"
 echo "sing-box 监听端口: $LISTEN_PORT"
 echo "--------------------------------------------------"
 
-# --- sing-box 配置 ---
+# sing-box 配置
 cat > 0.json <<EOF
 {
   "log": { "disabled": false, "level": "info", "timestamp": true },
@@ -69,7 +68,7 @@ ps | grep "sing-box" | grep -v 'grep'
 echo "sing-box 已启动"
 echo "--------------------------------------------------"
 
-# --- Cloudflare Tunnel 处理 ---
+# Cloudflare Tunnel 处理
 TUNNEL_MODE=""
 FINAL_DOMAIN=""
 TUNNEL_CONNECTED=false
@@ -79,7 +78,7 @@ if [ -n "$token" ] && [ -n "$domain" ]; then
     FINAL_DOMAIN="$domain"
     echo "使用【固定隧道模式】"
     echo "隧道域名: $FINAL_DOMAIN"
-    nohup /app/cloudflared tunnel --no-autoupdate run --token "${token}" > ./log.log 2>&1 & # 修正大小写
+    nohup /app/cloudflared tunnel --no-autoupdate run --token "${token}" > ./log.log 2>&1 &
     CLOUDFLARED_PID=$! # 获取 cloudflared 进程ID
 
     echo "等待固定隧道连接..."
@@ -96,7 +95,7 @@ if [ -n "$token" ] && [ -n "$domain" ]; then
 else
     TUNNEL_MODE="临时隧道"
     echo "使用【临时隧道模式】"
-    nohup /app/cloudflared tunnel --url http://localhost:${LISTEN_PORT} --edge-ip-version auto --no-autoupdate --protocol http2 > ./log.log 2>&1 & # 修正大小写
+    nohup /app/cloudflared tunnel --url http://localhost:${LISTEN_PORT} --edge-ip-version auto --no-autoupdate --protocol http2 > ./log.log 2>&1 &
     CLOUDFLARED_PID=$! # 获取 cloudflared 进程ID
 
     echo "等待临时隧道分配 URL..."
@@ -114,14 +113,14 @@ else
 fi
 echo "--------------------------------------------------"
 
-# --- 输出结果 ---
+# 输出
 if [ "$TUNNEL_CONNECTED" = "true" ]; then
     echo "$TUNNEL_MODE 已成功连接！"
     echo "公共访问域名: $FINAL_DOMAIN"
     echo "--------------------------------------------------"
     
     LINKS_FILE="links.txt"
-    name="vless" # 通用名称
+    name="vless" # 通用前缀，方便订阅客户端处理
     path_encoded="%2F${EFFECTIVE_UUID}%3Fed%3D2048"
 
     echo "vless://${EFFECTIVE_UUID}@www.visa.com.tw:443?encryption=none&security=tls&sni=${FINAL_DOMAIN}&host=${FINAL_DOMAIN}&fp=chrome&type=ws&path=${path_encoded}#${name}_visa_tw_443" > "$LINKS_FILE"
@@ -152,7 +151,7 @@ else
     exit 1
 fi
 
-# --- 自动更新二进制文件功能 ---
+# 自动更新二进制文件
 update_binaries() {
     echo "--------------------------------------------------"
     echo "开始检查二进制文件更新..."
@@ -179,7 +178,7 @@ update_binaries() {
             kill "$SINGBOX_PID" # 杀死 sing-box 进程
             curl -sL "$LATEST_SB_DOWNLOAD_URL" | tar -xz -C /app --strip-components=1 sing-box-"$LATEST_SB_VERSION"-linux-amd64/sing-box
             chmod +x /app/sing-box
-            nohup /app/sing-box run -c 0.json > /dev/null 2>&1 & # 修正配置文件名
+            nohup /app/sing-box run -c 0.json > /dev/null 2>&1 &
             SINGBOX_PID=$! # 更新 PID
             echo "sing-box 更新并重启成功"
         else
@@ -228,13 +227,13 @@ update_binaries() {
     echo "更新检查完成"
 }
 
-# --- 主循环：持续运行服务并定期检查更新 ---
+# 持续运行服务并定期检查更新
 (
     while true; do
-        sleep 86400 # 等待 24 小时 (86400 秒)
+        sleep 86400 # 等待 24 小时
         update_binaries
     done
 ) &
 
-# 保持主脚本运行，以便 tail -f 和更新循环可以继续
-wait "$TAIL_PID" # 等待 tail -f 进程，如果它退出则脚本也退出
+# 等待 tail -f 进程，如果它退出则脚本也退出
+wait "$TAIL_PID" 
