@@ -13,6 +13,9 @@ allow-lan: false # 局域网访问
 secret: 00000 # API 鉴权。建议设置得复杂一点
 authentication: # socks 代理认证
   - username:pwd
+skip-auth-prefixes:
+  - 127.0.0.1/8
+  - ::1/128
 
 # GENERAL
 mode: rule
