@@ -6,7 +6,7 @@
 #   #!/bin/bash
 #   ./mihomo-linux-amd64 -d ./
 
-# 250708
+# 250710a
 
 # ⚠️
 allow-lan: false # 局域网访问
