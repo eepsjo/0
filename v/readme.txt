@@ -28,3 +28,13 @@ SCRIPT_UPDATE_URL
 作用： 指定 entrypoint.sh 脚本自身进行更新的源 URL。脚本会定期从这个 URL 下载最新版本并进行比较
 类型： 字符串
 默认值： https://raw.githubusercontent.com/eepsjo/0/main/v/entrypoint.sh
+
+Dockerfile 是创建这个镜像的指令。build 前请准备好 sing-box 和 cloudflared 的可执行文件
+
+如果宿主机使用了 tun 代理，build 时 docker 无法使用代理，可以在终端先声明代理
+export http_proxy="http://127.0.0.1:port"
+export HTTP_PROXY="http://127.0.0.1:port"
+export https_proxy="http://127.0.0.1:port"
+export HTTPS_PROXY="http://127.0.0.1:port"
+然后用参数 --network host 来调用宿主机网络环境
+docker build -t simple_vless:latest --network host .
