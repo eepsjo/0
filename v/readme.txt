@@ -1,4 +1,4 @@
-entrypoint.sh 是我的 Docker 镜像 simple_vless 的核心脚本
+entrypoint.sh 是我的 Docker 镜像 eepsjo/simple-vless 的核心脚本
 
 该镜像用于快速部署一个基于 sing-box 的 vless + ws 代理服务，并通过 Cloudflare Tunnel 将其安全地暴露到公网。镜像有两种运行方式：固定隧道模式和临时隧道模式。前者需要在 Cloudflare Zero Trust Dashboard 中预先创建一个 Tunnel、获取该隧道的 Token、为该 Tunnel 配置一个 Public Hostname、将其服务指向 http://localhost:2777（容器内 sing-box 监听的端口）、确保相关的 DNS CNAME 记录已正确配置并生效、准备一个你想要固定使用的 UUID；后者提供的临时隧道不保证长期稳定，重启容器后地址会改变
 
