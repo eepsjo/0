@@ -4,9 +4,6 @@ WORKDIR /app
 
 RUN apt update && \
     apt install -y \
-    curl \
-    gnupg \
-    lsb-release \
     coreutils \
     --no-install-recommends && \
     rm -rf /var/lib/apt/lists/*
@@ -17,6 +14,6 @@ COPY cloudflared /app/cloudflared
 
 RUN chmod +x /app/entrypoint.sh /app/sing-box /app/cloudflared
 
-EXPOSE 2799
+EXPOSE 2777
 
 CMD ["/app/entrypoint.sh"]
