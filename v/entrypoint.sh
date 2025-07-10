@@ -1,6 +1,5 @@
 #!/bin/bash
 
-# default
 location="${location:-0}"
 
 # check
@@ -51,11 +50,11 @@ if [ -n "$token" ] && [ -n "$domain" ]; then
     echo "等待隧道连接..."
     for attempt in $(seq 1 15); do
         sleep 2
-        echo -n "."
         if grep -q -E "Registered tunnel connection|Connected to .*, an Argo Tunnel an edge" ./log.log; then
             TUNNEL_CONNECTED=true
             break
         fi
+        echo -n "."
     done
     echo ""
 else
@@ -65,13 +64,13 @@ else
     echo "等待临时隧道分配..."
     for attempt in $(seq 1 15); do
         sleep 2
-        echo -n "."
         TEMP_TUNNEL_URL=$(grep -o 'https://[a-zA-Z0-9-]*\.trycloudflare.com' ./log.log | head -n 1)
         if [ -n "$TEMP_TUNNEL_URL" ]; then
-            FINAL_DOMAIN=$(echo "$TEMP_TUNNEL_URL" | awk -F'//' '{print $2}')
+            FINAL_DOMAIN=$(echo $TEMP_TUNNEL_URL | awk -F'//' '{print $2}')
             TUNNEL_CONNECTED=true
             break
         fi
+        echo -n "."
     done
     echo ""
 fi
@@ -83,7 +82,7 @@ if [ "$TUNNEL_CONNECTED" = "true" ]; then
     echo "公共访问域名: $FINAL_DOMAIN"
     echo "--------------------------------------------------"
     LINKS_FILE="links.txt"
-    name="${location}_vless"
+    name="simple-vless_${location}"
     path_encoded="%2F${EFFECTIVE_UUID}%3Fed%3D2048"
     echo "vless://${EFFECTIVE_UUID}@www.visa.com.tw:443?encryption=none&security=tls&sni=${FINAL_DOMAIN}&host=${FINAL_DOMAIN}&fp=chrome&type=ws&path=${path_encoded}#${name}_visa_tw_443" > "$LINKS_FILE"
     echo "vless://${EFFECTIVE_UUID}@www.visa.com.hk:2053?encryption=none&security=tls&sni=${FINAL_DOMAIN}&host=${FINAL_DOMAIN}&fp=chrome&type=ws&path=${path_encoded}#${name}_visa_hk_2053" >> "$LINKS_FILE"
@@ -94,7 +93,7 @@ if [ "$TUNNEL_CONNECTED" = "true" ]; then
     echo "vless://${EFFECTIVE_UUID}@icook.tw:443?encryption=none&security=tls&sni=${FINAL_DOMAIN}&host=${FINAL_DOMAIN}&fp=chrome&type=ws&path=${path_encoded}#${name}_icook_tw_443" >> "$LINKS_FILE"
     cat "$LINKS_FILE"
     echo "--------------------------------------------------"
-    tail -f ./log.log &
+    tail -f ./log.log
 else
     echo "!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!"
     echo "Cloudflare $TUNNEL_MODE 连接失败"
