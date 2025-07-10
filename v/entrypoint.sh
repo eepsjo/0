@@ -1,7 +1,6 @@
 #!/bin/bash
 
 # default
-SCRIPT_UPDATE_URL="${SCRIPT_UPDATE_URL:-https://raw.githubusercontent.com/eepsjo/0/main/v/entrypoint.sh}"
 location="${location:-0}"
 
 # check
