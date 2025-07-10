@@ -1,5 +1,6 @@
 #!/bin/bash
 
+# proxy_prefix
 location="${location:-0}"
 
 # check
@@ -74,7 +75,6 @@ else
     done
     echo ""
 fi
-echo "--------------------------------------------------"
 
 # output
 if [ "$TUNNEL_CONNECTED" = "true" ]; then
