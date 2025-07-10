@@ -6,14 +6,14 @@
 #   #!/bin/bash
 #   ./mihomo-linux-amd64 -d ./
 
-# 250710a
+# 250710b
 
 # ⚠️
 allow-lan: false # 局域网访问
 secret: 00000 # API 鉴权。建议设置得复杂一点
 authentication: # socks 代理认证
   - username:pwd
-skip-auth-prefixes:
+skip-auth-prefixes: # 跳过认证的 ip 范围
   - 127.0.0.1/8
   - ::1/128
 
@@ -193,12 +193,12 @@ rule-providers: # 规则来源
     <<: *defalut
 rules: # 分流
 # - RULE-SET,示例规则,DIRECT
-  - AND,((DST-PORT,443),(NETWORK,UDP)),REJECT # 禁用 443 端口的 UDP 协议
-  - RULE-SET,r,REJECT,no-resolve
-# - RULE-SET,R,REJECT,no-resolve
-# - RULE-SET,P,PROXY
+  - AND,((DST-PORT,443),(NETWORK,UDP)),REJECT # 禁用 443 端口的 UDP 
   - RULE-SET,a,DIRECT
+# - RULE-SET,R,REJECT,no-resolve
 # - RULE-SET,D,DIRECT
+# - RULE-SET,P,PROXY
+  - RULE-SET,r,REJECT,no-resolve
   - RULE-SET,d,DIRECT
   - RULE-SET,d1,DIRECT
   - RULE-SET,di,DIRECT,no-resolve
@@ -206,7 +206,7 @@ rules: # 分流
 # - GEOIP,CN,DIRECT,no-resolve # 如需启用，需解除上面的 GEO 部分的注释
 # - GEOIP,private,DIRECT,no-resolve
   - MATCH,PROXY
+# 优先处理部分软件不可代理、优化 udp
 # 优先自定义，其次外部来源
-# 优先 DOMAIN，其次 IPCIDR
 # 优先 REJECT，其次 DIRECT，最后 PROXY
-# no-resolve 表示不解析 DNS，用于 IPCIDR 和屏蔽规则
+# 优先 DOMAIN，其次 IPCIDR
