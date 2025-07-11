@@ -1,19 +1,19 @@
-# 模板。通读并按需自定义后方可使用
-# mihomo 的语法：https://wiki.metacubex.one/handbook/syntax/
-# 运行时，用 -d 来定义 mihomo 的工作路径，否则内核会根据系统自动选择路径
-# 建议把 config 和内核放在同一文件夹内，并用 -d 指定该文件夹为工作路径
-# Linux 示例:
+# 範本。詳閱並依需求自訂後方可使用
+# 語法請參考：https://wiki.metacubex.one/handbook/syntax/
+# 使用 -d 定義 mihomo 的工作路徑，否則核心會依據系統自動選擇路徑
+# 建議將設定檔與核心放在同一資料夾內，並使用 -d 指定該資料夾為工作路徑
+# Linux 範例:
 #   #!/bin/bash
 #   ./mihomo-linux-amd64 -d ./
 
-# 250710b
+# 250711a
 
 # ⚠️
-allow-lan: false # 局域网访问
-secret: 00000 # API 鉴权。建议设置得复杂一点
-authentication: # socks 代理认证
+allow-lan: false # 禁用區域網路訪問
+secret: 00000 # API 驗證。建議設定得複雜一些
+authentication: # socks 代理驗證
   - username:pwd
-skip-auth-prefixes: # 跳过认证的 ip 范围
+skip-auth-prefixes: # 跳過驗證的 IP 範圍
   - 127.0.0.1/8
   - ::1/128
 
@@ -21,132 +21,132 @@ skip-auth-prefixes: # 跳过认证的 ip 范围
 mode: rule
 ipv6: false
 log-level: warning
-mixed-port: 00000 # 混合端口，需自定义
-external-controller: 127.0.0.1:99999 # RESTful API 监听地址
-unified-delay: true # 获得较为真实的延迟
-tcp-concurrent: true # TCP 并发连接所有 IP, 将使用最快握手的 TCP
-global-client-fingerprint: chrome # 全局 TLS 指纹
+mixed-port: 00000 # 混合埠，請自行定義
+external-controller: 127.0.0.1:99999 # RESTful API 監聽位址
+unified-delay: true # 取得較為真實的延遲
+tcp-concurrent: true # TCP 並行連接所有 IP，將使用最快握手的 TCP
+global-client-fingerprint: chrome # 全域 TLS 指紋
 profile:
-  store-selected: true # 存储 select 记录
-  store-fake-ip: true # 持久化 fake-ip
+  store-selected: true # 儲存選擇記錄
+  store-fake-ip: true # 永久儲存 fake-ip
 
-# GEO # ♻️ 已弃用
+# GEO # ♻️ 已棄用
 # geodata-mode: true
-# geo-auto-update: true # 自动更新
-# geo-update-interval: 3 # 单位：小时
+# geo-auto-update: true # 自動更新
+# geo-update-interval: 3 # 單位：小時
 # geox-url:
-#   geoip: "https://raw.githubusercontent.com/Loyalsoldier/geoip/release/geoip-only-cn-private.dat" # 精简版，只包含 CN 和 PRIVATE
+#   geoip: "https://raw.githubusercontent.com/Loyalsoldier/geoip/release/geoip-only-cn-private.dat" # 精簡版，僅包含 CN 和 PRIVATE
 #   mmdb: "https://raw.githubusercontent.com/Loyalsoldier/geoip/release/Country-only-cn-private.mmdb"
-#   geosite: "" # 不填写 url 即使用默认的 GeoSite
+#   geosite: "" # 不填寫 url 即使用預設的 GeoSite
 #   ASN: ""
 
-# SNIFF # ♻️ 已弃用
+# SNIFF # ♻️ 已棄用
 # sniffer:
 #   enable: true
-#   force-dns-mapping: true # 对 redir-host 类型识别的流量进行强制嗅探
-#   parse-pure-ip: true # 对所有未获取到域名的流量进行强制嗅探
-#   override-destination: false # 默认不使用嗅探结果作为实际访问
-#   sniff: # 嗅探范围
+#   force-dns-mapping: true # 對 redir-host 類型識別的流量進行強制嗅探
+#   parse-pure-ip: true # 對所有未取得域名的流量進行強制嗅探
+#   override-destination: false # 預設不使用嗅探結果作為實際存取目標
+#   sniff: # 嗅探範圍
 #     HTTP:
 #       ports: [80, 8080-8880]
-#       override-destination: true # 使用嗅探结果作为实际访问
+#       override-destination: true # 使用嗅探結果作為實際存取目標
 #     TLS: # https
 #       ports: [443, 8443]
 #     QUIC: # http3
 #       ports: [443, 8443]
-#   force-domain: # 强制进行嗅探的域名列表
+#   force-domain: # 強制進行嗅探的域名列表
 #     - +.v2ex.com
-#   skip-domain: # 跳过嗅探的域名列表
-#     - Mijia Cloud # 米家设备
-#     - +.apple.com # 苹果
-#   skip-src-address: # 跳过嗅探的来源 IP 段列表
+#   skip-domain: # 跳過嗅探的域名列表
+#     - Mijia Cloud # 米家設備
+#     - +.apple.com # 蘋果
+#   skip-src-address: # 跳過嗅探的來源 IP 區段列表
 #     - 192.168.0.3/32
-#   skip-dst-address: # 跳过嗅探的目标 IP 段列表
+#   skip-dst-address: # 跳過嗅探的目標 IP 區段列表
 #     - 192.168.0.3/32
 
 # TUN
 tun:
   enable: true
-  stack: mixed # 模式堆栈
-  auto-redirect: true # 仅 Linux ⚠️ 自动配置 iptables 以重定向 TCP 连接
-  auto-detect-interface: true # 自动识别出口网卡
-  auto-route: true # 自动配置路由表
-  strict-route: true # 所有连接路由到 tun。将无法被其他设备访问
+  stack: mixed # 模式堆疊
+  auto-redirect: true # 僅限 Linux ⚠️ 自動配置 iptables 以重新導向 TCP 連線
+  auto-detect-interface: true # 自動識別出口網卡
+  auto-route: true # 自動配置路由表
+  strict-route: true # 所有連線路由到 tun。將無法被其他裝置存取
   dns-hijack:
     - "any:53"
     - "tcp://any:53"
-  device: utun # 虚拟网卡名称
+  device: utun # 虛擬網卡名稱
 
 # DNS
 dns:
   enable: true
-  prefer-h3: false # 关闭 DoH 的 HTTP3 支持
+  prefer-h3: false # 關閉 DoH 的 HTTP3 支援
   ipv6: false
   enhanced-mode: fake-ip
-  fake-ip-range: 198.18.0.1/16 # fake-ip 池
+  fake-ip-range: 198.18.0.1/16 # fake-ip 範圍
   fake-ip-filter-mode: blacklist
-  fake-ip-filter: # 以下域名、规则集的地址不使用 fake-ip
+  fake-ip-filter: # 以下域名、規則集的位址不使用 fake-ip
     - "rule-set:d1"
 
 # PROXY
-proxy-anchor: # 引用，用于简化代码
-  url-test: # url-test 的通用行为
+proxy-anchor: # 錨點，用於簡化設定
+  url-test: # url-test 的通用行為
     &url_test {
       type: url-test,
       url: https://www.gstatic.com/generate_204,
-      tolerance: 150, # 容忍公差，单位：毫秒。延迟检测后，只有当延迟更低的节点的延迟+公差，比正在使用节点的延迟还要低，才会自动切换节点
+      tolerance: 150, # 容忍公差，單位：毫秒。延遲偵測後，只有當延遲更低的節點延遲 + 公差，比正在使用節點的延遲還要低，才會自動切換節點
       interval: 3600,
-      lazy: true, # 懒惰模式，只有当前代理组在使用状态时才发起 url-test
+      lazy: true, # 懶惰模式，只有當前代理組在使用狀態時才發起 url-test
     }
-proxy-providers: # 机场订阅
-# 示例订阅 1: # 订阅名称不可相同
+proxy-providers: # 機場訂閱
+# 範例訂閱 1: # 訂閱名稱不可重複
 #   type: http
-#   filter: 关键词 # 关键词过滤
-#   url: url # 机场订阅链接，http 的 url 不可为空
-#   path: ./subscribes/1.yaml # http 的 path 可以为空。文件储存路径。默认只允许存在 mihomo 所在的文件夹或子文件夹，如果要存到其他位置，要设置 SAFE_PATHS 环境变量指定额外的安全路径。环境变量的语法同操作系统的 PATH 环境变量规则（即 Windows 下以分号分割，其他系统下以冒号分割）
-#   interval: 6666 # 单位：秒
-#   override: # 节点加载时的覆写配置项
+#   filter: 關鍵字 # 關鍵字過濾
+#   url: url # 機場訂閱連結，http 的 url 不可為空
+#   path: ./subscribes/1.yaml # http 的 path 可以為空。檔案儲存路徑。預設只允許存在 mihomo 所在的資料夾或子資料夾，若要存到其他位置，請設定 SAFE_PATHS 環境變數指定額外的安全路徑。環境變數的語法與作業系統的 PATH 環境變數規則相同（即 Windows 下以分號分隔，其他系統下以冒號分隔）
+#   interval: 6666 # 單位：秒
+#   override: # 節點載入時的覆寫設定項
 #     skip-cert-verify: true
-#     udp: true # 启用 UDP
-# 示例订阅 2:
+#     udp: true # 啟用 UDP
+# 範例訂閱 2:
 #   type: file
-#   path: ./subscribes/2.yaml # file 的 path 不能为空
-proxy-groups: # 代理组
-  - name: GLOBAL # 全局模式使用的代理组
+#   path: ./subscribes/2.yaml # file 的 path 不可為空
+proxy-groups: # 代理組
+  - name: GLOBAL # 全域模式使用的代理組
     proxies:
-      - PROXY # 令全局模式为所有流量全部代理
-    type: select # 手动选择
-    hidden: true # 隐藏代理组。体现在 ui 等外部控制器上
+      - PROXY # 使全域模式為所有流量全部代理
+    type: select # 手動選擇
+    hidden: true # 隱藏代理組。體現在 UI 等外部控制器上
   - name: PROXY
     proxies:
-#     - 示例组 1
-#     - 示例组 2
+#     - 範例組 1
+#     - 範例組 2
     type: select
-# - name: 示例组 1
+# - name: 範例組 1
 #   use:
-#   - 示例订阅 1
+#   - 範例訂閱 1
 #   <<: *url_test
-# - name: 示例组 2
+# - name: 範例組 2
 #   use:
-#   - 示例订阅 2
-#   filter: 过滤关键词
+#   - 範例訂閱 2
+#   filter: 過濾關鍵字
 #   <<: *url_test
     
 # RULE
 rule-anchor:
   defalut:
-    &defalut { 
-      type: http, 
-      interval: 10800, 
-      format: yaml, # 支持 text，但是部分配置只能在 yaml 的情况下被 mihomo 解析
+    &defalut {
+      type: http,
+      interval: 10800,
+      format: yaml, # 支援 text，但部分設定只能在 yaml 的情況下被 mihomo 解析
     }
-rule-providers: # 规则来源
-# 示例规则 1:
-#   behavior: classical # 规则行为
-#   url: url # 规则链接。如果链接指向一个 txt 文件，需修改 path 的文件后缀为 yaml
-#   path: ./rulesets/示例规则 1.yaml
+rule-providers: # 規則來源
+# 範例規則 1:
+#   behavior: classical # 規則行為
+#   url: url # 規則連結。如果連結指向一個 txt 檔案，需修改 path 的檔案副檔名為 yaml
+#   path: ./rulesets/範例規則 1.yaml
 #   <<: *defalut
-# R: # 以下来自我的仓库，我自用的规则。保存路径 ./rulesets/E/ 。行为 classical
+# R: # 以下來自我的倉庫，我自用的規則。儲存路徑 ./rulesets/E/ 。行為 classical
 #   behavior: classical
 #   url: https://raw.githubusercontent.com/eepsjo/0/main/c/r.yaml
 #   path: ./rulesets/E/reject.yaml
@@ -161,12 +161,12 @@ rule-providers: # 规则来源
 #   url: https://raw.githubusercontent.com/eepsjo/0/main/c/d.yaml
 #   path: ./rulesets/E/direct.yaml
 #   <<: *defalut
-  a: # 以下行为 classical
+  a: # 以下行為 classical
     behavior: classical
     url: https://raw.githubusercontent.com/Loyalsoldier/clash-rules/release/applications.txt
     path: ./rulesets/applications.yaml
     <<: *defalut
-  r: # 以下行为 domain
+  r: # 以下行為 domain
     behavior: domain
     url: https://anti-ad.net/clash.yaml
     path: ./rulesets/antiadnet.yaml
@@ -181,7 +181,7 @@ rule-providers: # 规则来源
     url: https://raw.githubusercontent.com/Loyalsoldier/clash-rules/release/private.txt
     path: ./rulesets/private.yaml
     <<: *defalut
-  di: # 以下行为 ipcidr。小心 DNS 泄露
+  di: # 以下行為 ipcidr。小心 DNS 洩漏
     behavior: ipcidr
     url: https://raw.githubusercontent.com/Loyalsoldier/clash-rules/release/cncidr.txt
     path: ./rulesets/cncidr.yaml
@@ -191,9 +191,9 @@ rule-providers: # 规则来源
     url: https://raw.githubusercontent.com/Loyalsoldier/clash-rules/release/lancidr.txt
     path: ./rulesets/lancidr.yaml
     <<: *defalut
-rules: # 分流
-# - RULE-SET,示例规则,DIRECT
-  - AND,((DST-PORT,443),(NETWORK,UDP)),REJECT # 禁用 443 端口的 UDP 
+rules: # 分流規則
+# - RULE-SET,範例規則,DIRECT
+  - AND,((DST-PORT,443),(NETWORK,UDP)),REJECT # 禁用 443 埠的 UDP
   - RULE-SET,a,DIRECT
 # - RULE-SET,R,REJECT,no-resolve
 # - RULE-SET,D,DIRECT
@@ -203,10 +203,9 @@ rules: # 分流
   - RULE-SET,d1,DIRECT
   - RULE-SET,di,DIRECT,no-resolve
   - RULE-SET,di1,DIRECT,no-resolve
-# - GEOIP,CN,DIRECT,no-resolve # 如需启用，需解除上面的 GEO 部分的注释
+# - GEOIP,CN,DIRECT,no-resolve # 若需啟用，請解除上方 GEO 部分的註釋
 # - GEOIP,private,DIRECT,no-resolve
   - MATCH,PROXY
-# 优先处理部分软件不可代理、优化 udp
-# 优先自定义，其次外部来源
-# 优先 REJECT，其次 DIRECT，最后 PROXY
-# 优先 DOMAIN，其次 IPCIDR
+# 優先處理部分軟體不代理、優化 UDP
+# 優先自訂，其次外部來源；優先 REJECT，其次 DIRECT；優先 DOMAIN，其次 IPCIDR
+# PROXY 兜底
