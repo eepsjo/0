@@ -11,6 +11,7 @@ anchor:
       path: /[uuid]?ed=2048
       headers:
         Host: [domain]
+
 proxies:
   - name: claw_US_simple-vless_vTW
     server: www.visa.com.tw
