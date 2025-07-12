@@ -1,7 +1,5 @@
 # Windows 設定
 
-此部分提供 Windows 系統的一些實用設定與問題解決方案。
-
 ## 隱藏「本機」中的磁碟機代號
 
 隱藏「本機」中特定磁碟機代號的設定。
@@ -123,8 +121,6 @@
 
 # Linux 設定
 
-此部分說明如何在 Linux 系統中配置語言與區域格式，以及日期選單的格式化。
-
 ## 語言與區域設定
 
 ### `~/.pam_environment`
@@ -166,7 +162,5 @@ MM / dd  EEE  HH : mm
 # Minecraft
 
 ## Java 虛擬機 (JVM) 參數
-
-以下是 Minecraft 啟動器中常用的 JVM 參數，用於最佳化遊戲效能。
 
 -XX:+UseG1GC -XX:-UseAdaptiveSizePolicy -XX:-OmitStackTraceInFastThrow -Dfml.ignoreInvalidMinecraftCertificates=True -Dfml.ignorePatchDiscrepancies=True -Dlog4j2.formatMsgNoLookups=true
