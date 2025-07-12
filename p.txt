@@ -1,5 +1,8 @@
+# 自定義
 DOMAIN-SUFFIX,githubusercontent.com
 DOMAIN-SUFFIX,asmr.one
+
+# Deepseek
 DOMAIN-KEYWORD,deepseek
 DOMAIN-SUFFIX,fengkongcloud.cn
 DOMAIN-SUFFIX,fengkongcloud.com
