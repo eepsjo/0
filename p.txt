@@ -2,8 +2,17 @@
 DOMAIN-SUFFIX,githubusercontent.com
 DOMAIN-SUFFIX,asmr.one
 
+# Talkatone
+DOMAIN-SUFFIX,talkatone.com
+DOMAIN-SUFFIX,agkn.com
+DOMAIN-SUFFIX,tenor.com
+DOMAIN-SUFFIX,tktn.at
+DOMAIN-SUFFIX,tktn.be
+DOMAIN-SUFFIX,cohere.com
+DOMAIN-SUFFIX,ip-api.com
+
 # Deepseek
-DOMAIN-KEYWORD,deepseek
+DOMAIN-SUFFIX,deepseek.com
 DOMAIN-SUFFIX,fengkongcloud.cn
 DOMAIN-SUFFIX,fengkongcloud.com
 DOMAIN-SUFFIX,portal101.cn
@@ -13,7 +22,3 @@ DOMAIN-SUFFIX,volces.com
 DOMAIN-SUFFIX,intercom.io
 DOMAIN-SUFFIX,intercom.com
 DOMAIN-SUFFIX,intercomcdn.com
-DOMAIN-SUFFIX,tktn.at
-DOMAIN-SUFFIX,tktn.be
-DOMAIN-SUFFIX,vm.talkatone.com
-DOMAIN-SUFFIX,tenor.com
