@@ -1,0 +1,41 @@
+anchor: &default
+  type: vless
+  network: ws
+  tls: true
+  udp: true
+  client-fingerprint: chrome
+  uuid: [uuid]
+  servername: [domain]
+  ws-opts:
+    path: /[uuid]?ed=2048
+    headers:
+      Host: [domain]
+proxies:
+  - name: claw_US_simple-vless_vTW
+    server: www.visa.com.tw
+    port: 443
+    <<: *default
+  - name: claw_US_simple-vless_vHK
+    server: www.visa.com.hk
+    port: 2053
+    <<: *default
+  - name: claw_US_simple-vless_vBR
+    server: www.visa.com.br
+    port: 8443
+    <<: *default
+  - name: claw_US_simple-vless_vCH
+    server: www.visaeurope.ch
+    port: 443
+    <<: *default
+  - name: claw_US_simple-vless_vUS
+    server: usa.visa.com
+    port: 2053
+    <<: *default
+  - name: claw_US_simple-vless_iHK
+    server: icook.hk
+    port: 8443
+    <<: *default
+  - name: claw_US_simple-vless_iTW
+    server: icook.tw
+    port: 443
+    <<: *default
