@@ -1,15 +1,16 @@
-anchor: &default
-  type: vless
-  network: ws
-  tls: true
-  udp: true
-  client-fingerprint: chrome
-  uuid: [uuid]
-  servername: [domain]
-  ws-opts:
-    path: /[uuid]?ed=2048
-    headers:
-      Host: [domain]
+anchor: 
+  default: &default
+    type: vless
+    network: ws
+    tls: true
+    udp: true
+    client-fingerprint: chrome
+    uuid: [uuid]
+    servername: [domain]
+    ws-opts:
+      path: /[uuid]?ed=2048
+      headers:
+        Host: [domain]
 proxies:
   - name: claw_US_simple-vless_vTW
     server: www.visa.com.tw
