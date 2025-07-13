@@ -2,12 +2,6 @@
 DOMAIN-SUFFIX,githubusercontent.com
 DOMAIN-SUFFIX,asmr.one
 
-# Talkatone
-DOMAIN-SUFFIX,tktn.at
-DOMAIN-SUFFIX,tktn.be
-DOMAIN-SUFFIX,vm.talkatone.com
-DOMAIN-SUFFIX,tenor.com
-
 # Deepseek
 DOMAIN-SUFFIX,deepseek.com
 DOMAIN-SUFFIX,fengkongcloud.cn
