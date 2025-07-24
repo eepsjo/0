@@ -3,7 +3,7 @@ DOMAIN-SUFFIX,appmetrica.yandex.ru
 DOMAIN-SUFFIX,browser.sentry-cdn.com
 DOMAIN-SUFFIX,app.getsentry.com
 
-# 中共中央電視臺
+# 中國中央電視台
 DOMAIN-SUFFIX,cctv.cn
 DOMAIN-SUFFIX,cctv.com
 DOMAIN-SUFFIX,cctvlib.cn
