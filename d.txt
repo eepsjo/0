@@ -6,4 +6,3 @@ DOMAIN-SUFFIX,bsdayo.moe
 DOMAIN-SUFFIX,openfrp.net
 DOMAIN-SUFFIX,naids.com
 DOMAIN-SUFFIX,iios.club
-DOMAIN-SUFFIX,moontv-aek.pages.dev
