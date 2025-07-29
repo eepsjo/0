@@ -1,6 +1,5 @@
 # 自定義
 DOMAIN,time.windows.com
-DOMAIN-SUFFIX,nmcheck.gnome.org
 DOMAIN-SUFFIX,msftconnecttest.com
 DOMAIN-SUFFIX,maj-soul.com
 DOMAIN-SUFFIX,daai.fun
