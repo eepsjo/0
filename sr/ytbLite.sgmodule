@@ -2,6 +2,8 @@
 #!desc=（实验性）YouTube 去广告/优化模块的轻量版
 #!arguments=请求处理服务:https://stream.maasea.workers.dev,屏蔽上传按钮:true,屏蔽选段按钮:true,屏蔽 Shorts 按钮:true,字幕翻译语言:zh-TW,歌词翻译语言:zh-TW
 
+# https://raw.githubusercontent.com/Maasea/sgmodule/refs/heads/master/YouTube.Lite.sgmodule
+
 [URL Rewrite]
 ^https:\/\/youtubei\.googleapis\.com\/(youtubei\/v1\/(browse|next|player|search|reel\/reel_watch_sequence|guide|account\/get_setting|get_watch))(\?(.*))?$ {{{请求处理服务}}}/$1?blockUpload={{{屏蔽上传按钮}}}&blockImmersive={{{屏蔽选段按钮}}}&blockShorts={{{屏蔽 Shorts 按钮}}}&captionLang={{{字幕翻译语言}}}&lyricLang={{{歌词翻译语言}}}&$4 307
 
