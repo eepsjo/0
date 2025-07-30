@@ -1,6 +1,8 @@
 #!name=spotify
 #!desc=Spotify 去广告/优化模块
 
+# https://raw.githubusercontent.com/LOWERTOP/Shadowrocket-First/main/Spotify.sgmodule
+
 [Rule]
 DOMAIN-SUFFIX,ad.doubleclick.net,REJECT-NO-DROP
 
