@@ -4,8 +4,8 @@ DOMAIN-SUFFIX,browser.sentry-cdn.com
 DOMAIN-SUFFIX,app.getsentry.com
 
 # YouTube QUIC
-AND,((DOMAIN-SUFFIX,googlevideo.com),(PROTOCOL,UDP))
-AND,((DOMAIN,youtubei.googleapis.com),(PROTOCOL,UDP))
+AND,((DOMAIN-SUFFIX,googlevideo.com),(NETWORK,UDP))
+AND,((DOMAIN,youtubei.googleapis.com),(NETWORK,UDP))
 
 # 中國中央電視台
 DOMAIN-SUFFIX,cctv.cn
