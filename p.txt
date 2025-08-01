@@ -1,4 +1,3 @@
-# 自定義
 DOMAIN-SUFFIX,githubusercontent.com
 DOMAIN-SUFFIX,asmr.one
 
