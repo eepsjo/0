@@ -1,0 +1,11 @@
+#!name=lx
+#!desc=落雪查分器
+
+[Proxy]
+lx = http,proxy.maimai.lxns.net,8080
+
+[Rule]
+DOMAIN,tgk-wcaime.wahlap.com,lx
+
+[MITM]
+hostname = %APPEND% *.tgk-wcaime.wahlap.com,lx
