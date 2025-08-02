@@ -1,5 +1,5 @@
 #!name=bili
-#!desc=国际版（白图标）bilibili 移除热搜、搜索发现，精简“我的”页面
+#!desc=国际版（白图标）bilibili 移除热搜、精简“我的”页面
 
 [Body Rewrite]
 http-response-jq ^https:\/\/app\.bilibili\.com\/x\/v2\/account\/mine\?(.+) '.data.sections_v2[1].title |= null | .data.sections_v2[1].items |= map(select((.title | IN("联系客服", "稿件管理", "我的钱包", "我的NFT")) | not))'
