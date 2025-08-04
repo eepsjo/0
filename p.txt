@@ -1,6 +1,6 @@
 DOMAIN-SUFFIX,githubusercontent.com
 DOMAIN-SUFFIX,asmr.one
-DOMAIN-SUFFIX,moontv-aek.pages.dev
+DOMAIN-SUFFIX,tv-0nanii.pages.dev
 
 # Deepseek
 DOMAIN-SUFFIX,deepseek.com
