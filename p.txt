@@ -1,5 +1,6 @@
 DOMAIN-SUFFIX,githubusercontent.com
 DOMAIN-SUFFIX,asmr.one
+DOMAIN-SUFFIX,18comic.vip
 DOMAIN-SUFFIX,saucenao.com
 DOMAIN-SUFFIX,ascii2d.net
 DOMAIN-SUFFIX,kungal.com
