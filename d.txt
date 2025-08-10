@@ -1,12 +1,13 @@
-# 10
+# 11
 
-# (7) 自定義
+# (8) 自定義
 DOMAIN-SUFFIX,maj-soul.com
 DOMAIN-SUFFIX,daai.fun
 DOMAIN-SUFFIX,bsdayo.moe
 DOMAIN-SUFFIX,openfrp.net
 DOMAIN-SUFFIX,naids.com
 DOMAIN-SUFFIX,iios.club
+DOMAIN-SUFFIX,ping0.cc
 DOMAIN-SUFFIX,0nanii.dpdns.org
 
 # (3) Windows
