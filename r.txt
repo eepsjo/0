@@ -1,9 +1,10 @@
-# 6
+# 7
 
-# (3)
+# (4)
 DOMAIN-SUFFIX,appmetrica.yandex.ru
 DOMAIN-SUFFIX,browser.sentry-cdn.com
 DOMAIN-SUFFIX,app.getsentry.com
+DOMAIN-SUFFIX,mihomo.party
 
 # (3) Deepseek
 DOMAIN-SUFFIX,apmplus.volces.com
