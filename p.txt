@@ -1,10 +1,11 @@
-# 20
+# 21
 
-# (7)
+# (8)
 DOMAIN-SUFFIX,githubusercontent.com
 DOMAIN-SUFFIX,saucenao.com
 DOMAIN-SUFFIX,ascii2d.net
 DOMAIN-SUFFIX,kungal.com
+DOMAIN-KEYWORD,moegirl
 DOMAIN-SUFFIX,ddownr.com
 DOMAIN-SUFFIX,ping0.cc
 DOMAIN-SUFFIX,tv-0nanii.pages.dev
