@@ -15,7 +15,7 @@ DOMAIN-SUFFIX,guh50jw4-ios.mobile-messenger.intercom.com
 DOMAIN,iphone-stun.strato-iphone.de
 DOMAIN,relay.webwormhole.io
 DOMAIN,hw-v2-web-player-tracker.biliapi.net
-DOMAIN,xy220x202x8x145xy.mcdn.bilivideo.cn
+DOMAIN-SUFFIX,mcdn.bilivideo.cn
 DOMAIN-SUFFIX,stunserver.stunprotocol.org
 DOMAIN-SUFFIX,freestun.net
 DOMAIN-SUFFIX,stun.twilio.com
