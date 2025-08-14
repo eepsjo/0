@@ -17,6 +17,7 @@ DOMAIN,relay.webwormhole.io
 DOMAIN-SUFFIX,stunserver.stunprotocol.org
 DOMAIN-SUFFIX,freestun.net
 DOMAIN-SUFFIX,hw-v2-web-player-tracker.biliapi.net
+DOMAIN-SUFFIX,xy220x202x8x145xy.mcdn.bilivideo.cn
 DOMAIN-SUFFIX,stun.twilio.com
 DOMAIN-WILDCARD,stun.*
 DOMAIN-WILDCARD,stun*.l.google.com
