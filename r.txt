@@ -1,4 +1,4 @@
-# 28
+# 30
 
 # 4
 DOMAIN-SUFFIX,appmetrica.yandex.ru
@@ -11,9 +11,11 @@ DOMAIN-SUFFIX,apmplus.volces.com
 DOMAIN-SUFFIX,gator.volces.com
 DOMAIN-SUFFIX,guh50jw4-ios.mobile-messenger.intercom.com
 
-# 21 - STUN
+# 23 - STUN
 DOMAIN,iphone-stun.strato-iphone.de
 DOMAIN,relay.webwormhole.io
+DOMAIN-SUFFIX,stunserver.stunprotocol.org
+DOMAIN-SUFFIX,freestun.net
 DOMAIN-SUFFIX,stun.twilio.com
 DOMAIN-WILDCARD,stun.*
 DOMAIN-WILDCARD,stun*.l.google.com
