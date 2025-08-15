@@ -8,6 +8,7 @@ DOMAIN-SUFFIX,kungal.com
 DOMAIN-KEYWORD,moegirl
 DOMAIN-SUFFIX,ddownr.com
 DOMAIN-SUFFIX,ping0.cc
+DOMAIN-SUFFIX,hypixel.net
 DOMAIN-SUFFIX,tv-0nanii.pages.dev
 
 # 3 - 你懂得😋
