@@ -1,16 +1,8 @@
-# 33
+# 34
 
-# 5
+# 2 - QUIC
 AND,((NETWORK,UDP),(DST-PORT,443))
-DOMAIN-SUFFIX,appmetrica.yandex.ru
-DOMAIN-SUFFIX,browser.sentry-cdn.com
-DOMAIN-SUFFIX,app.getsentry.com
-DOMAIN-SUFFIX,mihomo.party
-
-# 3 - Deepseek
-DOMAIN-SUFFIX,apmplus.volces.com
-DOMAIN-SUFFIX,gator.volces.com
-DOMAIN-SUFFIX,guh50jw4-ios.mobile-messenger.intercom.com
+AND,((PROTOCOL,UDP),(DST-PORT,443))
 
 # 25 - STUN
 DOMAIN,iphone-stun.strato-iphone.de
@@ -38,3 +30,14 @@ IP-CIDR,2a01:4f9:4b:4c8f::2/128,no-resolve
 IP-CIDR,2a02:f98:0:50:2ff:23ff:fe42:1b23/128,no-resolve
 IP-CIDR,2a03:2880:f084:1:face:b00c:0:24d9/128,no-resolve
 IP-CIDR,2a03:b0c0:0:1010::a2:a001/128,no-resolve
+
+# 4
+DOMAIN-SUFFIX,appmetrica.yandex.ru
+DOMAIN-SUFFIX,browser.sentry-cdn.com
+DOMAIN-SUFFIX,app.getsentry.com
+DOMAIN-SUFFIX,mihomo.party
+
+# 3 - Deepseek
+DOMAIN-SUFFIX,apmplus.volces.com
+DOMAIN-SUFFIX,gator.volces.com
+DOMAIN-SUFFIX,guh50jw4-ios.mobile-messenger.intercom.com
