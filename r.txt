@@ -1,7 +1,8 @@
 # 33
 
-# 1 - 443 QUIC
-AND,((OR,((NETWORK,UDP),(PROTOCOL,UDP))),(DST-PORT,443))
+# 1 - 443 QUIC shadowrocket/mihomo
+AND,((PROTOCOL,UDP),(DST-PORT,443))
+AND,((NETWORK,UDP),(DST-PORT,443))
 
 # 25 - STUN
 DOMAIN,iphone-stun.strato-iphone.de
