@@ -1,6 +1,7 @@
-# 32
+# 33
 
-# 4
+# 5
+AND,((NETWORK,UDP),(DST-PORT,443))
 DOMAIN-SUFFIX,appmetrica.yandex.ru
 DOMAIN-SUFFIX,browser.sentry-cdn.com
 DOMAIN-SUFFIX,app.getsentry.com
