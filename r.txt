@@ -1,8 +1,7 @@
-# 34
+# 33
 
-# 2 - QUIC
-AND,((NETWORK,UDP),(DST-PORT,443))
-AND,((PROTOCOL,UDP),(DST-PORT,443))
+# 1 - 443 QUIC
+AND,((OR,((NETWORK,UDP),(PROTOCOL,UDP))),(DST-PORT,443))
 
 # 25 - STUN
 DOMAIN,iphone-stun.strato-iphone.de
