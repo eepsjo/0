@@ -6,7 +6,7 @@ DOMAIN-SUFFIX,ping0.cc
 DOMAIN-SUFFIX,kungal.com
 DOMAIN-SUFFIX,ddownr.com
 DOMAIN-SUFFIX,claw.cloud
-DOMAIN-SUFFIX,tv-0nanii.pages.dev
+DOMAIN-KEYWORD,tv-0nanii
 DOMAIN-SUFFIX,cubecraft.net
 DOMAIN-SUFFIX,hypixel.net
 DOMAIN-SUFFIX,saucenao.com
