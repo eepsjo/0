@@ -1,4 +1,4 @@
-### Windows 設定
+### Windows
 
 #### 磁碟機與檔案總管
 
@@ -72,7 +72,6 @@
 
         ```
         powercfg /batteryreport /output "<檔案路徑>\<檔案名稱>.html"
-
         ```
 
 #### 介面與功能
@@ -117,14 +116,12 @@
 
         ```
         winget uninstall MicrosoftWindows.Client.WebExperience_cw5n1h2txyewy
-
         ```
 
       * **重新安裝：**
 
         ```
         winget install 9MSSGKG348SP
-
         ```
 
 #### 軟體問題
