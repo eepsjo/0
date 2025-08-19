@@ -1,19 +1,18 @@
-# 26
+# 25
 
-# 16
+# 15
 DOMAIN-SUFFIX,githubusercontent.com
+DOMAIN-SUFFIX,claw.cloud
 DOMAIN-SUFFIX,whatshub.top
 DOMAIN-SUFFIX,ping0.cc
-DOMAIN-SUFFIX,kungal.com
-DOMAIN-SUFFIX,ddownr.com
-DOMAIN-SUFFIX,claw.cloud
-DOMAIN-KEYWORD,tv-0nanii
-DOMAIN-KEYWORD,minecraft
-DOMAIN-KEYWORD,cubecraft
-DOMAIN-SUFFIX,hypixel.net
-DOMAIN-SUFFIX,touchgrasss.com
 DOMAIN-SUFFIX,saucenao.com
 DOMAIN-SUFFIX,ascii2d.net
+DOMAIN-SUFFIX,ddownr.com
+DOMAIN-SUFFIX,kungal.com
+DOMAIN-KEYWORD,minecraft
+DOMAIN-KEYWORD,cubecraft
+DOMAIN-KEYWORD,hypixel
+DOMAIN-SUFFIX,touchgrasss.com
 DOMAIN-SUFFIX,iwara.tv
 DOMAIN-SUFFIX,asmr.one
 DOMAIN-SUFFIX,18comic.vip
