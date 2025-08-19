@@ -1,10 +1,12 @@
-# 25
+# 27
 
-# 15
+# 17
 DOMAIN-SUFFIX,githubusercontent.com
-DOMAIN-SUFFIX,claw.cloud
 DOMAIN-SUFFIX,whatshub.top
+DOMAIN-SUFFIX,anti-ad.net
+DOMAIN-SUFFIX,claw.cloud
 DOMAIN-SUFFIX,ping0.cc
+DOMAIN-SUFFIX,waifu2x.net
 DOMAIN-SUFFIX,saucenao.com
 DOMAIN-SUFFIX,ascii2d.net
 DOMAIN-SUFFIX,ddownr.com
