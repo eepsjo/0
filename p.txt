@@ -8,7 +8,7 @@ DOMAIN-SUFFIX,ping0.cc
 DOMAIN-SUFFIX,saucenao.com
 DOMAIN-SUFFIX,ascii2d.net
 DOMAIN-SUFFIX,ddownr.com
-DOMAIN-SUFFIX,kungal.com
+DOMAIN-KEYWORD,kungal
 DOMAIN-KEYWORD,minecraft
 DOMAIN-KEYWORD,cubecraft
 DOMAIN-KEYWORD,hypixel
