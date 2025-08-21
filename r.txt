@@ -1,4 +1,4 @@
-# 29
+# 34
 
 # 1 - 443 QUIC shadowrocket/mihomo
 AND,((PROTOCOL,UDP),(DST-PORT,443))
@@ -37,3 +37,10 @@ IP-CIDR,2a03:b0c0:0:1010::a2:a001/128,no-resolve
 DOMAIN-SUFFIX,apmplus.volces.com
 DOMAIN-SUFFIX,gator.volces.com
 DOMAIN-SUFFIX,guh50jw4-ios.mobile-messenger.intercom.com
+
+# 5 - Toolz
+DOMAIN-SUFFIX,browser.sentry-cdn.com
+DOMAIN-SUFFIX,app.getsentry.com
+DOMAIN-SUFFIX,appmetrica.yandex.ru
+DOMAIN-SUFFIX,adfstat.yandex.ru
+DOMAIN-SUFFIX,metrics.icloud.com
