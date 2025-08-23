@@ -19,7 +19,7 @@ DOMAIN-SUFFIX,iwara.tv
 DOMAIN-SUFFIX,asmr.one
 DOMAIN-SUFFIX,18comic.vip
 
-# 10 - Deepseek bypass +86 Tel
+# 10 - Deepseek bypass-(+86)
 DOMAIN-SUFFIX,deepseek.com
 DOMAIN-SUFFIX,fengkongcloud.cn
 DOMAIN-SUFFIX,fengkongcloud.com
