@@ -1,6 +1,6 @@
 # 32
 
-# 18 - LANcidr
+# 18 - LAN
 IP-CIDR,0.0.0.0/8,no-resolve
 IP-CIDR,10.0.0.0/8,no-resolve
 IP-CIDR,100.64.0.0/10,no-resolve
