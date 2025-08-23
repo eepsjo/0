@@ -1,6 +1,6 @@
 # 36
 
-# 1 - 443 QUIC shadowrocket/mihomo
+# 1 - QUIC443 (shadowrocket/mihomo)
 AND,((PROTOCOL,UDP),(DST-PORT,443))
 AND,((NETWORK,UDP),(DST-PORT,443))
 
