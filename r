@@ -35,7 +35,7 @@ IP-CIDR,2a03:b0c0:0:1010::a2:a001/128,no-resolve
 DOMAIN-SUFFIX,mihomo.party
 DOMAIN-KEYWORD,mihomo-party
 
-# 3 - Deepseek
+# 3 - Deepseek Anti-track
 DOMAIN-SUFFIX,apmplus.volces.com
 DOMAIN-SUFFIX,gator.volces.com
 DOMAIN-SUFFIX,guh50jw4-ios.mobile-messenger.intercom.com
