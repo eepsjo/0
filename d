@@ -20,7 +20,7 @@ IP-CIDR,fc00::/7,no-resolve
 IP-CIDR,fe80::/10,no-resolve
 IP-CIDR,ff00::/8,no-resolve
 
-# 12
+# 15
 DOMAIN,time.windows.com
 DOMAIN-SUFFIX,msftncsi.com
 DOMAIN-SUFFIX,msftconnecttest.com
@@ -33,8 +33,6 @@ DOMAIN-SUFFIX,2b2t.cc
 DOMAIN-SUFFIX,maj-soul.com
 DOMAIN-SUFFIX,daai.fun
 DOMAIN-SUFFIX,njdiancool.com
-
-# 3 - 进行一个勤的出
 DOMAIN-SUFFIX,wahlap.net
 DOMAIN-SUFFIX,gzheyoukeji.com
 DOMAIN-SUFFIX,jingjianx.vip
