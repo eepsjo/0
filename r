@@ -1,18 +1,19 @@
-# 36
+# 35
 
 # 1 - QUIC443 (shadowrocket/mihomo)
 AND,((PROTOCOL,UDP),(DST-PORT,443))
 AND,((NETWORK,UDP),(DST-PORT,443))
 
-# 25 - STUN
+# 26 - STUN
+DOMAIN-WILDCARD,stun.*
+DOMAIN-WILDCARD,stun.*.*
+DOMAIN-WILDCARD,stun.*.*.*
 DOMAIN,iphone-stun.strato-iphone.de
 DOMAIN,relay.webwormhole.io
 DOMAIN,hw-v2-web-player-tracker.biliapi.net
 DOMAIN-SUFFIX,mcdn.bilivideo.cn
 DOMAIN-SUFFIX,stunserver.stunprotocol.org
 DOMAIN-SUFFIX,freestun.net
-DOMAIN-SUFFIX,stun.twilio.com
-DOMAIN-WILDCARD,stun.*
 DOMAIN-WILDCARD,stun*.l.google.com
 IP-CIDR,2001:4060:1:1005::10:32/128,no-resolve
 IP-CIDR,2001:41d0:2:12b9::1/128,no-resolve
@@ -31,9 +32,7 @@ IP-CIDR,2a02:f98:0:50:2ff:23ff:fe42:1b23/128,no-resolve
 IP-CIDR,2a03:2880:f084:1:face:b00c:0:24d9/128,no-resolve
 IP-CIDR,2a03:b0c0:0:1010::a2:a001/128,no-resolve
 
-# 2
-DOMAIN-SUFFIX,mihomo.party
-DOMAIN-KEYWORD,mihomo-party
+# 0
 
 # 3 - Deepseek Anti-track
 DOMAIN-SUFFIX,apmplus.volces.com
