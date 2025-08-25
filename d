@@ -1,4 +1,4 @@
-# 33
+# 32
 
 # 18 - LAN
 IP-CIDR,0.0.0.0/8,no-resolve
@@ -33,8 +33,7 @@ DOMAIN-SUFFIX,2b2t.cc
 DOMAIN-SUFFIX,maj-soul.com
 DOMAIN-SUFFIX,daai.fun
 
-# 4 - 进行一个勤的出
+# 3 - 进行一个勤的出
 DOMAIN-SUFFIX,wahlap.net
 DOMAIN-SUFFIX,gzheyoukeji.com
-# DOMAIN-SUFFIX,jingjianx.vip
-# DOMAIN-SUFFIX,bdszh.vip
+DOMAIN-SUFFIX,jingjianx.vip
