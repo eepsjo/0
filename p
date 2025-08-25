@@ -1,4 +1,4 @@
-# 29
+# 30
 
 # 13
 DOMAIN-SUFFIX,githubusercontent.com
@@ -15,12 +15,13 @@ DOMAIN-KEYWORD,minecraft
 DOMAIN-KEYWORD,cubecraft
 DOMAIN-KEYWORD,hypixel
 
-# 6 - 你懂得
+# 7 - 你懂得
 DOMAIN-SUFFIX,asmr.one
 DOMAIN-SUFFIX,kiko-play-niptan.one
 DOMAIN-WILDCARD,api.asmr-?00.com
 DOMAIN-SUFFIX,harem-battle.club
 DOMAIN-KEYWORD,iwara
+DOMAIN-SUFFIX,hembed.com
 DOMAIN-SUFFIX,18comic.vip
 
 # 10 - Deepseek bypass-(+86)
