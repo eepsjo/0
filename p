@@ -20,7 +20,7 @@ DOMAIN-SUFFIX,18comic.vip
 
 # 3 - asmr.one
 DOMAIN-SUFFIX,asmr.one
-DOMAIN,api.kiko-play-niptan.one
+DOMAIN-SUFFIX,kiko-play-niptan.one
 DOMAIN-WILDCARD,api.asmr-?00.com
 
 # 10 - Deepseek bypass-(+86)
