@@ -1,4 +1,4 @@
-# 40
+# 41
 
 # 1 - QUIC443 (shadowrocket/mihomo)
 AND,((PROTOCOL,UDP),(DST-PORT,443))
@@ -34,7 +34,8 @@ IP-CIDR,2a03:b0c0:0:1010::a2:a001/128,no-resolve
 
 # 0
 
-# 5 - WPS
+# 6 - WPS
+PROCESS-NAME,promecefpluginhost
 PROCESS-NAME,wps
 PROCESS-NAME,wpp
 PROCESS-NAME,et
