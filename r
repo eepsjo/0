@@ -1,4 +1,4 @@
-# 35
+# 40
 
 # 1 - QUIC443 (shadowrocket/mihomo)
 AND,((PROTOCOL,UDP),(DST-PORT,443))
@@ -33,6 +33,13 @@ IP-CIDR,2a03:2880:f084:1:face:b00c:0:24d9/128,no-resolve
 IP-CIDR,2a03:b0c0:0:1010::a2:a001/128,no-resolve
 
 # 0
+
+# 5 - WPS
+PROCESS-NAME,wps
+PROCESS-NAME,wpp
+PROCESS-NAME,et
+PROCESS-NAME,wpsoffice
+PROCESS-NAME,wpsocloudsvr
 
 # 3 - Deepseek Anti-track
 DOMAIN-SUFFIX,apmplus.volces.com
