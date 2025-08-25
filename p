@@ -10,10 +10,10 @@ DOMAIN-SUFFIX,waifu2x.net
 DOMAIN-SUFFIX,saucenao.com
 DOMAIN-SUFFIX,ascii2d.net
 DOMAIN-SUFFIX,ddownr.com
-DOMAIN-KEYWORD,kungal
-DOMAIN-KEYWORD,minecraft
-DOMAIN-KEYWORD,cubecraft
-DOMAIN-KEYWORD,hypixel
+DOMAIN-SUFFIX,kungal.com
+DOMAIN-SUFFIX,minecraft.net
+DOMAIN-SUFFIX,cubecraft.net
+DOMAIN-SUFFIX,hypixel.net
 
 # 7 - 你懂得
 DOMAIN-SUFFIX,asmr.one
