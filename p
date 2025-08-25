@@ -1,6 +1,6 @@
-# 27
+# 28
 
-# 17
+# 18
 DOMAIN-SUFFIX,githubusercontent.com
 DOMAIN-SUFFIX,whatshub.top
 DOMAIN-SUFFIX,anti-ad.net
@@ -17,6 +17,7 @@ DOMAIN-KEYWORD,hypixel
 DOMAIN-SUFFIX,touchgrasss.com
 DOMAIN-SUFFIX,iwara.tv
 DOMAIN-SUFFIX,asmr.one
+DOMAIN-SUFFIX,kiko-play-niptan.one
 DOMAIN-SUFFIX,18comic.vip
 
 # 10 - Deepseek bypass-(+86)
