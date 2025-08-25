@@ -1,6 +1,6 @@
-# 30
+# 29
 
-# 14
+# 13
 DOMAIN-SUFFIX,githubusercontent.com
 DOMAIN-SUFFIX,whatshub.top
 DOMAIN-SUFFIX,anti-ad.net
@@ -14,9 +14,8 @@ DOMAIN-KEYWORD,kungal
 DOMAIN-KEYWORD,minecraft
 DOMAIN-KEYWORD,cubecraft
 DOMAIN-KEYWORD,hypixel
-DOMAIN-SUFFIX,touchgrasss.com
 
-# 6 - asmr.one
+# 6 - 你懂得
 DOMAIN-SUFFIX,asmr.one
 DOMAIN-SUFFIX,kiko-play-niptan.one
 DOMAIN-WILDCARD,api.asmr-?00.com
