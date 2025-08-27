@@ -40,7 +40,7 @@ PROCESS-NAME,wps
 PROCESS-NAME,wpp
 PROCESS-NAME,et
 PROCESS-NAME,wpsoffice
-PROCESS-NAME,wpsocloudsvr
+PROCESS-NAME,wpscloudsvr
 
 # 3 - Deepseek Anti-track
 DOMAIN-SUFFIX,apmplus.volces.com
