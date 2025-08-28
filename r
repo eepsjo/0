@@ -1,13 +1,11 @@
-# 42
+# 40
 
 # 1 - QUIC443 (shadowrocket/mihomo)
 AND,((PROTOCOL,UDP),(DST-PORT,443))
 AND,((NETWORK,UDP),(DST-PORT,443))
 
-# 27 - STUN
+# 25 - STUN
 DOMAIN-WILDCARD,stun.*
-DOMAIN-WILDCARD,stun.*.*
-DOMAIN-WILDCARD,stun.*.*.*
 DOMAIN-WILDCARD,stun*.l.google.com
 DOMAIN,iphone-stun.strato-iphone.de
 DOMAIN,relay.webwormhole.io
