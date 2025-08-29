@@ -1,4 +1,4 @@
-# 40
+# 78
 
 # 1 - HTTP/3
 AND,((PROTOCOL,UDP),(DST-PORT,443))
@@ -33,7 +33,7 @@ IP-CIDR,2a03:b0c0:0:1010::a2:a001/128,no-resolve
 
 # 0
 
-# 6 - WPS Office
+# 6 - WPS
 PROCESS-NAME,et
 PROCESS-NAME,wps
 PROCESS-NAME,wpp
@@ -52,3 +52,45 @@ DOMAIN-SUFFIX,browser.sentry-cdn.com
 DOMAIN-SUFFIX,app.getsentry.com
 DOMAIN-SUFFIX,appmetrica.yandex.ru
 DOMAIN-SUFFIX,adfstat.yandex.ru
+
+# 7 - mouthpieces
+DOMAIN-SUFFIX,gmw.cn
+DOMAIN-SUFFIX,cri.cn
+DOMAIN-SUFFIX,huanqiu.com
+DOMAIN-SUFFIX,xinhuanet.com
+DOMAIN-SUFFIX,chinanews.com
+DOMAIN-SUFFIX,people.com.cn
+DOMAIN-SUFFIX,chinadaily.com.cn
+
+# 31 - leftist
+DOMAIN-KEYWORD,leftist
+DOMAIN-KEYWORD,leftism
+DOMAIN-KEYWORD,marxist
+DOMAIN-KEYWORD,marxism
+DOMAIN-KEYWORD,communist
+DOMAIN-KEYWORD,communism
+DOMAIN-KEYWORD,socialist
+DOMAIN-KEYWORD,socialism
+DOMAIN-KEYWORD,maoist
+DOMAIN-KEYWORD,maoism
+DOMAIN-KEYWORD,trotskyist
+DOMAIN-KEYWORD,trotskyism
+DOMAIN-KEYWORD,leninist
+DOMAIN-KEYWORD,leninism
+DOMAIN-KEYWORD,stalinist
+DOMAIN-KEYWORD,stalinism
+DOMAIN-KEYWORD,bolshevik
+DOMAIN-KEYWORD,bolshevism
+DOMAIN-KEYWORD,leftwing
+DOMAIN-KEYWORD,left-wing
+DOMAIN-SUFFIX,wsws.org
+DOMAIN-SUFFIX,zyom.site
+DOMAIN-SUFFIX,cpusa.org
+DOMAIN-SUFFIX,libcom.org
+DOMAIN-SUFFIX,revleft.com
+DOMAIN-SUFFIX,solidnet.org
+DOMAIN-SUFFIX,marxists.org
+DOMAIN-SUFFIX,leftvoice.org
+DOMAIN-SUFFIX,peoplesworld.org
+DOMAIN-SUFFIX,socialistworld.net
+DOMAIN-SUFFIX,internationalviewpoint.org
