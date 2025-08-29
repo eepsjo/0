@@ -1,19 +1,19 @@
 # 40
 
-# 1 - QUIC443 (shadowrocket/mihomo)
+# 1 - QUIC443
 AND,((PROTOCOL,UDP),(DST-PORT,443))
 AND,((NETWORK,UDP),(DST-PORT,443))
 
 # 25 - STUN
 DOMAIN-WILDCARD,stun.*
 DOMAIN-WILDCARD,stun*.l.google.com
-DOMAIN,iphone-stun.strato-iphone.de
 DOMAIN,relay.webwormhole.io
+DOMAIN,iphone-stun.strato-iphone.de
 DOMAIN,hw-v2-web-player-tracker.biliapi.net
-DOMAIN-SUFFIX,mcdn.bilivideo.cn
-DOMAIN-SUFFIX,stunserver.stunprotocol.org
 DOMAIN-SUFFIX,freestun.net
 DOMAIN-SUFFIX,stun.twilio.com
+DOMAIN-SUFFIX,mcdn.bilivideo.cn
+DOMAIN-SUFFIX,stunserver.stunprotocol.org
 IP-CIDR,2001:4060:1:1005::10:32/128,no-resolve
 IP-CIDR,2001:41d0:2:12b9::1/128,no-resolve
 IP-CIDR,2001:678:b28::118/128,no-resolve
@@ -33,22 +33,22 @@ IP-CIDR,2a03:b0c0:0:1010::a2:a001/128,no-resolve
 
 # 0
 
-# 6 - WPS
-PROCESS-NAME,promecefpluginhost
+# 6 - WPS Office
+PROCESS-NAME,et
 PROCESS-NAME,wps
 PROCESS-NAME,wpp
-PROCESS-NAME,et
 PROCESS-NAME,wpsoffice
 PROCESS-NAME,wpscloudsvr
+PROCESS-NAME,promecefpluginhost
 
 # 3 - Deepseek
-DOMAIN-SUFFIX,apmplus.volces.com
 DOMAIN-SUFFIX,gator.volces.com
+DOMAIN-SUFFIX,apmplus.volces.com
 DOMAIN-SUFFIX,guh50jw4-ios.mobile-messenger.intercom.com
 
 # 5 - Toolz
+DOMAIN-SUFFIX,metrics.icloud.com
 DOMAIN-SUFFIX,browser.sentry-cdn.com
 DOMAIN-SUFFIX,app.getsentry.com
 DOMAIN-SUFFIX,appmetrica.yandex.ru
 DOMAIN-SUFFIX,adfstat.yandex.ru
-DOMAIN-SUFFIX,metrics.icloud.com
