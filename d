@@ -32,6 +32,7 @@ DOMAIN,mc.bsdayo.moe
 DOMAIN-SUFFIX,2b2t.cc
 
 # 2 - Games
+DOMAIN,ak.hypergryph.com
 DOMAIN-SUFFIX,maj-soul.com
 DOMAIN-SUFFIX,daai.fun
 
