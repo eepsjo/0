@@ -1,4 +1,4 @@
-# 78
+# 79
 
 # 1 - HTTP/3
 AND,((PROTOCOL,UDP),(DST-PORT,443))
@@ -31,7 +31,8 @@ IP-CIDR,2a02:f98:0:50:2ff:23ff:fe42:1b23/128,no-resolve
 IP-CIDR,2a03:2880:f084:1:face:b00c:0:24d9/128,no-resolve
 IP-CIDR,2a03:b0c0:0:1010::a2:a001/128,no-resolve
 
-# 0
+# 1
+DOMAIN-SUFFIX,mihomo.party
 
 # 6 - WPS
 PROCESS-NAME,et
