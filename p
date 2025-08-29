@@ -1,6 +1,6 @@
 # 30
 
-# 13
+# 9
 DOMAIN-SUFFIX,githubusercontent.com
 DOMAIN-SUFFIX,whatshub.top
 DOMAIN-SUFFIX,anti-ad.net
@@ -10,6 +10,8 @@ DOMAIN-SUFFIX,waifu2x.net
 DOMAIN-SUFFIX,saucenao.com
 DOMAIN-SUFFIX,ascii2d.net
 DOMAIN-SUFFIX,kungal.com
+
+# 4 - Minecraft
 DOMAIN-SUFFIX,zerotier.com
 DOMAIN-SUFFIX,minecraft.net
 DOMAIN-SUFFIX,cubecraft.net
