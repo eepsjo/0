@@ -1,4 +1,4 @@
-# 31
+# 32
 
 # 14
 DOMAIN-SUFFIX,githubusercontent.com
@@ -16,11 +16,12 @@ DOMAIN-SUFFIX,minecraft.net
 DOMAIN-SUFFIX,cubecraft.net
 DOMAIN-SUFFIX,hypixel.net
 
-# 7 - 你懂得
+# 8 - 你懂得
 DOMAIN-SUFFIX,asmr.one
 DOMAIN-SUFFIX,kiko-play-niptan.one
 DOMAIN-WILDCARD,api.asmr-?00.com
 DOMAIN-KEYWORD,24tupian
+DOMAIN,pic.lovecos.net
 DOMAIN-KEYWORD,18comic
 DOMAIN-KEYWORD,iwara
 DOMAIN-SUFFIX,hembed.com
