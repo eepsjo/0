@@ -1,4 +1,4 @@
-# 33
+# 34
 
 # 18 - Reserved IPs
 IP-CIDR,0.0.0.0/8,no-resolve
@@ -31,7 +31,7 @@ DOMAIN-SUFFIX,naids.com
 DOMAIN,mc.bsdayo.moe
 DOMAIN-SUFFIX,2b2t.cc
 
-# 2 - Games
+# 3 - Games
 DOMAIN,ak.hypergryph.com
 DOMAIN-SUFFIX,maj-soul.com
 DOMAIN-SUFFIX,daai.fun
