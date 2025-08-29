@@ -20,10 +20,10 @@ DOMAIN-SUFFIX,hypixel.net
 DOMAIN-SUFFIX,asmr.one
 DOMAIN-SUFFIX,kiko-play-niptan.one
 DOMAIN-WILDCARD,api.asmr-?00.com
-DOMAIN-SUFFIX,harem-battle.club
+DOMAIN-KEYWORD,24tupian
+DOMAIN-KEYWORD,18comic
 DOMAIN-KEYWORD,iwara
 DOMAIN-SUFFIX,hembed.com
-DOMAIN-SUFFIX,18comic.vip
 
 # 10 - Deepseek bypass-(+86)
 DOMAIN-SUFFIX,deepseek.com
