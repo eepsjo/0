@@ -11,7 +11,7 @@ DOMAIN-SUFFIX,saucenao.com
 DOMAIN-SUFFIX,ascii2d.net
 DOMAIN-SUFFIX,kungal.com
 
-# 4 - Minecraft
+# 4 - Games
 DOMAIN-SUFFIX,zerotier.com
 DOMAIN-SUFFIX,minecraft.net
 DOMAIN-SUFFIX,cubecraft.net
