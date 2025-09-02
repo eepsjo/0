@@ -31,30 +31,14 @@ IP-CIDR,2a02:f98:0:50:2ff:23ff:fe42:1b23/128,no-resolve
 IP-CIDR,2a03:2880:f084:1:face:b00c:0:24d9/128,no-resolve
 IP-CIDR,2a03:b0c0:0:1010::a2:a001/128,no-resolve
 
-# 1
+# 45
 DOMAIN-SUFFIX,mihomo.party
-
-# 6 - WPS
 PROCESS-NAME,et
 PROCESS-NAME,wps
 PROCESS-NAME,wpp
 PROCESS-NAME,wpsoffice
 PROCESS-NAME,wpscloudsvr
 PROCESS-NAME,promecefpluginhost
-
-# 3 - Deepseek
-DOMAIN-SUFFIX,gator.volces.com
-DOMAIN-SUFFIX,apmplus.volces.com
-DOMAIN-SUFFIX,guh50jw4-ios.mobile-messenger.intercom.com
-
-# 5 - Toolz
-DOMAIN-SUFFIX,metrics.icloud.com
-DOMAIN-SUFFIX,browser.sentry-cdn.com
-DOMAIN-SUFFIX,app.getsentry.com
-DOMAIN-SUFFIX,appmetrica.yandex.ru
-DOMAIN-SUFFIX,adfstat.yandex.ru
-
-# 7 - mouthpieces
 DOMAIN-SUFFIX,gmw.cn
 DOMAIN-SUFFIX,cri.cn
 DOMAIN-SUFFIX,huanqiu.com
@@ -62,8 +46,6 @@ DOMAIN-SUFFIX,xinhuanet.com
 DOMAIN-SUFFIX,chinanews.com
 DOMAIN-SUFFIX,people.com.cn
 DOMAIN-SUFFIX,chinadaily.com.cn
-
-# 31 - leftist
 DOMAIN-KEYWORD,leftist
 DOMAIN-KEYWORD,leftism
 DOMAIN-KEYWORD,marxist
@@ -95,3 +77,15 @@ DOMAIN-SUFFIX,leftvoice.org
 DOMAIN-SUFFIX,peoplesworld.org
 DOMAIN-SUFFIX,socialistworld.net
 DOMAIN-SUFFIX,internationalviewpoint.org
+
+# 3 - Deepseek
+DOMAIN-SUFFIX,gator.volces.com
+DOMAIN-SUFFIX,apmplus.volces.com
+DOMAIN-SUFFIX,guh50jw4-ios.mobile-messenger.intercom.com
+
+# 5 - Toolz
+DOMAIN-SUFFIX,metrics.icloud.com
+DOMAIN-SUFFIX,browser.sentry-cdn.com
+DOMAIN-SUFFIX,app.getsentry.com
+DOMAIN-SUFFIX,appmetrica.yandex.ru
+DOMAIN-SUFFIX,adfstat.yandex.ru
