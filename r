@@ -1,4 +1,4 @@
-# 40
+# 34
 
 # 1 - HTTP/3
 AND,((PROTOCOL,UDP),(DST-PORT,443))
@@ -31,13 +31,7 @@ IP-CIDR,2a02:f98:0:50:2ff:23ff:fe42:1b23/128,no-resolve
 IP-CIDR,2a03:2880:f084:1:face:b00c:0:24d9/128,no-resolve
 IP-CIDR,2a03:b0c0:0:1010::a2:a001/128,no-resolve
 
-# 6
-PROCESS-NAME,et
-PROCESS-NAME,wps
-PROCESS-NAME,wpp
-PROCESS-NAME,wpsoffice
-PROCESS-NAME,wpscloudsvr
-PROCESS-NAME,promecefpluginhost
+# 0
 
 # 3 - Deepseek
 DOMAIN-SUFFIX,gator.volces.com
