@@ -48,7 +48,7 @@
 
           * 導航至：`電腦\HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Power\PowerSettings\2a737441-1930-4402-8d77-b2bebba308a3\48e6b7a6-50f5-4782-a5d4-53bb8f07e226`。
 
-          * 建立或修改一個 **DWORD (32 位元) 值**，將 `Attributes` 設定為 `2`。
+          * 建立或修改一個 **DWORD (32 位元) 值** `Attributes` 設定為 `2`。
 
   * **Windows 離開模式**
 
