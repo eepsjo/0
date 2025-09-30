@@ -1,189 +1,213 @@
 ### Windows
 
-#### 磁碟機與檔案總管
+#### “文件资源管理器”相关
 
-  * **隱藏「本機」中的磁碟機代號**
+* **隐藏“此电脑”中的驱动器盘符**
 
-      * **步驟：**
+  * **步骤：**
 
-          * 開啟登錄編輯程式 (`Win+R` 輸入 `regedit`)。
+    * 打开注册表编辑器 (`Win+R` 输入 `regedit`)。
 
-          * 導航至：`電腦\HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\Explorer`。
+    * 导航至：`计算机\HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\Explorer`。
 
-          * 建立或修改一個 **DWORD (32 位元) 值**，將其**賦值為十進位 `04`**，這表示隱藏 `D:\`、`F:\` 和 `G:\` 磁碟機。
+    * 创建或修改一个 **DWORD (32 位) 值** `NoDrives`，将其**赋值为一个十进制数字**。
 
-      * **說明：**
+  * **原理：**
 
-          * 每個磁碟機代號對應一個二進位位元：A: `1 (2^0)`、B: `2 (2^1)`、C: `4 (2^2)`，以此類推。
+    * 每个盘符对应一个二进位位：A: `1 (2^0)`、B: `2 (2^1)`、C: `4 (2^2)`，以此类推。
 
-          * 若要隱藏多個磁碟機，請將其對應的二進位數字相加。例如：隱藏 D:(`8`) + F:(`32`) + G:(`64`) = `104`。
+    * 隐藏多个盘符，将它们对应的十进制数字相加即可。如：隐藏 D:(`8`) + F:(`32`) + G:(`64`) = **十进制 `104`**。
 
-  * **移除「檔案總管」中的 3D 物件資料夾**
+* **移除“文件资源管理器”中的 3D 对象文件夹**
 
-      * **步驟：**
+  * **步骤：**
 
-          * 開啟登錄編輯程式 (`Win+R` 輸入 `regedit`)。
+    * 打开注册表编辑器 (`Win+R` 输入 `regedit`)。
 
-          * 導航至：`電腦\HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\MyComputer\NameSpace`。
+    * 导航至：`计算机\HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\MyComputer\NameSpace`。
 
-          * **刪除**資料夾：`{0DB7E03F-FC29-4DC6-9020-FF41B59E513A}`。
+    * **删除**子项：`{0DB7E03F-FC29-4DC6-9020-FF41B59E513A}`。
 
-          * 重新啟動檔案總管後生效。
+    * 重新启动文件资源管理器后生效。
 
-  * **快速開啟已安裝應用程式資料夾**
+* **已安装应用程序文件夹**
 
-      * **步驟：**
+  * **步骤：**
 
-          * 開啟執行視窗 (`Win+R`)。
+    * 打开运行窗口 (`Win+R`)。
 
-          * 輸入 `shell:AppsFolder`。
+    * 输入 `shell:AppsFolder`。
 
-#### 電源管理與效能
+#### 电源 & 睡眠
 
-  * **進階電源選項中的 USB 選擇性暫停**
+* **高级电源选项中的【USB 选择性暂停】**
 
-      * **步驟：**
+  * **步骤：**
 
-          * 開啟登錄編輯程式 (`Win+R` 輸入 `regedit`)。
+    * 打开注册表编辑器 (`Win+R` 输入 `regedit`)。
 
-          * 導航至：`電腦\HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Power\PowerSettings\2a737441-1930-4402-8d77-b2bebba308a3\48e6b7a6-50f5-4782-a5d4-53bb8f07e226`。
+    * 导航至：`计算机\HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Power\PowerSettings\2a737441-...\48e6b7a6-...`。
 
-          * 建立或修改一個 **DWORD (32 位元) 值** `Attributes` 設定為 `2`。
+    * 创建或修改一个 **DWORD (32 位) 值** `Attributes`，将其值设置为 **2**。
 
-  * **Windows 離開模式**
+  * **说明：**
+    
+    * 将 `Attributes` 设为 `2` 会使选项显示在“高级电源选项”界面中，具体设置还是需要去这里做。
+    
+    * S0 睡眠模式下该项为隐藏选项，下同。
+    
+    * 需要注意，`...\PowerSettings\2a7...` 后的 GUID 在不同的电脑或者不同的系统版本中可能不完全相同，但有相似之处。
 
-      * **步驟：**
+* **高级电源选项中的【待机状态下的网络连接性】**
 
-          * 開啟登錄編輯程式 (`Win+R` 輸入 `regedit`)。
+  * **步骤：**
 
-          * 導航至：`電腦\HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Session Manager\Power`。
+    * 打开注册表编辑器 (`Win+R` 输入 `regedit`)。
 
-          * 建立或修改一個 **DWORD (32 位元) 值**，將 `AwayModeEnabled` 設定為 `0`。
+    * 导航至：`计算机\HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Power\PowerSettings\f15576e8-...`。
 
-  * **生成電池使用報告**
+    * 创建或修改一个 **DWORD (32 位) 值** `Attributes`，将其值设置为 **2**。
 
-      * **步驟：**
+  * **说明：** **此项为 S0 模式下电脑接入电源后能否深度睡眠的关键！**
 
-          * 開啟命令提示字元或 PowerShell。
+* **高级电源选项中的【允许使用唤醒计时器】**
 
-          * 執行以下命令：
+  * **步骤：**
 
-        <!-- end list -->
+    * 打开注册表编辑器 (`Win+R` 输入 `regedit`)。
 
-        ```
-        powercfg /batteryreport /output "<檔案路徑>\<檔案名稱>.html"
-        ```
+    * 导航至：`计算机\HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Power\PowerSettings\238c9fa8-...\bd3b718a-...`。
 
-#### 介面與功能
+    * 创建或修改一个 **DWORD (32 位) 值** `Attributes`，将其值设置为 **2**。
 
-  * **Windows 10 工作列透明化**
+  * **说明：** 控制 Windows 维护任务是否能在睡眠中唤醒系统。
 
-      * **步驟：**
+* **禁用离开模式 (Away Mode)**
 
-          * 開啟登錄編輯程式 (`Win+R` 輸入 `regedit`)。
+  * **步骤：**
 
-          * 導航至：`電腦\HKEY_CURRENT_USER\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\Advanced`。
+    * 打开注册表编辑器 (`Win+R` 输入 `regedit`)。
 
-          * 建立或修改一個 **DWORD (32 位元) 值**，將 `TaskbarAcrylicOpacity` 設定為 `0`。
+    * 导航至：`计算机\HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Session Manager\Power`。
 
-          * **注意：** 如果沒有此項，請手動新增。建議搭配深色工作列使用。
+    * 创建或修改一个 **DWORD (32 位) 值**，将 `AwayModeEnabled` 设置为 **0**。
 
-  * **停用工作管理員**
+  * **说明：** 禁用离开模式的全局设置。若要在高级电源选项中显示该策略，请将 `计算机\HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Power\PowerSettings\238c9fa8-...\94ac6d29-...` 的策略的 `Attributes` 设为 **2**。
 
-      * **步驟：**
+* **生成电池使用报告**
 
-          * 開啟登錄編輯程式 (`Win+R` 輸入 `regedit`)。
+  * **步骤：**
 
-          * 導航至：`電腦\HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Policies`。
+    * 打开命令提示符或 PowerShell。
 
-          * 建立或修改一個 **DWORD (32 位元) 值**，將 `DisableTaskMgr` 設定為 `1`。
+    * 执行以下命令：
 
-  * **移除 Windows 工作列搜尋中的推廣內容 (廣告)**
+    ```
+    powercfg /batteryreport /output "<文件路径>\<文件名>.html"
+    ```
 
-      * **步驟：**
+#### 界面与功能
 
-          * 開啟登錄編輯程式 (`Win+R` 輸入 `regedit`)。
+* **Windows 10 任务栏透明化**
 
-          * 導航至：`電腦\HKEY_CURRENT_USER\SOFTWARE\Policies\Microsoft\Windows\explorer`。
+  * **步骤：**
 
-          * 建立或修改一個 **DWORD (32 位元) 值**，將 `DisableSearchBoxSuggestions` 設定為 `1`。
+    * 打开注册表编辑器 (`Win+R` 输入 `regedit`)。
 
-          * 重新啟動檔案總管後生效。
+    * 导航至：`计算机\HKEY_CURRENT_USER\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\Advanced`。
 
-  * **Windows 11 「小工具」解除安裝/重新安裝**
+    * 创建或修改一个 **DWORD (32 位) 值**，将 `TaskbarAcrylicOpacity` 设置为 **0**。
 
-      * **解除安裝：**
+    * **注意：** 如果没有此项，请手动新增。建议搭配深色任务栏使用。
 
-        ```
-        winget uninstall MicrosoftWindows.Client.WebExperience_cw5n1h2txyewy
-        ```
+* **禁用任务管理器**
 
-      * **重新安裝：**
+  * **步骤：**
 
-        ```
-        winget install 9MSSGKG348SP
-        ```
+    * 打开注册表编辑器 (`Win+R` 输入 `regedit`)。
 
-#### 軟體問題
+    * 导航至：`计算机\HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Policies\System`。
 
-  * **解決盜版 Adobe Premiere Pro 2019 啟動時崩潰問題**
+    * 建立或修改一个 **DWORD (32 位) 值**，将 `DisableTaskMgr` 设置为 **1**。
 
-      * **步驟：**
+* **移除 Windows 任务栏搜索中的推广内容 (广告)**
 
-          * 將檔案替換至 `*\Adobe\Adobe Premiere Pro CC 2019\` 目錄。
+  * **步骤：**
 
-          * 檔案：`ZXPSignLib-minimal.dll`
+    * 打开注册表编辑器 (`Win+R` 输入 `regedit`)。
 
-          * 下載連結：[https://www.ijinshan.com/filerepair/ZXPSignLib-minimal.dll.shtml](https://www.ijinshan.com/filerepair/ZXPSignLib-minimal.dll.shtml)
+    * 导航至：`计算机\HKEY_CURRENT_USER\SOFTWARE\Policies\Microsoft\Windows\explorer`。
 
-### Linux 設定
+    * 建立或修改一个 **DWORD (32 位) 值**，将 `DisableSearchBoxSuggestions` 设置为 **1**。
 
-#### 語言與區域設定
+    * 重新启动文件资源管理器后生效。
 
-  * **`~/.pam_environment`**
+* **Windows 11 “小组件”卸载/重新安装**
 
-      * **語言 (最低優先順序)：**
-        `LANG=zh_TW.UTF-8`
+  * **卸载：**
 
-      * **應用程式語言 (優先順序由左至右)：**
-        `LANGUAGE=zh_TW:zh_CN:en_US`
+    ```
+    winget uninstall MicrosoftWindows.Client.WebExperience_cw5n1h2txyewy
+    ```
 
-      * **區域格式：簡中 (覆蓋 LANG)：**
-        `LC_TIME=zh_CN.UTF-8`
-        `LC_NUMERIC=zh_CN.UTF-8`
-        `LC_MONETARY=zh_CN.UTF-8`
-        `LC_PAPER=zh_CN.UTF-8`
-        `LC_MEASUREMENT=zh_CN.UTF-8`
+  * **重新安装：**
 
-      * **其他設定：繁中：**
-        `LC_COLLATE=zh_TW.UTF-8`
-        `LC_NAME=zh_TW.UTF-8`
-        `LC_ADDRESS=zh_TW.UTF-8`
-        `LC_TELEPHONE=zh_TW.UTF-8`
-        `LC_IDENTIFICATION=zh_TW.UTF-8`
-        `LC_MESSAGES=zh_TW.UTF-8`
+    ```
+    winget install 9MSSGKG348SP
+    ```
 
-  * **`/etc/default/locale`**
+---
 
-      * `LC_CTYPE=en_US.UTF-8`
+### Linux
+
+#### 语言与区域设置
+
+* **`~/.pam_environment`**
+
+  * **语言 (最低优先级)：**
+    `LANG=zh_TW.UTF-8`
+
+  * **应用程序语言 (优先级由左至右)：**
+    `LANGUAGE=zh_TW:zh_CN:en_US`
+
+  * **区域格式：简中 (覆盖 LANG)：**
+    `LC_TIME=zh_CN.UTF-8`
+    `LC_NUMERIC=zh_CN.UTF-8`
+    `LC_MONETARY=zh_CN.UTF-8`
+    `LC_PAPER=zh_CN.UTF-8`
+    `LC_MEASUREMENT=zh_CN.UTF-8`
+
+  * **其他配置：繁中：**
+    `LC_COLLATE=zh_TW.UTF-8`
+    `LC_NAME=zh_TW.UTF-8`
+    `LC_ADDRESS=zh_TW.UTF-8`
+    `LC_TELEPHONE=zh_TW.UTF-8`
+    `LC_IDENTIFICATION=zh_TW.UTF-8`
+    `LC_MESSAGES=zh_TW.UTF-8`
+
+* **`/etc/default/locale`**
+
+  * `LC_CTYPE=en_US.UTF-8`
 
 #### 日期格式
 
-  * **日期選單格式化：**
-    `MM / dd EEE HH : mm`
+* **日期菜单格式化：**
+  `MM / dd EEE HH : mm`
+
+---
 
 ### Minecraft
 
-  * **Java 虛擬機 (JVM) 參數：**
+* **Java 虚拟机 (JVM) 参数：**
 
-      * `-XX:+UseG1GC`
+  * `-XX:+UseG1GC`
 
-      * `-XX:-UseAdaptiveSizePolicy`
+  * `-XX:-UseAdaptiveSizePolicy`
 
-      * `-XX:-OmitStackTraceInFastThrow`
+  * `-XX:-OmitStackTraceInFastThrow`
 
-      * `-Dfml.ignoreInvalidMinecraftCertificates=True`
+  * `-Dfml.ignoreInvalidMinecraftCertificates=True`
 
-      * `-Dfml.ignorePatchDiscrepancies=True`
+  * `-Dfml.ignorePatchDiscrepancies=True`
 
-      * `-Dlog4j2.formatMsgNoLookups=true`
+  * `-Dlog4j2.formatMsgNoLookups=true`
