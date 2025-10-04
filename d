@@ -20,9 +20,11 @@ IP-CIDR,fc00::/7,no-resolve
 IP-CIDR,fe80::/10,no-resolve
 IP-CIDR,ff00::/8,no-resolve
 
-# 3 - Microsoft NCSI
+# 2 - NCSI
 DOMAIN-SUFFIX,msftncsi.com
 DOMAIN-SUFFIX,msftconnecttest.com
+
+# 1 - NTP
 DOMAIN,time.windows.com
   
 # 3
@@ -31,12 +33,12 @@ DOMAIN-SUFFIX,iios.club
 DOMAIN-SUFFIX,njdiancool.com
 
 # 6 - Games
+DOMAIN-SUFFIX,maj-soul.com
+DOMAIN-SUFFIX,daai.fun
 DOMAIN-SUFFIX,openfrp.net
 DOMAIN-SUFFIX,naids.com
 DOMAIN,mc.bsdayo.moe
 DOMAIN-SUFFIX,2b2t.cc
-DOMAIN-SUFFIX,maj-soul.com
-DOMAIN-SUFFIX,daai.fun
 
 # 3 - 进行一个勤的出
 DOMAIN-SUFFIX,wahlap.net

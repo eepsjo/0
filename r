@@ -1,7 +1,8 @@
 # 34
 
-# 1 - HTTP/3
+# 0.5 - QUIC Shadowrocket
 AND,((PROTOCOL,UDP),(DST-PORT,443))
+# 0.5 - QUIC mihomo
 AND,((NETWORK,UDP),(DST-PORT,443))
 
 # 25 - STUN

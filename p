@@ -1,18 +1,19 @@
-# 29
+# 28
 
-# 9
+# 4 - Rules Maintenance
 DOMAIN-SUFFIX,githubusercontent.com
 DOMAIN-SUFFIX,whatshub.top
 DOMAIN-SUFFIX,anti-ad.net
-DOMAIN-SUFFIX,claw.cloud
 DOMAIN-SUFFIX,ping0.cc
+
+# 4
+DOMAIN-SUFFIX,claw.cloud
 DOMAIN-SUFFIX,waifu2x.net
 DOMAIN-SUFFIX,saucenao.com
 DOMAIN-SUFFIX,ascii2d.net
-DOMAIN-SUFFIX,kungal.com
 
 # 4 - Games
-DOMAIN-SUFFIX,zerotier.com
+DOMAIN-SUFFIX,kungal.com
 DOMAIN-SUFFIX,minecraft.net
 DOMAIN-SUFFIX,cubecraft.net
 DOMAIN-SUFFIX,hypixel.net
