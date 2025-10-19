@@ -1,13 +1,14 @@
-# 28
+# 29
 
-# 4 - Rules Maintenance
+# 3 - Rules Maintenance
 DOMAIN-SUFFIX,githubusercontent.com
 DOMAIN-SUFFIX,whatshub.top
 DOMAIN-SUFFIX,anti-ad.net
-DOMAIN-SUFFIX,ping0.cc
 
-# 4
+# 6
 DOMAIN-SUFFIX,claw.cloud
+DOMAIN-SUFFIX,hysteria.network
+DOMAIN-SUFFIX,ping0.cc
 DOMAIN-SUFFIX,waifu2x.net
 DOMAIN-SUFFIX,saucenao.com
 DOMAIN-SUFFIX,ascii2d.net
