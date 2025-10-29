@@ -1,4 +1,4 @@
-# 29
+# 30
 
 # 3 - Rules Maintenance
 DOMAIN-SUFFIX,githubusercontent.com
@@ -19,7 +19,7 @@ DOMAIN-SUFFIX,minecraft.net
 DOMAIN-SUFFIX,cubecraft.net
 DOMAIN-SUFFIX,hypixel.net
 
-# 8 - NSFW
+# 9 - NSFW
 DOMAIN-SUFFIX,asmr.one
 DOMAIN-SUFFIX,kiko-play-niptan.one
 DOMAIN-WILDCARD,api.asmr-?00.com
@@ -28,6 +28,7 @@ DOMAIN-SUFFIX,diercun.com
 DOMAIN-KEYWORD,18comic
 DOMAIN-SUFFIX,hembed.com
 DOMAIN-KEYWORD,iwara
+DOMAIN-SUFFIX,8se.me
 
 # 8 - DeepSeek
 DOMAIN-SUFFIX,deepseek.com
