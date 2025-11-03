@@ -1,7 +1,6 @@
-# 31
+# 30
 
-# 3 - Rules Maintenance
-DOMAIN,raw.githubusercontent.com
+# 2 - Updates
 DOMAIN,whatshub.top
 DOMAIN,anti-ad.net
 
