@@ -1,9 +1,9 @@
 # 31
 
 # 3 - Rules Maintenance
-DOMAIN-SUFFIX,githubusercontent.com
-DOMAIN-SUFFIX,whatshub.top
-DOMAIN-SUFFIX,anti-ad.net
+DOMAIN,raw.githubusercontent.com
+DOMAIN,whatshub.top
+DOMAIN,anti-ad.net
 
 # 7
 DOMAIN-SUFFIX,claw.cloud
