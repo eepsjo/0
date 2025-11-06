@@ -6,6 +6,7 @@ DOMAIN,anti-ad.net
 
 # 8
 DOMAIN-SUFFIX,claw.cloud
+DOMAIN-SUFFIX,clawcloudrun.com
 DOMAIN-SUFFIX,dpdns.org
 DOMAIN-SUFFIX,hysteria.network
 DOMAIN-SUFFIX,ping0.cc
