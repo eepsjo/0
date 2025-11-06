@@ -1,19 +1,19 @@
 # 32
 
-# 2 - Updates
+# 5 - Updates
 DOMAIN,whatshub.top
 DOMAIN,anti-ad.net
-
-# 9
 DOMAIN-SUFFIX,claw.cloud
 DOMAIN-SUFFIX,clawcloudrun.com
 DOMAIN-SUFFIX,dpdns.org
-DOMAIN-SUFFIX,hysteria.network
-DOMAIN-SUFFIX,ping0.cc
+
+# 6
 DOMAIN-SUFFIX,waifu2x.net
 DOMAIN-SUFFIX,saucenao.com
 DOMAIN-SUFFIX,ascii2d.net
 DOMAIN-SUFFIX,xvideoget.com
+DOMAIN-SUFFIX,hysteria.network
+DOMAIN-SUFFIX,ping0.cc
 
 # 4 - Games
 DOMAIN-SUFFIX,kungal.com
