@@ -1,10 +1,10 @@
-# 31
+# 32
 
 # 2 - Updates
 DOMAIN,whatshub.top
 DOMAIN,anti-ad.net
 
-# 8
+# 9
 DOMAIN-SUFFIX,claw.cloud
 DOMAIN-SUFFIX,clawcloudrun.com
 DOMAIN-SUFFIX,dpdns.org
