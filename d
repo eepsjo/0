@@ -1,4 +1,4 @@
-# 32
+# 31
 
 # 18 - Reserved IPs
 IP-CIDR,0.0.0.0/8,no-resolve
@@ -27,8 +27,7 @@ DOMAIN-SUFFIX,msftconnecttest.com
 # 1 - NTP
 DOMAIN,time.windows.com
   
-# 2
-DOMAIN-KEYWORD,tv.0nanii
+# 1
 DOMAIN-SUFFIX,iios.club
 
 # 6 - Games

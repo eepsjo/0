@@ -1,11 +1,12 @@
-# 30
+# 31
 
 # 2 - Updates
 DOMAIN,whatshub.top
 DOMAIN,anti-ad.net
 
-# 7
+# 8
 DOMAIN-SUFFIX,claw.cloud
+DOMAIN-SUFFIX,dpdns.org
 DOMAIN-SUFFIX,hysteria.network
 DOMAIN-SUFFIX,ping0.cc
 DOMAIN-SUFFIX,waifu2x.net
