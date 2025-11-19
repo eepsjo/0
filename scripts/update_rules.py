@@ -82,17 +82,23 @@ def parse_yaml_payload(content):
 
                 final_rule = None
                 
+                # 检查 1: DOMAIN-SUFFIX 格式（以 +. 开头）
                 if item.startswith("+."):
-                    final_rule = f"DOMAIN-SUFFIX,{item[2:]}"
+                    # 去除开头的 '+.'
+                    final_rule = f"DOMAIN-SUFFIX,{item[2:]}" 
                 
+                # 检查 2: IP-CIDR 格式（包含斜杠 /）
                 elif '/' in item:
                     final_rule = f"IP-CIDR,{item}"
                 
+                # 检查 3: 泛域名格式（包含 *）
                 else:
                     if '*' in item:
                         final_rule = f"DOMAIN-WILDCARD,{item}"
-                    else:
-                        final_rule = f"DOMAIN,{item}"
+
+                # 检查 4: 其他均为普通域名
+                else:
+                    final_rule = f"DOMAIN,{item}"
                     
                 # 统一检查和追加逻辑
                 if final_rule is not None:
@@ -186,9 +192,8 @@ def process_files():
                             # 规则内容，默认为原始行
                             final_content = line
                             
-                            # 根据新逻辑处理 DOMAIN-SUFFIX 的内容
+                            # 根据 DOMAIN-SUFFIX 逻辑处理内容
                             if auto_prefix == "DOMAIN-SUFFIX" and line.startswith('.'):
-                                # 如果判定为 DOMAIN-SUFFIX 且以 '.' 开头，则去除 '.'
                                 final_content = line[1:]
 
                             if auto_prefix == "IP-CIDR":
