@@ -4,7 +4,6 @@ import os
 import re
 
 # ================= 配置区域 =================
-# 在这里添加/删除规则来源
 # target: 生成的目标文件
 # base: 手动维护的基础文件
 # sources: 外部规则来源
@@ -16,12 +15,13 @@ CONFIG = [
             {
                 "name": "PCDN @ privacy-protection-tools/anti-AD",
                 "url": "https://raw.githubusercontent.com/privacy-protection-tools/anti-AD/refs/heads/master/discretion/pcdn.txt",
+                # "prefix": "DOMAIN-SUFFIX", # 默认值 DOMAIN-SUFFIX
                 "type": "text"
             },
             # {
-            #    "name": "Example YAML Source",
-            #    "url": "https://example.com/rule.yaml",
-            #    "type": "yaml"
+            #     "name": "YAML Example @ example/repo",
+            #     "url": "https://example.com/example.yaml",
+            #     "type": "yaml"
             # },
         ]
     },
@@ -50,13 +50,14 @@ def get_content(url):
         return None
 
 def parse_yaml_payload(content):
-    """解析 YAML payload 并转换为 text 格式 (DOMAIN-SUFFIX)"""
+    # 解析 YAML payload 并转换为 text 格式 (DOMAIN-SUFFIX/DOMAIN)
     rules = []
     try:
         data = yaml.safe_load(content)
         if 'payload' in data:
             for item in data['payload']:
-                item = item.strip("'\"") # 去除引号
+                if not isinstance(item, str): continue
+                item = item.strip("'\"")
                 # 转换逻辑：+.abc.com -> DOMAIN-SUFFIX,abc.com
                 if item.startswith("+."):
                     rules.append(f"DOMAIN-SUFFIX,{item[2:]}")
@@ -90,7 +91,7 @@ def process_files():
             match = re.search(r'#\s*(\d+)', base_lines[0])
             if match:
                 base_count = int(match.group(1))
-                base_content_no_header = base_lines[1:] # 保留除第一行外的内容
+                base_content_no_header = base_lines[1:] 
             else:
                 base_content_no_header = base_lines
         else:
@@ -108,6 +109,9 @@ def process_files():
 
             valid_rules = []
             
+            # 确定 text 规则的前缀，如果未指定则默认使用 DOMAIN-SUFFIX
+            rule_prefix = source.get('prefix', 'DOMAIN-SUFFIX').upper()
+            
             # 处理 YAML 格式
             if source.get('type') == 'yaml':
                 valid_rules = parse_yaml_payload(raw_text)
@@ -119,7 +123,12 @@ def process_files():
                     line = line.strip()
                     # 忽略空行和注释
                     if line and not line.startswith("#"):
-                        valid_rules.append(line)
+                        # 检查规则是否已包含前缀
+                        if re.match(r'^(DOMAIN|DOMAIN-SUFFIX|DOMAIN-KEYWORD|IP-CIDR)', line, re.IGNORECASE):
+                            valid_rules.append(line) # 如果已包含，则原样保留
+                        else:
+                            # 否则，添加 CONFIG 中指定的默认前缀
+                            valid_rules.append(f"{rule_prefix},{line}")
 
             count = len(valid_rules)
             total_new_rules += count
