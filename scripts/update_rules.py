@@ -17,6 +17,11 @@ CONFIG = [
                 "url": "https://raw.githubusercontent.com/privacy-protection-tools/anti-AD/refs/heads/master/discretion/pcdn.txt",
                 "type": "text",
             },
+            {
+                "name": "Encrypted DNS servers @ privacy-protection-tools/anti-AD",
+                "url": "https://raw.githubusercontent.com/privacy-protection-tools/anti-AD/refs/heads/master/discretion/dns.txt",
+                "type": "text",
+            },
             # {
             #     "name": "YAML Example @ example/repo",
             #     "url": "https://example.com/example.yaml", 
