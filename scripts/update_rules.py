@@ -52,6 +52,8 @@ def determine_text_prefix(line: str) -> str:
     # 根据裸规则内容自动判断最合适的前缀类型
     line = line.strip()
     
+    if not line: return ""
+
     # 1. IP-CIDR 判定（包含 '/'）
     if '/' in line:
         return "IP-CIDR"
@@ -60,9 +62,13 @@ def determine_text_prefix(line: str) -> str:
     elif '*' in line:
         return "DOMAIN-WILDCARD"
 
-    # 3. 默认域名判定
-    else:
+    # 3. DOMAIN-SUFFIX 判定（以 '.' 开头）
+    elif line.startswith('.'):
         return "DOMAIN-SUFFIX"
+    
+    # 4. 普通 DOMAIN 判定（其余均为普通域名）
+    else:
+        return "DOMAIN"
 
 def parse_yaml_payload(content):
     # 解析 YAML payload 并转换为 text 格式
@@ -177,12 +183,20 @@ def process_files():
                         else:
                             auto_prefix = determine_text_prefix(line)
 
+                            # 规则内容，默认为原始行
+                            final_content = line
+                            
+                            # 根据新逻辑处理 DOMAIN-SUFFIX 的内容
+                            if auto_prefix == "DOMAIN-SUFFIX" and line.startswith('.'):
+                                # 如果判定为 DOMAIN-SUFFIX 且以 '.' 开头，则去除 '.'
+                                final_content = line[1:]
+
                             if auto_prefix == "IP-CIDR":
                                 # 如果是 IP-CIDR，追加 ,no-resolve
                                 valid_rules.append(f"IP-CIDR,{line},no-resolve")
-                            else:
-                                # 否则，使用自动判定的前缀
-                                valid_rules.append(f"{auto_prefix},{line}")
+                            elif auto_prefix:
+                                # 否则，使用自动判定的前缀和处理后的内容 (final_content)
+                                valid_rules.append(f"{auto_prefix},{final_content}")
 
             count = len(valid_rules)
             total_new_rules += count
