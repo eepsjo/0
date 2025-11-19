@@ -14,7 +14,7 @@ CONFIG = [
         "base": "base/r",
         "sources": [
             {
-                "name": "Anti-AD PCDN",
+                "name": "PCDN @ privacy-protection-tools/anti-AD",
                 "url": "https://raw.githubusercontent.com/privacy-protection-tools/anti-AD/refs/heads/master/discretion/pcdn.txt",
                 "type": "text"
             },
@@ -138,7 +138,7 @@ def process_files():
             f.writelines(base_content_no_header)
             # 写入外部规则
             if external_rules_content:
-                f.write("\n\n") # 与手写规则隔开一点距离
+                f.write("\n")
                 f.write("\n".join(external_rules_content))
                 f.write("\n")
 
