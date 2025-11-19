@@ -95,10 +95,9 @@ def parse_yaml_payload(content):
                 else:
                     if '*' in item:
                         final_rule = f"DOMAIN-WILDCARD,{item}"
-
-                # 检查 4: 其他均为普通域名
-                else:
-                    final_rule = f"DOMAIN,{item}"
+                    # 检查 4: 其他均为普通域名
+                    else:
+                        final_rule = f"DOMAIN,{item}"
                     
                 # 统一检查和追加逻辑
                 if final_rule is not None:
