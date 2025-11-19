@@ -1,4 +1,4 @@
-# 34
+# 64
 
 # 0.5 - QUIC Shadowrocket
 AND,((PROTOCOL,UDP),(DST-PORT,443))
@@ -45,3 +45,36 @@ DOMAIN-SUFFIX,browser.sentry-cdn.com
 DOMAIN-SUFFIX,app.getsentry.com
 DOMAIN-SUFFIX,appmetrica.yandex.ru
 DOMAIN-SUFFIX,adfstat.yandex.ru
+
+
+# 30 - Anti-AD PCDN
+bsccdn.net
+dyp2p-ali.douyucdn.cn
+dyp2p-hw.douyucdn.cn
+ietheivaicai.com
+kuiniuca.com
+nexusedgeio.com
+onethingpcs.com
+p2p-ali.douyucdn.cn
+p2p.huya.com
+p2p.qq.com
+p2pchunk-hw.douyucdn.cn
+p2pchunk-table.douyucdn.cn
+p2pchunk-ws.douyucdn.cn
+p2perrorlog.douyucdn.cn
+p2plive-ali.douyucdn.cn
+p2plive-ws.douyucdn.cn
+p2plog.douyucdn.cn
+p2ptun.qq.com
+p2pupdate.gamedl.qq.com
+p2pupgrade.gamedl.qq.com
+p2pvod-ws.douyucdn.cn
+pcdn.yximgs.com
+pkoplink.com
+saxysec.com
+stun.douyucdn.cn
+stun.hitv.com
+stun1.douyucdn.cn
+szbdyd.com
+uhabo.com
+xycdn.com
