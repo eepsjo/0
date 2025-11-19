@@ -46,8 +46,7 @@ DOMAIN-SUFFIX,app.getsentry.com
 DOMAIN-SUFFIX,appmetrica.yandex.ru
 DOMAIN-SUFFIX,adfstat.yandex.ru
 
-
-# 30 - Anti-AD PCDN
+# 30 - PCDN @ privacy-protection-tools/anti-AD
 bsccdn.net
 dyp2p-ali.douyucdn.cn
 dyp2p-hw.douyucdn.cn
