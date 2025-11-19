@@ -10,8 +10,8 @@ import re
 # sources: 外部规则来源
 CONFIG = [
     {
-        "target": "0/r",
-        "base": "0/base/r",
+        "target": "r",
+        "base": "base/r",
         "sources": [
             {
                 "name": "Anti-AD PCDN",
@@ -26,14 +26,14 @@ CONFIG = [
         ]
     },
     {
-        "target": "0/d",
-        "base": "0/base/d",
+        "target": "d",
+        "base": "base/d",
         "sources": [
         ]
     },
     {
-        "target": "0/p",
-        "base": "0/base/p",
+        "target": "p",
+        "base": "base/p",
         "sources": [
         ]
     }
