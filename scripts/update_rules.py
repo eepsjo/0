@@ -15,12 +15,11 @@ CONFIG = [
             {
                 "name": "PCDN @ privacy-protection-tools/anti-AD",
                 "url": "https://raw.githubusercontent.com/privacy-protection-tools/anti-AD/refs/heads/master/discretion/pcdn.txt",
-                # "prefix": "DOMAIN-SUFFIX", # 默认值 DOMAIN-SUFFIX
-                "type": "text"
+                "type": "text",
             },
             # {
             #     "name": "YAML Example @ example/repo",
-            #     "url": "https://example.com/example.yaml",
+            #     "url": "https://example.com/example.yaml", 
             #     "type": "yaml"
             # },
         ]
@@ -49,8 +48,24 @@ def get_content(url):
         print(f"Error downloading {url}: {e}")
         return None
 
+def determine_text_prefix(line: str) -> str:
+    # 根据裸规则内容自动判断最合适的前缀类型
+    line = line.strip()
+    
+    # 1. IP-CIDR 判定（包含 '/'）
+    if '/' in line:
+        return "IP-CIDR"
+    
+    # 2. 泛域名判定（包含 '*'）
+    elif '*' in line:
+        return "DOMAIN-WILDCARD"
+
+    # 3. 默认域名判定
+    else:
+        return "DOMAIN-SUFFIX"
+
 def parse_yaml_payload(content):
-    # 解析 YAML payload 并转换为 text 格式 (DOMAIN-SUFFIX/DOMAIN)
+    # 解析 YAML payload 并转换为 text 格式
     rules = []
     try:
         data = yaml.safe_load(content)
@@ -58,12 +73,33 @@ def parse_yaml_payload(content):
             for item in data['payload']:
                 if not isinstance(item, str): continue
                 item = item.strip("'\"")
-                # 转换逻辑：+.abc.com -> DOMAIN-SUFFIX,abc.com
+
+                final_rule = None
+                
                 if item.startswith("+."):
-                    rules.append(f"DOMAIN-SUFFIX,{item[2:]}")
+                    final_rule = f"DOMAIN-SUFFIX,{item[2:]}"
+                
+                elif '/' in item:
+                    final_rule = f"IP-CIDR,{item}"
+                
                 else:
-                    # 其他情况默认按原样或视作 DOMAIN
-                    rules.append(f"DOMAIN,{item}")
+                    if '*' in item:
+                        final_rule = f"DOMAIN-WILDCARD,{item}"
+                    else:
+                        final_rule = f"DOMAIN,{item}"
+                    
+                # 统一检查和追加逻辑
+                if final_rule is not None:
+                    # 只有 IP-CIDR 规则才需要进行 no-resolve 的检查和追加
+                    if final_rule.startswith('IP-CIDR'):
+                        # 检查是否已经有 ,no-resolve，避免重复
+                        if not final_rule.endswith(',no-resolve'):
+                            rules.append(f"{final_rule},no-resolve")
+                        else:
+                            rules.append(final_rule)
+                    else:
+                        rules.append(final_rule)
+
     except Exception as e:
         print(f"YAML parsing error: {e}")
     return rules
@@ -86,12 +122,11 @@ def process_files():
         base_count = 0
         base_content_no_header = []
         
-        # 提取第一行的数字
         if base_lines and base_lines[0].startswith("#"):
             match = re.search(r'#\s*(\d+)', base_lines[0])
             if match:
                 base_count = int(match.group(1))
-                base_content_no_header = base_lines[1:] 
+                base_content_no_header = base_lines[1:]
             else:
                 base_content_no_header = base_lines
         else:
@@ -109,9 +144,6 @@ def process_files():
 
             valid_rules = []
             
-            # 确定 text 规则的前缀，如果未指定则默认使用 DOMAIN-SUFFIX
-            rule_prefix = source.get('prefix', 'DOMAIN-SUFFIX').upper()
-            
             # 处理 YAML 格式
             if source.get('type') == 'yaml':
                 valid_rules = parse_yaml_payload(raw_text)
@@ -123,12 +155,34 @@ def process_files():
                     line = line.strip()
                     # 忽略空行和注释
                     if line and not line.startswith("#"):
-                        # 检查规则是否已包含前缀
-                        if re.match(r'^(DOMAIN|DOMAIN-SUFFIX|DOMAIN-KEYWORD|IP-CIDR)', line, re.IGNORECASE):
-                            valid_rules.append(line) # 如果已包含，则原样保留
+                        
+                        # 1. 检查规则是否已包含前缀
+                        if re.match(r'^(DOMAIN|DOMAIN-SUFFIX|DOMAIN-KEYWORD|DOMAIN-WILDCARD|IP-CIDR|IP-CIDR6)', line, re.IGNORECASE):
+                            
+                            # 如果规则已包含 IP-CIDR 或 IP-CIDR6 前缀
+                            if re.match(r'^(IP-CIDR|IP-CIDR6)', line, re.IGNORECASE):
+                                # 步骤 1: 将 IP-CIDR6 规范化为 IP-CIDR
+                                normalized_line = re.sub(r'^IP-CIDR6', 'IP-CIDR', line, 1, re.IGNORECASE)
+                                
+                                # 步骤 2: 确保添加 ,no-resolve 
+                                if not normalized_line.endswith(',no-resolve'):
+                                    valid_rules.append(f"{normalized_line},no-resolve")
+                                else:
+                                    valid_rules.append(normalized_line)
+                            else:
+                                # 如果是 DOMAIN 等非 IP 前缀，原样保留
+                                valid_rules.append(line)
+                        
+                        # 2. 规则是裸域名/IP (不含前缀) -> 依赖 determine_text_prefix
                         else:
-                            # 否则，添加 CONFIG 中指定的默认前缀
-                            valid_rules.append(f"{rule_prefix},{line}")
+                            auto_prefix = determine_text_prefix(line)
+
+                            if auto_prefix == "IP-CIDR":
+                                # 如果是 IP-CIDR，追加 ,no-resolve
+                                valid_rules.append(f"IP-CIDR,{line},no-resolve")
+                            else:
+                                # 否则，使用自动判定的前缀
+                                valid_rules.append(f"{auto_prefix},{line}")
 
             count = len(valid_rules)
             total_new_rules += count
