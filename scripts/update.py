@@ -29,6 +29,11 @@ CONFIG = [
                 "url": "https://raw.githubusercontent.com/privacy-protection-tools/anti-AD/refs/heads/master/discretion/dns.txt",
                 "type": "text",
             },
+            {
+                "name": "STUN @ blackmatrix7/ios_rule_script",
+                "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/STUN/STUN.list",
+                "type": "text",
+            },
         ]
     },
     {
