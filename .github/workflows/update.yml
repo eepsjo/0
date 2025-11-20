@@ -1,4 +1,4 @@
-name: Update Rules Python
+name: Update Rules
 on:
   push:
     branches:
@@ -31,7 +31,7 @@ jobs:
 
     - name: Run update script
       run: |
-        python scripts/update_rules.py
+        python scripts/update.py
 
     - name: Commit and Push changes
       uses: stefanzweifel/git-auto-commit-action@v5
