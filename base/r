@@ -1,5 +1,7 @@
 # 30
 
+# 0
+
 # 0.5 - QUIC mihomo
 AND,((NETWORK,UDP),(DST-PORT,443))
 # 0.5 - QUIC Shadowrocket
@@ -29,8 +31,6 @@ IP-CIDR,2a01:4f9:4b:4c8f::2/128,no-resolve
 IP-CIDR,2a02:f98:0:50:2ff:23ff:fe42:1b23/128,no-resolve
 IP-CIDR,2a03:2880:f084:1:face:b00c:0:24d9/128,no-resolve
 IP-CIDR,2a03:b0c0:0:1010::a2:a001/128,no-resolve
-
-# 0
 
 # 1 - anti-AD
 DOMAIN,shouji.sogou.com
