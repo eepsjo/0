@@ -19,7 +19,6 @@ DOMAIN-SUFFIX,wahlap.net
 DOMAIN-SUFFIX,gzheyoukeji.com
 DOMAIN-SUFFIX,jingjianx.vip
 
-
 # 18 - Reserved IPs @ Loyalsoldier/clash-rules
 IP-CIDR,0.0.0.0/8,no-resolve
 IP-CIDR,10.0.0.0/8,no-resolve
