@@ -1,9 +1,5 @@
 # 38
 
-# 2 - Updates
-DOMAIN,whatshub.top
-DOMAIN,anti-ad.net
-
 # 11
 DOMAIN-SUFFIX,saucenao.com
 DOMAIN-SUFFIX,ascii2d.net
@@ -16,6 +12,10 @@ DOMAIN-SUFFIX,ping0.cc
 DOMAIN-SUFFIX,claw.cloud
 DOMAIN-SUFFIX,clawcloudrun.com
 DOMAIN-SUFFIX,dpdns.org
+
+# 2 - Updates
+DOMAIN,whatshub.top
+DOMAIN,anti-ad.net
 
 # 4 - Games
 DOMAIN-SUFFIX,kungal.com
