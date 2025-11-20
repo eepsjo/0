@@ -74,7 +74,7 @@ DOMAIN,szbdyd.com
 DOMAIN,uhabo.com
 DOMAIN,xycdn.com
 
-# 66 - DNS servers in GFW @ privacy-protection-tools/anti-AD
+# 66 - DNS in GFW @ privacy-protection-tools/anti-AD
 DOMAIN,api.yuedu.dns.iqiyi.com
 DOMAIN,apidns.kwd.inkuai.com
 DOMAIN,bj.vip.waf.dns.iqiyi.com
