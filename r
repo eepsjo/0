@@ -1,4 +1,4 @@
-# 131
+# 128
 
 # 0.5 - QUIC mihomo
 AND,((NETWORK,UDP),(DST-PORT,443))
@@ -35,17 +35,13 @@ IP-CIDR,2a03:b0c0:0:1010::a2:a001/128,no-resolve
 # 1
 DOMAIN,shouji.sogou.com
 
-# 3 - Deepseek
-DOMAIN-SUFFIX,gator.volces.com
-DOMAIN-SUFFIX,apmplus.volces.com
-DOMAIN-SUFFIX,guh50jw4-ios.mobile-messenger.intercom.com
-
 # 5 - ToolzAD
 DOMAIN-SUFFIX,metrics.icloud.com
 DOMAIN-SUFFIX,browser.sentry-cdn.com
 DOMAIN-SUFFIX,app.getsentry.com
 DOMAIN-SUFFIX,appmetrica.yandex.ru
 DOMAIN-SUFFIX,adfstat.yandex.ru
+
 
 # 30 - PCDN @ privacy-protection-tools/anti-AD
 DOMAIN,bsccdn.net
