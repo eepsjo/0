@@ -1,19 +1,21 @@
-# 32
+# 26
 
-# 5 - Updates
+# 2 - Updates
 DOMAIN,whatshub.top
 DOMAIN,anti-ad.net
-DOMAIN-SUFFIX,claw.cloud
-DOMAIN-SUFFIX,clawcloudrun.com
-DOMAIN-SUFFIX,dpdns.org
 
-# 6
-DOMAIN-SUFFIX,waifu2x.net
+# 11
+DOMAIN-SUFFIX,wdycenter.com
+DOMAIN-SUFFIX,wdyserver.com
 DOMAIN-SUFFIX,saucenao.com
 DOMAIN-SUFFIX,ascii2d.net
+DOMAIN-SUFFIX,waifu2x.net
 DOMAIN-SUFFIX,xvideoget.com
 DOMAIN-SUFFIX,hysteria.network
 DOMAIN-SUFFIX,ping0.cc
+DOMAIN-SUFFIX,claw.cloud
+DOMAIN-SUFFIX,clawcloudrun.com
+DOMAIN-SUFFIX,dpdns.org
 
 # 4 - Games
 DOMAIN-SUFFIX,kungal.com
@@ -31,13 +33,3 @@ DOMAIN-KEYWORD,18comic
 DOMAIN-SUFFIX,hembed.com
 DOMAIN-KEYWORD,iwara
 DOMAIN-SUFFIX,8se.me
-
-# 8 - DeepSeek
-DOMAIN-SUFFIX,deepseek.com
-DOMAIN-SUFFIX,volces.com
-DOMAIN-SUFFIX,fengkongcloud.cn
-DOMAIN-SUFFIX,fengkongcloud.com
-DOMAIN-SUFFIX,portal101.cn
-DOMAIN-SUFFIX,portal101.com
-DOMAIN-SUFFIX,intercom.com
-DOMAIN-SUFFIX,intercomcdn.com

@@ -4,19 +4,17 @@ import os
 import re
 import sys
 
-# ================= 严格模式 =================
 # 如果设置为 True，任何外部规则下载失败都将导致脚本中止
 STRICT_SOURCE_CHECK = True 
 # 获取脚本所在的目录，作为所有相对路径的基准
 SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
-# 仓库根目录，假设脚本在 scripts/
+# 根目录
 REPO_ROOT = os.path.abspath(os.path.join(SCRIPT_DIR, '..'))
 
-# ================= 配置区域 =================
-# target: 生成的目标文件 (位于仓库根目录)
-# base: 手动维护的基础文件 (位于 base/ 目录)
-# sources: 外部规则来源
 CONFIG = [
+# target: 生成的目标文件 (位于根目录)
+# base: 手动维护的基础文件 (位于 base/ 目录)
+# sources: 外部规则
     {
         "target": "r",
         "base": os.path.join(REPO_ROOT, "base", "r"),
@@ -31,17 +29,17 @@ CONFIG = [
                 "url": "https://raw.githubusercontent.com/privacy-protection-tools/anti-AD/refs/heads/master/discretion/dns.txt",
                 "type": "text",
             },
-            # {
-            #     "name": "YAML Example @ example/repo",
-            #     "url": "https://example.com/example.yaml", 
-            #     "type": "yaml"
-            # },
         ]
     },
     {
         "target": "d",
         "base": os.path.join(REPO_ROOT, "base", "d"),
         "sources": [
+            {
+                "name": "Reserved IPs @ Loyalsoldier/clash-rules",
+                "url": "https://raw.githubusercontent.com/Loyalsoldier/clash-rules/refs/heads/release/lancidr.txt",
+                "type": "yaml",
+            },
         ]
     },
     {
@@ -51,24 +49,23 @@ CONFIG = [
         ]
     }
 ]
-# ===========================================
 
 def get_content(url):
-    # 尝试下载 URL 内容，失败时如果开启严格模式则抛出异常
+    # 如果开启严格模式，下载失败则抛出异常
     try:
         resp = requests.get(url, timeout=10)
-        resp.raise_for_status() # 检查 HTTP 状态码 (如 404, 500)
+        resp.raise_for_status() # 检查 HTTP 状态码
         return resp.text
     except Exception as e:
         error_message = f"Error downloading {url}: {e}"
         print(f"!!! {error_message} !!!")
         
         if STRICT_SOURCE_CHECK:
-            # 在严格模式下，下载失败直接退出程序，触发 CI/CD 失败
+            # 在严格模式下，下载失败直接触发 CI/CD 失败
             print("Strict check failed. Aborting workflow.")
             sys.exit(1)
         else:
-            # 非严格模式下，继续运行，并返回 None
+            # 非严格模式下，继续运行，返回 None
             return None
 
 def determine_text_prefix(line: str) -> str:
@@ -81,7 +78,7 @@ def determine_text_prefix(line: str) -> str:
     if '/' in line:
         return "IP-CIDR"
     
-    # 2. 泛域名判定（包含 '*'）
+    # 2. DOMAIN-WILDCARD 判定（包含 '*'）
     elif '*' in line:
         return "DOMAIN-WILDCARD"
 
@@ -89,12 +86,12 @@ def determine_text_prefix(line: str) -> str:
     elif line.startswith('.'):
         return "DOMAIN-SUFFIX"
     
-    # 4. 普通 DOMAIN 判定（其余均为普通域名）
+    # 4. 其余均为 DOMAIN
     else:
         return "DOMAIN"
 
 def parse_yaml_payload(content):
-    # 解析 YAML payload 并转换为 text 格式
+    # 解析 YAML payload 并转换为裸规则
     rules = []
     try:
         data = yaml.safe_load(content)
@@ -105,28 +102,27 @@ def parse_yaml_payload(content):
 
                 final_rule = None
                 
-                # 检查 1: DOMAIN-SUFFIX 格式（以 +. 开头）
+                # 1. DOMAIN-SUFFIX 判定（以 '+.' 开头）
                 if item.startswith("+."):
                     # 去除开头的 '+.'
                     final_rule = f"DOMAIN-SUFFIX,{item[2:]}" 
                 
-                # 检查 2: IP-CIDR 格式（包含斜杠 /）
+                # 2. IP-CIDR 判定（包含 '/'）
                 elif '/' in item:
                     final_rule = f"IP-CIDR,{item}"
                 
-                # 检查 3: 泛域名格式（包含 *）
+                # 3. DOMAIN-WILDCARD 判定（包含 '*'）
                 else:
                     if '*' in item:
                         final_rule = f"DOMAIN-WILDCARD,{item}"
-                    # 检查 4: 其他均为普通域名
+                    # 4. 其余均为 DOMAIN
                     else:
                         final_rule = f"DOMAIN,{item}"
-                    
-                # 统一检查和追加逻辑
+
                 if final_rule is not None:
-                    # 只有 IP-CIDR 规则才需要进行 no-resolve 的检查和追加
+                    # IP-CIDR 规则需要进行 ',no-resolve' 的检查和追加
                     if final_rule.startswith('IP-CIDR'):
-                        # 检查是否已经有 ,no-resolve，避免重复
+                        # 检查是否已经有 ',no-resolve'，避免重复
                         if not final_rule.endswith(',no-resolve'):
                             rules.append(f"{final_rule},no-resolve")
                         else:
@@ -203,10 +199,10 @@ def process_files():
                             
                             # 如果规则已包含 IP-CIDR 或 IP-CIDR6 前缀
                             if re.match(r'^(IP-CIDR|IP-CIDR6)', line, re.IGNORECASE):
-                                # 步骤 1: 将 IP-CIDR6 规范化为 IP-CIDR
+                                # 1. 将 IP-CIDR6 规范化为 IP-CIDR
                                 normalized_line = re.sub(r'^IP-CIDR6', 'IP-CIDR', line, 1, re.IGNORECASE)
                                 
-                                # 步骤 2: 确保添加 ,no-resolve 
+                                # 2. 确保添加 ',no-resolve' 
                                 if not normalized_line.endswith(',no-resolve'):
                                     valid_rules.append(f"{normalized_line},no-resolve")
                                 else:
@@ -222,7 +218,7 @@ def process_files():
                             # 规则内容，默认为原始行
                             final_content = line
                             
-                            # 根据 DOMAIN-SUFFIX 逻辑处理内容（移除开头的 .）
+                            # 根据 DOMAIN-SUFFIX 逻辑处理内容（移除开头的 '.'）
                             if auto_prefix == "DOMAIN-SUFFIX" and line.startswith('.'):
                                 final_content = line[1:]
 
