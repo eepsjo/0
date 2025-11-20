@@ -1,17 +1,13 @@
 name: Update Rules Python
-
 on:
   push:
     branches:
-      - '0' # 明确监听 '0' 分支的 push 事件
+      - '0'
     paths:
-      - 'base/**'    # 监听 base 文件夹下的所有文件变动
-      - 'scripts/**' # 监听 scripts 文件夹下的所有文件变动
-  
+      - 'base/**'
+      - 'scripts/**'
   schedule: # Runs every 8 hours
     - cron: '0 */8 * * *'
-    
-  workflow_dispatch: # Allows manual triggering of the workflow
 
 permissions:
   contents: write
