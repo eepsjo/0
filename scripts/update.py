@@ -25,7 +25,7 @@ CONFIG = [
                 "type": "text",
             },
             {
-                "name": "DNS servers in GFW @ privacy-protection-tools/anti-AD",
+                "name": "DNS in GFW @ privacy-protection-tools/anti-AD",
                 "url": "https://raw.githubusercontent.com/privacy-protection-tools/anti-AD/refs/heads/master/discretion/dns.txt",
                 "type": "text",
             },
@@ -46,6 +46,11 @@ CONFIG = [
         "target": "p",
         "base": os.path.join(REPO_ROOT, "base", "p"),
         "sources": [
+            {
+                "name": "Telegram IPs @ Loyalsoldier/clash-rules",
+                "url": "https://raw.githubusercontent.com/Loyalsoldier/clash-rules/refs/heads/release/telegramcidr.txt",
+                "type": "yaml",
+            },
         ]
     }
 ]
