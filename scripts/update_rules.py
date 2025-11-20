@@ -2,15 +2,24 @@ import requests
 import yaml
 import os
 import re
+import sys
+
+# ================= 严格模式 =================
+# 如果设置为 True，任何外部规则下载失败都将导致脚本中止
+STRICT_SOURCE_CHECK = True 
+# 获取脚本所在的目录，作为所有相对路径的基准
+SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
+# 仓库根目录，假设脚本在 scripts/
+REPO_ROOT = os.path.abspath(os.path.join(SCRIPT_DIR, '..'))
 
 # ================= 配置区域 =================
-# target: 生成的目标文件
-# base: 手动维护的基础文件
+# target: 生成的目标文件 (位于仓库根目录)
+# base: 手动维护的基础文件 (位于 base/ 目录)
 # sources: 外部规则来源
 CONFIG = [
     {
         "target": "r",
-        "base": "base/r",
+        "base": os.path.join(REPO_ROOT, "base", "r"),
         "sources": [
             {
                 "name": "PCDN @ privacy-protection-tools/anti-AD",
@@ -18,26 +27,26 @@ CONFIG = [
                 "type": "text",
             },
             {
-                "name": "Encrypted DNS servers @ privacy-protection-tools/anti-AD",
+                "name": "DNS servers in GFW @ privacy-protection-tools/anti-AD",
                 "url": "https://raw.githubusercontent.com/privacy-protection-tools/anti-AD/refs/heads/master/discretion/dns.txt",
                 "type": "text",
             },
             # {
-            #     "name": "YAML Example @ example/repo",
-            #     "url": "https://example.com/example.yaml", 
-            #     "type": "yaml"
+            #     "name": "YAML Example @ example/repo",
+            #     "url": "https://example.com/example.yaml", 
+            #     "type": "yaml"
             # },
         ]
     },
     {
         "target": "d",
-        "base": "base/d",
+        "base": os.path.join(REPO_ROOT, "base", "d"),
         "sources": [
         ]
     },
     {
         "target": "p",
-        "base": "base/p",
+        "base": os.path.join(REPO_ROOT, "base", "p"),
         "sources": [
         ]
     }
@@ -45,13 +54,22 @@ CONFIG = [
 # ===========================================
 
 def get_content(url):
+    # 尝试下载 URL 内容，失败时如果开启严格模式则抛出异常
     try:
         resp = requests.get(url, timeout=10)
-        resp.raise_for_status()
+        resp.raise_for_status() # 检查 HTTP 状态码 (如 404, 500)
         return resp.text
     except Exception as e:
-        print(f"Error downloading {url}: {e}")
-        return None
+        error_message = f"Error downloading {url}: {e}"
+        print(f"!!! {error_message} !!!")
+        
+        if STRICT_SOURCE_CHECK:
+            # 在严格模式下，下载失败直接退出程序，触发 CI/CD 失败
+            print("Strict check failed. Aborting workflow.")
+            sys.exit(1)
+        else:
+            # 非严格模式下，继续运行，并返回 None
+            return None
 
 def determine_text_prefix(line: str) -> str:
     # 根据裸规则内容自动判断最合适的前缀类型
@@ -117,12 +135,18 @@ def parse_yaml_payload(content):
                         rules.append(final_rule)
 
     except Exception as e:
-        print(f"YAML parsing error: {e}")
+        # 如果 YAML 文件格式错误导致解析失败，也视为严重错误
+        print(f"!!! YAML parsing error: {e} !!!")
+        if STRICT_SOURCE_CHECK:
+            print("Strict check failed due to YAML format error. Aborting workflow.")
+            sys.exit(1)
+            
     return rules
 
 def process_files():
     for task in CONFIG:
-        target_file = task['target']
+        # target 文件位于 REPO_ROOT
+        target_file = os.path.join(REPO_ROOT, task['target']) 
         base_file = task['base']
         
         if not os.path.exists(base_file):
@@ -138,6 +162,7 @@ def process_files():
         base_count = 0
         base_content_no_header = []
         
+        # 提取头部计数
         if base_lines and base_lines[0].startswith("#"):
             match = re.search(r'#\s*(\d+)', base_lines[0])
             if match:
@@ -153,9 +178,10 @@ def process_files():
         total_new_rules = 0
 
         for source in task['sources']:
-            print(f"  - Fetching {source['name']}...")
+            print(f"  - Fetching {source['name']}...")
             raw_text = get_content(source['url'])
-            if not raw_text:
+            
+            if raw_text is None:
                 continue
 
             valid_rules = []
@@ -188,15 +214,15 @@ def process_files():
                             else:
                                 # 如果是 DOMAIN 等非 IP 前缀，原样保留
                                 valid_rules.append(line)
-                        
-                        # 2. 规则是裸域名/IP (不含前缀) -> 依赖 determine_text_prefix
+                            
+                            # 2. 规则是裸域名/IP (不含前缀) -> 依赖 determine_text_prefix
                         else:
                             auto_prefix = determine_text_prefix(line)
 
                             # 规则内容，默认为原始行
                             final_content = line
                             
-                            # 根据 DOMAIN-SUFFIX 逻辑处理内容
+                            # 根据 DOMAIN-SUFFIX 逻辑处理内容（移除开头的 .）
                             if auto_prefix == "DOMAIN-SUFFIX" and line.startswith('.'):
                                 final_content = line[1:]
 
