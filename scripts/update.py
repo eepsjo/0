@@ -36,6 +36,11 @@ CONFIG = [
         "base": os.path.join(REPO_ROOT, "base", "d"),
         "sources": [
             {
+                "name": "Private Domains @ Loyalsoldier/clash-rules",
+                "url": "https://raw.githubusercontent.com/Loyalsoldier/clash-rules/refs/heads/release/private.txt",
+                "type": "yaml",
+            },
+            {
                 "name": "Reserved IPs @ Loyalsoldier/clash-rules",
                 "url": "https://raw.githubusercontent.com/Loyalsoldier/clash-rules/refs/heads/release/lancidr.txt",
                 "type": "yaml",
