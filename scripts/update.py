@@ -56,6 +56,11 @@ CONFIG = [
                 "url": "https://raw.githubusercontent.com/Loyalsoldier/clash-rules/refs/heads/release/telegramcidr.txt",
                 "type": "yaml",
             },
+            {
+                "name": "GFW List @ Loyalsoldier/clash-rules",
+                "url": "https://raw.githubusercontent.com/Loyalsoldier/clash-rules/refs/heads/release/gfw.txt",
+                "type": "yaml",
+            },
         ]
     }
 ]
