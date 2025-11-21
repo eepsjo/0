@@ -6,9 +6,8 @@ import sys
 
 # 如果设置为 True，任何外部规则下载失败都将导致脚本中止
 STRICT_SOURCE_CHECK = True 
-# 获取脚本所在的目录，作为所有相对路径的基准
+# 相对路径的基准
 SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
-# 根目录
 REPO_ROOT = os.path.abspath(os.path.join(SCRIPT_DIR, '..'))
 
 CONFIG = [
