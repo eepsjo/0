@@ -6,7 +6,7 @@ on:
     paths:
       - 'base/**'
       - 'scripts/**'
-  schedule: # Runs every 8 hours
+  schedule:
     - cron: '0 */8 * * *'
 
 permissions:
