@@ -1,4 +1,4 @@
-# 126
+# 132
 
 # 0
 
@@ -74,7 +74,7 @@ DOMAIN,szbdyd.com
 DOMAIN,uhabo.com
 DOMAIN,xycdn.com
 
-# 66 - DNS in GFW @ privacy-protection-tools/anti-AD
+# 72 - DNS in GFW @ privacy-protection-tools/anti-AD
 DOMAIN,api.yuedu.dns.iqiyi.com
 DOMAIN,apidns.kwd.inkuai.com
 DOMAIN,bj.vip.waf.dns.iqiyi.com
@@ -99,11 +99,13 @@ DOMAIN,httpdns-platform-dbankcloud-com-drcn.wec.dbankedge.cn
 DOMAIN,httpdns-sc.aliyuncs.com
 DOMAIN,httpdns-sdk.n.netease.com
 DOMAIN,httpdns.alicdn.com
+DOMAIN,httpdns.aliyuncs.com
 DOMAIN,httpdns.baidu.com
 DOMAIN,httpdns.baidubce.com
 DOMAIN,httpdns.bcelive.com
 DOMAIN,httpdns.bilivideo.com
 DOMAIN,httpdns.browser.miui.com
+DOMAIN,httpdns.c.163.com
 DOMAIN,httpdns.c.cdnhwc2.com
 DOMAIN,httpdns.calorietech.com
 DOMAIN,httpdns.cctv.com
@@ -127,6 +129,7 @@ DOMAIN,httpdns.push.oppomobile.com
 DOMAIN,httpdns.tantanapp.com
 DOMAIN,httpdns.volcengineapi.com
 DOMAIN,httpdns.yunxindns.com
+DOMAIN,httpdns.yunxinfw.com
 DOMAIN,httpdns.zhihu.com
 DOMAIN,httpdns.zybang.com
 DOMAIN,httpdns1.cc.cdnhwc5.com
@@ -137,7 +140,10 @@ DOMAIN,lofter.httpdns.c.163.com
 DOMAIN,music.httpdns.c.163.com
 DOMAIN,ocloud-httpdns-cn.heytapmobi.com
 DOMAIN,passport.dns.iqiyi.com
+DOMAIN,resolver.gslb.mi-idc.com
 DOMAIN,resolver.mi.xiaomi.com
+DOMAIN,resolver.msg.global.xiaomi.net
 DOMAIN,resolver.msg.xiaomi.net
 DOMAIN,static.dns.qiyipic.iqiyi.com
 DOMAIN,v6-data.video.dns.iqiyi.com
+DOMAIN,union-httpdns.gslb.yy.com
