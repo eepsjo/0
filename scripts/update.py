@@ -19,6 +19,11 @@ CONFIG = [
         "base": os.path.join(REPO_ROOT, "base", "r"),
         "sources": [
             {
+                "name": "STUN @ HERE",
+                "url": "https://raw.githubusercontent.com/eepsjo/0/refs/heads/0/oth/r_stun",
+                "type": "text",
+            },
+            {
                 "name": "PCDN @ privacy-protection-tools/anti-AD",
                 "url": "https://raw.githubusercontent.com/privacy-protection-tools/anti-AD/refs/heads/master/discretion/pcdn.txt",
                 "type": "text",
@@ -34,6 +39,11 @@ CONFIG = [
         "target": "d",
         "base": os.path.join(REPO_ROOT, "base", "d"),
         "sources": [
+            {
+                "name": "NTP & NCSI @ HERE",
+                "url": "https://raw.githubusercontent.com/eepsjo/0/refs/heads/0/oth/d_time",
+                "type": "text",
+            },
             {
                 "name": "Private Domains @ Loyalsoldier/clash-rules",
                 "url": "https://raw.githubusercontent.com/Loyalsoldier/clash-rules/refs/heads/release/private.txt",
