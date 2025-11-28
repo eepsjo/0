@@ -1,9 +1,6 @@
 # 161
 
-# 4
-DOMAIN,time.windows.com
-DOMAIN-SUFFIX,msftncsi.com
-DOMAIN-SUFFIX,msftconnecttest.com
+# 1
 DOMAIN-SUFFIX,iios.club
 
 # 5 - Games
@@ -17,6 +14,11 @@ DOMAIN,mc.bsdayo.moe
 DOMAIN-SUFFIX,wahlap.net
 DOMAIN-SUFFIX,gzheyoukeji.com
 DOMAIN-SUFFIX,jingjianx.vip
+
+# 3 - NTP & NCSI @ HERE
+DOMAIN,time.windows.com
+DOMAIN-SUFFIX,msftncsi.com
+DOMAIN-SUFFIX,msftconnecttest.com
 
 # 131 - Private Domains @ Loyalsoldier/clash-rules
 DOMAIN,instant.arubanetworks.com
