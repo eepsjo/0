@@ -45,13 +45,13 @@ CONFIG = [
                 "type": "text",
             },
             {
-                "name": "Private Domains @ Loyalsoldier/clash-rules",
-                "url": "https://raw.githubusercontent.com/Loyalsoldier/clash-rules/refs/heads/release/private.txt",
+                "name": "Reserved IPs @ Loyalsoldier/clash-rules",
+                "url": "https://raw.githubusercontent.com/Loyalsoldier/clash-rules/refs/heads/release/lancidr.txt",
                 "type": "yaml",
             },
             {
-                "name": "Reserved IPs @ Loyalsoldier/clash-rules",
-                "url": "https://raw.githubusercontent.com/Loyalsoldier/clash-rules/refs/heads/release/lancidr.txt",
+                "name": "Private Domains @ Loyalsoldier/clash-rules",
+                "url": "https://raw.githubusercontent.com/Loyalsoldier/clash-rules/refs/heads/release/private.txt",
                 "type": "yaml",
             },
         ]
@@ -60,11 +60,11 @@ CONFIG = [
         "target": "p",
         "base": os.path.join(REPO_ROOT, "base", "p"),
         "sources": [
-            # {
-            #     "name": "Telegram IPs @ Loyalsoldier/clash-rules",
-            #     "url": "https://raw.githubusercontent.com/Loyalsoldier/clash-rules/refs/heads/release/telegramcidr.txt",
-            #     "type": "yaml",
-            # },
+            {
+                "name": "Telegram IPs @ Loyalsoldier/clash-rules",
+                "url": "https://raw.githubusercontent.com/Loyalsoldier/clash-rules/refs/heads/release/telegramcidr.txt",
+                "type": "yaml",
+            },
             # {
             #     "name": "GFW List @ Loyalsoldier/clash-rules",
             #     "url": "https://raw.githubusercontent.com/Loyalsoldier/clash-rules/refs/heads/release/gfw.txt",
