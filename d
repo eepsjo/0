@@ -1,15 +1,11 @@
-# 165
+# 161
 
 # 1
 DOMAIN-SUFFIX,iios.club
 
-# 12 - Games
+# 8 - Games
 DOMAIN-SUFFIX,maj-soul.com
 DOMAIN-SUFFIX,daai.fun
-DOMAIN-SUFFIX,sgsnssdk.com
-DOMAIN-SUFFIX,bytegsdk.com
-DOMAIN-SUFFIX,bytedgame.com
-DOMAIN-SUFFIX,bytedgames.com
 DOMAIN-SUFFIX,openfrp.net
 DOMAIN-SUFFIX,naids.com
 DOMAIN,mc.bsdayo.moe
