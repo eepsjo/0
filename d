@@ -3,6 +3,13 @@
 # 1
 DOMAIN-SUFFIX,iios.club
 
+# 1 - NTP
+DOMAIN,time.windows.com
+
+# 2 - NCSI
+DOMAIN-SUFFIX,msftncsi.com
+DOMAIN-SUFFIX,msftconnecttest.com
+
 # 8 - Games
 DOMAIN-SUFFIX,maj-soul.com
 DOMAIN-SUFFIX,daai.fun
@@ -12,11 +19,6 @@ DOMAIN,mc.bsdayo.moe
 DOMAIN-SUFFIX,wahlap.net
 DOMAIN-SUFFIX,gzheyoukeji.com
 DOMAIN-SUFFIX,jingjianx.vip
-
-# 3 - NTP & NCSI @ HERE
-DOMAIN,time.windows.com
-DOMAIN-SUFFIX,msftncsi.com
-DOMAIN-SUFFIX,msftconnecttest.com
 
 # 18 - Reserved IPs @ Loyalsoldier/clash-rules
 IP-CIDR,0.0.0.0/8,no-resolve
