@@ -40,11 +40,6 @@ CONFIG = [
         "base": os.path.join(REPO_ROOT, "base", "d"),
         "sources": [
             {
-                "name": "NTP & NCSI @ HERE",
-                "url": "https://raw.githubusercontent.com/eepsjo/0/refs/heads/0/oth/d_time",
-                "type": "text",
-            },
-            {
                 "name": "Reserved IPs @ Loyalsoldier/clash-rules",
                 "url": "https://raw.githubusercontent.com/Loyalsoldier/clash-rules/refs/heads/release/lancidr.txt",
                 "type": "yaml",

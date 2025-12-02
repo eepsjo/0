@@ -1,4 +1,4 @@
-# 8
+# 9
 
 # 0
 
@@ -7,9 +7,10 @@ AND,((PROTOCOL,UDP),(DST-PORT,443))
 # 0.5 - QUIC mihomo
 AND,((NETWORK,UDP),(DST-PORT,443))
 
-# 2 - anti-AD
-DOMAIN,shouji.sogou.com
+# 3 - anti-AD
+DOMAIN-SUFFIX,shouji.sogou.com
 DOMAIN-SUFFIX,activity.windows.com
+DOMAIN-SUFFIX,mmstat.com
 
 # 5 - ToolzAD
 DOMAIN-SUFFIX,metrics.icloud.com
