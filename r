@@ -1,4 +1,4 @@
-# 118
+# 117
 
 # 0
 
@@ -19,12 +19,11 @@ DOMAIN-SUFFIX,app.getsentry.com
 DOMAIN-SUFFIX,appmetrica.yandex.ru
 DOMAIN-SUFFIX,adfstat.yandex.ru
 
-# 7 - STUN @ HERE
+# 6 - STUN @ HERE
 DOMAIN-WILDCARD,stun.*
 DOMAIN-WILDCARD,stun*.l.google.com
 DOMAIN,hw-v2-web-player-tracker.biliapi.net
 DOMAIN-SUFFIX,freestun.net
-DOMAIN-SUFFIX,stun.twilio.com
 DOMAIN-SUFFIX,mcdn.bilivideo.cn
 DOMAIN-SUFFIX,stunserver.stunprotocol.org
 
