@@ -6,6 +6,7 @@ on:
       - '0'
     paths:
       - 'base/**'
+      - 'oth/**'
       - 'scripts/**'
   schedule:
     - cron: '0 */8 * * *'
