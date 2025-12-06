@@ -20,7 +20,7 @@ CONFIG = [
         "sources": [
             {
                 "name": "STUN @ HERE",
-                "url": "https://raw.githubusercontent.com/eepsjo/0/refs/heads/0/oth/r_stun",
+                "url": "https://raw.githubusercontent.com/eepsjo/0/refs/heads/0/oth/stun",
                 "type": "text",
             },
             {
