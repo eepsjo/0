@@ -265,11 +265,10 @@ def process_files():
         final_count = base_count + total_new_rules
         
         with open(target_file, 'w', encoding='utf-8') as f:
+            # 写入时间戳和计数
             f.write(timestamp_line)
+            f.write("_{final_count}")
             f.write("\n") 
-            
-            # 写入新的头部总数
-            f.write(f"# {final_count}\n")
             # 写入 Base 文件原有内容（保留原有换行）
             f.writelines(base_content_no_header)
             # 写入外部规则
