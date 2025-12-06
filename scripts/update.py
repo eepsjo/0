@@ -3,6 +3,8 @@ import yaml
 import os
 import re
 import sys
+from datetime import datetime
+import zoneinfo 
 
 # 如果设置为 True，任何外部规则下载失败都将导致脚本中止
 STRICT_SOURCE_CHECK = True 
@@ -159,6 +161,10 @@ def parse_yaml_payload(content):
     return rules
 
 def process_files():
+    taipei_tz = zoneinfo.ZoneInfo("Asia/Taipei")
+    current_time_taipei = datetime.now(taipei_tz)
+    timestamp_line = current_time_taipei.strftime("# Taipei_%y%m%d-%H%M%S")
+
     for task in CONFIG:
         # target 文件位于 REPO_ROOT
         target_file = os.path.join(REPO_ROOT, task['target']) 
@@ -259,6 +265,9 @@ def process_files():
         final_count = base_count + total_new_rules
         
         with open(target_file, 'w', encoding='utf-8') as f:
+            f.write(timestamp_line)
+            f.write("\n") 
+            
             # 写入新的头部总数
             f.write(f"# {final_count}\n")
             # 写入 Base 文件原有内容（保留原有换行）
