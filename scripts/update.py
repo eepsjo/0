@@ -268,7 +268,7 @@ def process_files():
             # 写入时间戳和计数
             f.write(timestamp_line)
             f.write("_")
-            f.write(final_count)
+            f.write(str(final_count))
             f.write("\n") 
             # 写入 Base 文件原有内容（保留原有换行）
             f.writelines(base_content_no_header)
