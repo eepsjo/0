@@ -1,8 +1,7 @@
-# 34 - Taipei_260412
+# 33 - Taipei_260412
 
-# 2
+# 1
 DOMAIN-SUFFIX,amiami.com
-DOMAIN-SUFFIX,discord.media
 
 # 6 - MASQ
 DOMAIN-SUFFIX,ping0.cc
