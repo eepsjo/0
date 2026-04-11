@@ -1,0 +1,47 @@
+# 34 - Taipei_260412
+
+# 2
+DOMAIN-SUFFIX,amiami.com
+DOMAIN-SUFFIX,discord.media
+
+# 6 - MASQ
+DOMAIN-SUFFIX,ping0.cc
+DOMAIN-SUFFIX,ippure.com
+DOMAIN-SUFFIX,ipcheck.ing
+DOMAIN-SUFFIX,dpdns.org
+DOMAIN-SUFFIX,claw.cloud
+DOMAIN-SUFFIX,clawcloudrun.com
+
+# 2 - TOOL
+DOMAIN-SUFFIX,saucenao.com
+DOMAIN-SUFFIX,ascii2d.net
+
+# 6 - NSFW
+DOMAIN-SUFFIX,asmr.one
+DOMAIN-SUFFIX,kiko-play-niptan.one
+DOMAIN-WILDCARD,api.asmr-?00.com
+DOMAIN-KEYWORD,18comic
+DOMAIN-KEYWORD,iwara
+DOMAIN-SUFFIX,8se.me
+
+# 6 - GAME
+DOMAIN-SUFFIX,kungal.com
+DOMAIN-WILDCARD,zi?.cc
+DOMAIN-KEYWORD,minecraft
+DOMAIN-KEYWORD,mojang
+DOMAIN-KEYWORD,modrinth
+DOMAIN-KEYWORD,cubecraft
+
+# 12 - telegramcidr @ Loyalsoldier/clash-rules
+IP-CIDR,91.105.192.0/23,no-resolve
+IP-CIDR,91.108.4.0/22,no-resolve
+IP-CIDR,91.108.8.0/21,no-resolve
+IP-CIDR,91.108.16.0/21,no-resolve
+IP-CIDR,91.108.56.0/22,no-resolve
+IP-CIDR,95.161.64.0/20,no-resolve
+IP-CIDR,149.154.160.0/20,no-resolve
+IP-CIDR,185.76.151.0/24,no-resolve
+IP-CIDR,2001:67c:4e8::/48,no-resolve
+IP-CIDR,2001:b28:f23c::/47,no-resolve
+IP-CIDR,2001:b28:f23f::/48,no-resolve
+IP-CIDR,2a0a:f280::/32,no-resolve
