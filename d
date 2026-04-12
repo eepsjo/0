@@ -1,4 +1,4 @@
-# 156 - Taipei_260412
+# 158 - Taipei_260412
 
 # 1
 DOMAIN-SUFFIX,iios.club
@@ -36,7 +36,7 @@ IP-CIDR,fc00::/7,no-resolve
 IP-CIDR,fe80::/10,no-resolve
 IP-CIDR,ff00::/8,no-resolve
 
-# 128 - private @ Loyalsoldier/clash-rules
+# 130 - private @ Loyalsoldier/clash-rules
 DOMAIN,instant.arubanetworks.com
 DOMAIN,setmeup.arubanetworks.com
 DOMAIN,asusrouter.com
@@ -48,6 +48,7 @@ DOMAIN,www.routerlogin.com
 DOMAIN,tplogin.cn
 DOMAIN,miwifi.com
 DOMAIN,www.miwifi.com
+DOMAIN,local.adguard.org
 DOMAIN-SUFFIX,internal
 DOMAIN-SUFFIX,localdomain
 DOMAIN-SUFFIX,example
@@ -162,6 +163,7 @@ DOMAIN-SUFFIX,8.e.f.ip6.arpa
 DOMAIN-SUFFIX,113.0.203.in-addr.arpa
 DOMAIN-SUFFIX,100.51.198.in-addr.arpa
 DOMAIN-SUFFIX,2.0.192.in-addr.arpa
+DOMAIN-SUFFIX,kis.v2.scr.kaspersky-labs.com
 DOMAIN-SUFFIX,255.255.255.255.in-addr.arpa
 DOMAIN-SUFFIX,8.b.d.0.1.0.0.2.ip6.arpa
 DOMAIN-SUFFIX,1.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.ip6.arpa
