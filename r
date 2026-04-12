@@ -1,6 +1,7 @@
-# 121 - Taipei_260412
+# 122 - Taipei_260413
 
-# 0
+# 1
+DOMAIN-SUFFIX,meituan.net
 
 # 1 - QUIC
 # # Shadowrocket
