@@ -29,7 +29,6 @@ fn main() {
             target: "r",
             base: "base/r",
             sources: vec![
-                Source { name: "QUIC @", url: "https://raw.githubusercontent.com/eepsjo/0/refs/heads/0/oth/r/quic" },
                 Source { name: "STUN @", url: "https://raw.githubusercontent.com/eepsjo/0/refs/heads/0/oth/r/stun" },
                 Source { name: "FU @", url: "https://raw.githubusercontent.com/eepsjo/0/refs/heads/0/oth/r/fu" },
                 Source { name: "AD @", url: "https://raw.githubusercontent.com/eepsjo/0/refs/heads/0/oth/r/ad" },
