@@ -1,5 +1,0 @@
-# 1 - QUIC
-# # Shadowrocket
-AND,((PROTOCOL,UDP),(DST-PORT,443))
-# # mihomo
-AND,((NETWORK,UDP),(DST-PORT,443))
