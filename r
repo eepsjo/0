@@ -12,8 +12,8 @@ DOMAIN-SUFFIX,stun.twilio.com
 DOMAIN-SUFFIX,mcdn.bilivideo.cn
 DOMAIN-SUFFIX,stunserver.stunprotocol.org
 
-# 1 - FU
-# # https://aodun.com.cn/product/idc/vpn
+# 1 - FUCK
+DOMAIN-SUFFIX,3000soft.net
 DOMAIN-SUFFIX,aodun.com.cn
 
 # 8 - AD
