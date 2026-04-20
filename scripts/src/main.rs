@@ -30,7 +30,7 @@ fn main() {
             base: "base/r",
             sources: vec![
                 Source { name: "STUN @", url: "https://raw.githubusercontent.com/eepsjo/0/refs/heads/0/oth/r/stun" },
-                Source { name: "FU @", url: "https://raw.githubusercontent.com/eepsjo/0/refs/heads/0/oth/r/fu" },
+                Source { name: "FUCK @", url: "https://raw.githubusercontent.com/eepsjo/0/refs/heads/0/oth/r/fuck" },
                 Source { name: "AD @", url: "https://raw.githubusercontent.com/eepsjo/0/refs/heads/0/oth/r/ad" },
                 Source { name: "pcdn @ privacy-protection-tools/anti-AD", url: "https://raw.githubusercontent.com/privacy-protection-tools/anti-AD/refs/heads/master/discretion/pcdn.txt" },
                 Source { name: "dns @ privacy-protection-tools/anti-AD", url: "https://raw.githubusercontent.com/privacy-protection-tools/anti-AD/refs/heads/master/discretion/dns.txt" },
