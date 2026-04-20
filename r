@@ -1,12 +1,6 @@
-# 121 - Taipei_260420
+# 120 - Taipei_260420
 
 # 0
-
-# 1 - QUIC
-# # Shadowrocket
-AND,((PROTOCOL,UDP),(DST-PORT,443))
-# # mihomo
-AND,((NETWORK,UDP),(DST-PORT,443))
 
 # 8 - STUN
 DST-PORT,3478
