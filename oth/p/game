@@ -1,7 +1,5 @@
-# 6 - GAME
+# 4 - GAME
+DOMAIN-SUFFIX,zi0.cc
 DOMAIN-SUFFIX,kungal.com
-DOMAIN-WILDCARD,zi?.cc
-DOMAIN-KEYWORD,minecraft
-DOMAIN-KEYWORD,mojang
-DOMAIN-KEYWORD,modrinth
-DOMAIN-KEYWORD,cubecraft
+DOMAIN-SUFFIX,minecraft.net
+DOMAIN-SUFFIX,cubecraft.net
