@@ -1,19 +1,15 @@
-# 35 - Taipei_260424
+# 31 - Taipei_260427
 
 # 1
 DOMAIN-SUFFIX,amiami.com
 
-# 8 - MASQ
+# 8 - TOOL
 DOMAIN-SUFFIX,ping0.cc
 DOMAIN-SUFFIX,ippure.com
 DOMAIN-SUFFIX,ipcheck.ing
 DOMAIN-SUFFIX,dpdns.org
-DOMAIN-SUFFIX,b4a.run
-DOMAIN-SUFFIX,back4app.com
 DOMAIN-SUFFIX,claw.cloud
 DOMAIN-SUFFIX,clawcloudrun.com
-
-# 2 - TOOL
 DOMAIN-SUFFIX,saucenao.com
 DOMAIN-SUFFIX,ascii2d.net
 
@@ -21,17 +17,15 @@ DOMAIN-SUFFIX,ascii2d.net
 DOMAIN-SUFFIX,asmr.one
 DOMAIN-SUFFIX,kiko-play-niptan.one
 DOMAIN-WILDCARD,api.asmr-?00.com
-DOMAIN-KEYWORD,18comic
-DOMAIN-KEYWORD,iwara
+DOMAIN-SUFFIX,18comic.vip
+DOMAIN-SUFFIX,iwara.tv
 DOMAIN-SUFFIX,8se.me
 
-# 6 - GAME
+# 4 - GAME
+DOMAIN-SUFFIX,zi0.cc
 DOMAIN-SUFFIX,kungal.com
-DOMAIN-WILDCARD,zi?.cc
-DOMAIN-KEYWORD,minecraft
-DOMAIN-KEYWORD,mojang
-DOMAIN-KEYWORD,modrinth
-DOMAIN-KEYWORD,cubecraft
+DOMAIN-SUFFIX,minecraft.net
+DOMAIN-SUFFIX,cubecraft.net
 
 # 12 - telegramcidr @ Loyalsoldier/clash-rules
 IP-CIDR,91.105.192.0/23,no-resolve
