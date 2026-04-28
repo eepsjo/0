@@ -1,4 +1,4 @@
-# 121 - Taipei_260428
+# 122 - Taipei_260428
 
 # 0
 
@@ -12,7 +12,8 @@ DOMAIN-SUFFIX,stun.twilio.com
 DOMAIN-SUFFIX,mcdn.bilivideo.cn
 DOMAIN-SUFFIX,stunserver.stunprotocol.org
 
-# 2 - FUCK
+# 3 - FUCK
+DOMAIN-SUFFIX,2x.nz
 DOMAIN-SUFFIX,3000soft.net
 DOMAIN-SUFFIX,aodun.com.cn
 
