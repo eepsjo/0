@@ -1,7 +1,10 @@
-# 31 - Taipei_260427
+# 34 - Taipei_260428
 
-# 1
+# 4
 DOMAIN-SUFFIX,amiami.com
+DOMAIN-SUFFIX,open-vsx.org
+DOMAIN-SUFFIX,popcat.click
+DOMAIN-SUFFIX,play-naive.pro-components.cn
 
 # 8 - TOOL
 DOMAIN-SUFFIX,ping0.cc
