@@ -6,7 +6,7 @@ DOMAIN-SUFFIX,open-vsx.org
 DOMAIN-SUFFIX,popcat.click
 DOMAIN-SUFFIX,play-naive.pro-components.cn
 
-# 8 - TOOL
+# 10 - TOOL
 DOMAIN-SUFFIX,ping0.cc
 DOMAIN-SUFFIX,ippure.com
 DOMAIN-SUFFIX,ipcheck.ing
@@ -15,6 +15,8 @@ DOMAIN-SUFFIX,claw.cloud
 DOMAIN-SUFFIX,clawcloudrun.com
 DOMAIN-SUFFIX,saucenao.com
 DOMAIN-SUFFIX,ascii2d.net
+DOMAIN-SUFFIX,open-vsx.org
+DOMAIN-SUFFIX,play-naive.pro-components.cn
 
 # 6 - NSFW
 DOMAIN-SUFFIX,asmr.one
@@ -24,9 +26,10 @@ DOMAIN-SUFFIX,18comic.vip
 DOMAIN-SUFFIX,iwara.tv
 DOMAIN-SUFFIX,8se.me
 
-# 4 - GAME
+# 5 - GAME
 DOMAIN-SUFFIX,zi0.cc
 DOMAIN-SUFFIX,kungal.com
+DOMAIN-SUFFIX,popcat.click
 DOMAIN-SUFFIX,minecraft.net
 DOMAIN-SUFFIX,cubecraft.net
 
