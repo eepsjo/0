@@ -1,4 +1,4 @@
-# 158 - Taipei_260502
+# 157 - Taipei_260502
 
 # 1
 DOMAIN-SUFFIX,iios.club
@@ -10,11 +10,10 @@ DOMAIN-SUFFIX,msftncsi.com
 DOMAIN-SUFFIX,msftconnecttest.com
 DOMAIN-SUFFIX,update.microsoft.com
 
-# 4 - GAME
+# 3 - GAME
 DOMAIN,mc.bsdayo.moe
 DOMAIN-SUFFIX,maj-soul.com
 DOMAIN-SUFFIX,jingjianx.vip
-DOMAIN-SUFFIX,gzheyoukeji.com
 
 # 18 - lancidr @ Loyalsoldier/clash-rules
 IP-CIDR,0.0.0.0/8,no-resolve

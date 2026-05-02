@@ -1,26 +1,37 @@
-# 34 - Taipei_260502
+# 43 - Taipei_260502
 
 # 1
 DOMAIN-SUFFIX,amiami.com
 
-# 10 - TOOL
+# 12 - APNS
+DOMAIN-SUFFIX,push.apple.com
+DOMAIN-SUFFIX,akadns.net
+DOMAIN-KEYWORD,apple.com.edgekey.net
+IP-CIDR,17.249.0.0/16,no-resolve
+IP-CIDR,17.252.0.0/16,no-resolve
+IP-CIDR,17.57.144.0/22,no-resolve
+IP-CIDR,17.188.128.0/18,no-resolve
+IP-CIDR,17.188.20.0/23,no-resolve
+IP-CIDR6,2620:149:a44::/48,no-resolve
+IP-CIDR6,2403:300:a42::/48,no-resolve
+IP-CIDR6,2403:300:a51::/48,no-resolve
+IP-CIDR6,2a01:b740:a42::/48,no-resolve
+
+# 8 - TOOL
 DOMAIN-SUFFIX,ping0.cc
 DOMAIN-SUFFIX,ippure.com
 DOMAIN-SUFFIX,ipcheck.ing
 DOMAIN-SUFFIX,dpdns.org
-DOMAIN-SUFFIX,claw.cloud
-DOMAIN-SUFFIX,clawcloudrun.com
 DOMAIN-SUFFIX,saucenao.com
 DOMAIN-SUFFIX,ascii2d.net
 DOMAIN-SUFFIX,open-vsx.org
 DOMAIN-SUFFIX,play-naive.pro-components.cn
 
-# 6 - NSFW
+# 5 - NSFW
 DOMAIN-SUFFIX,asmr.one
 DOMAIN-SUFFIX,kiko-play-niptan.one
 DOMAIN-WILDCARD,api.asmr-?00.com
 DOMAIN-SUFFIX,18comic.vip
-DOMAIN-SUFFIX,iwara.tv
 DOMAIN-SUFFIX,8se.me
 
 # 5 - GAME
