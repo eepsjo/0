@@ -1,11 +1,12 @@
-# 33 - Taipei_260502
+# 32 - Taipei_260502
 
 # 1
 DOMAIN-SUFFIX,amiami.com
 
-# 2 - APNS
-DOMAIN,apsd.apple.com
+# 1 - APNS
 DOMAIN-SUFFIX,push.apple.com
+# 1
+# DOMAIN,apsd.apple.com
 # 11
 # DOMAIN-SUFFIX,akadns.net
 # DOMAIN-KEYWORD,apple.com.edgekey.net
