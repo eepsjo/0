@@ -50,7 +50,6 @@ fn main() {
             target: "p",
             base: "base/p",
             sources: vec![
-                Source { name: "APNS @", url: "https://raw.githubusercontent.com/eepsjo/0/refs/heads/0/oth/p/apns" },
                 Source { name: "TOOL @", url: "https://raw.githubusercontent.com/eepsjo/0/refs/heads/0/oth/p/tool" },
                 Source { name: "NSFW @", url: "https://raw.githubusercontent.com/eepsjo/0/refs/heads/0/oth/p/nsfw" },
                 Source { name: "GAME @", url: "https://raw.githubusercontent.com/eepsjo/0/refs/heads/0/oth/p/game" },
