@@ -1,14 +1,14 @@
-# 32 - Taipei_260502
+# 33 - Taipei_260502
 
 # 1
 DOMAIN-SUFFIX,amiami.com
 
-# 1 - APNS
+# 2 - APNS
+DOMAIN,apsd.apple.com
 DOMAIN-SUFFIX,push.apple.com
-# 1
-# DOMAIN,apsd.apple.com
-# 11
+# 12 if not fakeip
 # DOMAIN-SUFFIX,akadns.net
+# DOMAIN-SUFFIX,push.apple.com
 # DOMAIN-KEYWORD,apple.com.edgekey.net
 # IP-CIDR,17.249.0.0/16,no-resolve
 # IP-CIDR,17.252.0.0/16,no-resolve
