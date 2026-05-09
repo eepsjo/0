@@ -1,13 +1,14 @@
-# 31 - Taipei_260509
+# 32 - Taipei_260509
 
 # 1
 DOMAIN-SUFFIX,amiami.com
 
-# 8 - TOOL
+# 9 - TOOL
 DOMAIN-SUFFIX,ping0.cc
 DOMAIN-SUFFIX,ippure.com
 DOMAIN-SUFFIX,ipcheck.ing
 DOMAIN-SUFFIX,dpdns.org
+DOMAIN-SUFFIX,digitalplat.org
 DOMAIN-SUFFIX,saucenao.com
 DOMAIN-SUFFIX,ascii2d.net
 DOMAIN-SUFFIX,open-vsx.org
