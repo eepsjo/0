@@ -1,9 +1,10 @@
-# 32 - Taipei_260510
+# 33 - Taipei_260510
 
 # 1
 DOMAIN-SUFFIX,amiami.com
 
-# 9 - TOOL
+# 10 - TOOL
+DOMAIN,anti-ad.net
 DOMAIN-SUFFIX,ping0.cc
 DOMAIN-SUFFIX,ippure.com
 DOMAIN-SUFFIX,ipcheck.ing
