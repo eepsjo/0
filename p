@@ -1,4 +1,4 @@
-# 33 - Taipei_260511
+# 34 - Taipei_260511
 
 # 1
 DOMAIN-SUFFIX,amiami.com
@@ -22,10 +22,11 @@ DOMAIN-WILDCARD,api.asmr-?00.com
 DOMAIN-SUFFIX,18comic.vip
 DOMAIN-SUFFIX,8se.me
 
-# 5 - GAME
+# 6 - GAME
 DOMAIN-SUFFIX,zi0.cc
 DOMAIN-SUFFIX,kungal.com
 DOMAIN-SUFFIX,popcat.click
+DOMAIN-SUFFIX,wen-ware.com
 DOMAIN-SUFFIX,minecraft.net
 DOMAIN-SUFFIX,cubecraft.net
 
