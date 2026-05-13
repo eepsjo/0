@@ -1,11 +1,15 @@
 # 10 - TOOL
+# # 4 - proxy
 DOMAIN,anti-ad.net
 DOMAIN-SUFFIX,ping0.cc
 DOMAIN-SUFFIX,ippure.com
 DOMAIN-SUFFIX,ipcheck.ing
+# # 2 - dpdns
 DOMAIN-SUFFIX,dpdns.org
 DOMAIN-SUFFIX,digitalplat.org
+# # 2 - tool
 DOMAIN-SUFFIX,saucenao.com
 DOMAIN-SUFFIX,ascii2d.net
+# # 2 - oth
 DOMAIN-SUFFIX,open-vsx.org
 DOMAIN-SUFFIX,play-naive.pro-components.cn
