@@ -1,4 +1,4 @@
-# 122 - Taipei_260513
+# 120 - Taipei_260513
 
 # 0
 
@@ -12,17 +12,16 @@ DOMAIN-SUFFIX,stun.twilio.com
 DOMAIN-SUFFIX,mcdn.bilivideo.cn
 DOMAIN-SUFFIX,stunserver.stunprotocol.org
 
-# 3 - FUCK
+# 1 - FUCK
+# # 1 - bili
 DOMAIN-SUFFIX,2x.nz
-DOMAIN-SUFFIX,3000soft.net
-DOMAIN-SUFFIX,aodun.com.cn
 
 # 8 - AD
-# # anti-AD
+# # 3- anti-AD
 DOMAIN-SUFFIX,shouji.sogou.com
 DOMAIN-SUFFIX,activity.windows.com
 DOMAIN-SUFFIX,mmstat.com
-# # ToolzAD
+# # 5 - ToolzAD
 DOMAIN-SUFFIX,metrics.icloud.com
 DOMAIN-SUFFIX,browser.sentry-cdn.com
 DOMAIN-SUFFIX,app.getsentry.com
