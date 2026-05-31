@@ -1,14 +1,12 @@
-# 40 - Taipei_260601
+# 51 - Taipei_260601
 
-# 6
+# 1
 DOMAIN-SUFFIX,amiami.com
-DOMAIN-SUFFIX,spotify.com
-DOMAIN-SUFFIX,discord.com
-DOMAIN-SUFFIX,discord.gg
-DOMAIN-SUFFIX,discordapp.com
-DOMAIN-SUFFIX,discordapp.net
 
 # 11 - TOOL
+# # 2
+DOMAIN-SUFFIX,saucenao.com
+DOMAIN-SUFFIX,ascii2d.net
 # # 5 - proxy
 DOMAIN,anti-ad.net
 DOMAIN,raw.githubusercontent.com
@@ -18,19 +16,18 @@ DOMAIN-SUFFIX,ipcheck.ing
 # # 2 - dpdns
 DOMAIN-SUFFIX,dpdns.org
 DOMAIN-SUFFIX,digitalplat.org
-# # 2 - tool
-DOMAIN-SUFFIX,saucenao.com
-DOMAIN-SUFFIX,ascii2d.net
 # # 2 - oth
 DOMAIN-SUFFIX,open-vsx.org
 DOMAIN-SUFFIX,play-naive.pro-components.cn
 
-# 5 - NSFW
-DOMAIN-SUFFIX,asmr.one
-DOMAIN-SUFFIX,kiko-play-niptan.one
-DOMAIN-WILDCARD,api.asmr-?00.com
-DOMAIN-SUFFIX,18comic.vip
-DOMAIN-SUFFIX,8se.me
+# 1 - Spotify
+DOMAIN-SUFFIX,spotify.com
+
+# 4 - Discord
+DOMAIN-SUFFIX,discord.com
+DOMAIN-SUFFIX,discord.gg
+DOMAIN-SUFFIX,discordapp.com
+DOMAIN-SUFFIX,discordapp.net
 
 # 6 - GAME
 DOMAIN-SUFFIX,zi0.cc
@@ -39,6 +36,26 @@ DOMAIN-SUFFIX,popcat.click
 DOMAIN-SUFFIX,wen-ware.com
 DOMAIN-SUFFIX,minecraft.net
 DOMAIN-SUFFIX,cubecraft.net
+
+# 5 - NSFW
+DOMAIN-SUFFIX,asmr.one
+DOMAIN-SUFFIX,kiko-play-niptan.one
+DOMAIN-WILDCARD,api.asmr-?00.com
+DOMAIN-SUFFIX,18comic.vip
+DOMAIN-SUFFIX,8se.me
+
+# 11 - deepseek @ LOWERTOP/Shadowrocket-First
+DOMAIN-KEYWORD,deepseek
+DOMAIN-SUFFIX,deepseek.com
+DOMAIN-SUFFIX,fengkongcloud.cn
+DOMAIN-SUFFIX,fengkongcloud.com
+DOMAIN-SUFFIX,portal101.cn
+DOMAIN-SUFFIX,portal101.com
+DOMAIN-SUFFIX,sentry.io
+DOMAIN-SUFFIX,volces.com
+DOMAIN-SUFFIX,intercom.io
+DOMAIN-SUFFIX,intercom.com
+DOMAIN-SUFFIX,intercomcdn.com
 
 # 12 - telegramcidr @ Loyalsoldier/clash-rules
 IP-CIDR,91.105.192.0/23,no-resolve

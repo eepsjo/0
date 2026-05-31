@@ -1,6 +1,17 @@
 # 121 - Taipei_260601
 
-# 0
+# 8 - STUN
+DST-PORT,3478
+DOMAIN-WILDCARD,stun.*
+DOMAIN-WILDCARD,stun?.l.google.com
+DOMAIN,hw-v2-web-player-tracker.biliapi.net
+DOMAIN-SUFFIX,freestun.net
+DOMAIN-SUFFIX,stun.twilio.com
+DOMAIN-SUFFIX,mcdn.bilivideo.cn
+DOMAIN-SUFFIX,stunserver.stunprotocol.org
+
+# 1 - PCDN_bili
+DOMAIN-WILDCARD,*pcdn*.biliapi.net
 
 # 1 - FUCK
 # # 1 - bili
@@ -17,19 +28,6 @@ DOMAIN-SUFFIX,browser.sentry-cdn.com
 DOMAIN-SUFFIX,app.getsentry.com
 DOMAIN-SUFFIX,appmetrica.yandex.ru
 DOMAIN-SUFFIX,adfstat.yandex.ru
-
-# 8 - STUN
-DST-PORT,3478
-DOMAIN-WILDCARD,stun.*
-DOMAIN-WILDCARD,stun?.l.google.com
-DOMAIN,hw-v2-web-player-tracker.biliapi.net
-DOMAIN-SUFFIX,freestun.net
-DOMAIN-SUFFIX,stun.twilio.com
-DOMAIN-SUFFIX,mcdn.bilivideo.cn
-DOMAIN-SUFFIX,stunserver.stunprotocol.org
-
-# 1 - PCDN
-DOMAIN-WILDCARD,*pcdn*.biliapi.net
 
 # 30 - pcdn @ privacy-protection-tools/anti-AD
 DOMAIN,bsccdn.net
