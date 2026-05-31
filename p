@@ -1,4 +1,4 @@
-# 39 - Taipei_260531
+# 40 - Taipei_260531
 
 # 6
 DOMAIN-SUFFIX,amiami.com
@@ -8,9 +8,10 @@ DOMAIN-SUFFIX,discord.gg
 DOMAIN-SUFFIX,discordapp.com
 DOMAIN-SUFFIX,discordapp.net
 
-# 10 - TOOL
-# # 4 - proxy
+# 11 - TOOL
+# # 5 - proxy
 DOMAIN,anti-ad.net
+DOMAIN,raw.githubusercontent.com
 DOMAIN-SUFFIX,ping0.cc
 DOMAIN-SUFFIX,ippure.com
 DOMAIN-SUFFIX,ipcheck.ing
