@@ -3,10 +3,10 @@
 # 6
 DOMAIN-SUFFIX,amiami.com
 DOMAIN-SUFFIX,spotify.com
-DOMAIN,SUFFIX,discord.com
-DOMAIN,SUFFIX,discord.gg
-DOMAIN,SUFFIX,discordapp.com
-DOMAIN,SUFFIX,discordapp.net
+DOMAIN-SUFFIX,discord.com
+DOMAIN-SUFFIX,discord.gg
+DOMAIN-SUFFIX,discordapp.com
+DOMAIN-SUFFIX,discordapp.net
 
 # 10 - TOOL
 # # 4 - proxy
