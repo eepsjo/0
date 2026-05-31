@@ -31,8 +31,6 @@ fn main() {
             sources: vec![
                 Source { name: "FUCK @", url: "https://raw.githubusercontent.com/eepsjo/0/refs/heads/0/oth/r/fuck" },
                 Source { name: "AD @", url: "https://raw.githubusercontent.com/eepsjo/0/refs/heads/0/oth/r/ad" },
-                Source { name: "STUN @", url: "https://raw.githubusercontent.com/eepsjo/0/refs/heads/0/oth/r/stun" },
-                Source { name: "PCDN @", url: "https://raw.githubusercontent.com/eepsjo/0/refs/heads/0/oth/r/pcdn" },
                 Source { name: "pcdn @ privacy-protection-tools/anti-AD", url: "https://raw.githubusercontent.com/privacy-protection-tools/anti-AD/refs/heads/master/discretion/pcdn.txt" },
                 Source { name: "dns @ privacy-protection-tools/anti-AD", url: "https://raw.githubusercontent.com/privacy-protection-tools/anti-AD/refs/heads/master/discretion/dns.txt" },
             ],
@@ -41,8 +39,6 @@ fn main() {
             target: "d",
             base: "base/d",
             sources: vec![
-                Source { name: "SYST @", url: "https://raw.githubusercontent.com/eepsjo/0/refs/heads/0/oth/d/syst" },
-                Source { name: "GAME @", url: "https://raw.githubusercontent.com/eepsjo/0/refs/heads/0/oth/d/game" },
                 Source { name: "lancidr @ Loyalsoldier/clash-rules", url: "https://raw.githubusercontent.com/Loyalsoldier/clash-rules/refs/heads/release/lancidr.txt" },
                 Source { name: "private @ Loyalsoldier/clash-rules", url: "https://raw.githubusercontent.com/Loyalsoldier/clash-rules/refs/heads/release/private.txt" },
             ],
@@ -51,9 +47,7 @@ fn main() {
             target: "p",
             base: "base/p",
             sources: vec![
-                Source { name: "TOOL @", url: "https://raw.githubusercontent.com/eepsjo/0/refs/heads/0/oth/p/tool" },
-                Source { name: "NSFW @", url: "https://raw.githubusercontent.com/eepsjo/0/refs/heads/0/oth/p/nsfw" },
-                Source { name: "GAME @", url: "https://raw.githubusercontent.com/eepsjo/0/refs/heads/0/oth/p/game" },
+                Source { name: "deepseek @ LOWERTOP/Shadowrocket-First", url: "https://raw.githubusercontent.com/LOWERTOP/Shadowrocket-First/main/DeepSeek.list" },
                 Source { name: "telegramcidr @ Loyalsoldier/clash-rules", url: "https://raw.githubusercontent.com/Loyalsoldier/clash-rules/refs/heads/release/telegramcidr.txt" },
             ],
         },
