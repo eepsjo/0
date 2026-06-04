@@ -47,8 +47,9 @@ fn main() {
             target: "p",
             base: "base/p",
             sources: vec![
-                Source { name: "deepseek @ LOWERTOP/Shadowrocket-First", url: "https://raw.githubusercontent.com/LOWERTOP/Shadowrocket-First/main/DeepSeek.list" },
                 Source { name: "telegramcidr @ Loyalsoldier/clash-rules", url: "https://raw.githubusercontent.com/Loyalsoldier/clash-rules/refs/heads/release/telegramcidr.txt" },
+                Source { name: "deepseek @ LOWERTOP/Shadowrocket-First", url: "https://raw.githubusercontent.com/LOWERTOP/Shadowrocket-First/main/DeepSeek.list" },
+                Source { name: "ai @ iab0x00/ProxyRules", url: "https://raw.githubusercontent.com/iab0x00/ProxyRules/main/Rule/AI.txt" },
             ],
         },
     ];
