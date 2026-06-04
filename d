@@ -1,9 +1,10 @@
 # 158 - Taipei_260604
 
-# 1
+# 2
+DOMAIN-SUFFIX,discord.media
 DOMAIN-SUFFIX,iios.club
 
-# 5 - SYST
+# 5 - TOOL
 DOMAIN,time.windows.com
 DOMAIN,definitionupdates.microsoft.com
 DOMAIN-SUFFIX,msftncsi.com
@@ -14,9 +15,6 @@ DOMAIN-SUFFIX,update.microsoft.com
 DOMAIN,mc.bsdayo.moe
 DOMAIN-SUFFIX,maj-soul.com
 DOMAIN-SUFFIX,jingjianx.vip
-
-# 1 - Discord
-DOMAIN-SUFFIX,discord.media
 
 # 18 - lancidr @ Loyalsoldier/clash-rules
 IP-CIDR,0.0.0.0/8,no-resolve

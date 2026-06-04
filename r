@@ -10,7 +10,7 @@ DOMAIN-SUFFIX,stun.twilio.com
 DOMAIN-SUFFIX,mcdn.bilivideo.cn
 DOMAIN-SUFFIX,stunserver.stunprotocol.org
 
-# 1 - PCDN_bili
+# 1 - PCDN
 DOMAIN-WILDCARD,*pcdn*.biliapi.net
 
 # 1 - FUCK
