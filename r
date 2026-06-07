@@ -1,4 +1,7 @@
-# 121 - Taipei_260608
+# 122 - Taipei_260608
+
+# 1
+DOMAIN-SUFFIX,ping0.cc
 
 # 8 - STUN
 DST-PORT,3478
