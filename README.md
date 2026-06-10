@@ -1,6 +1,18 @@
 > 此等規則僅獻給配得上的人。
 
+## 🛡️ “誤殺”的規則
+
+| | 集 | 收錄原因 | 狀態 | 備註 |
+| :--- | :--- | :--- | :--- | :--- |
+| `+.dataflow.biliapi.com` | `R` | bilibili 的一个 PCDN 域名。攔截后手機客戶端“緩存視頻”功能失效 | ❌不處理 | 手機客戶端會使用其他域名來“緩存視頻” |
+
 ## 📝 使用例
+
+### shadowrocket
+
+- [兜底代理](https://raw.githubusercontent.com/eepsjo/s/refs/heads/c/p)
+
+- [兜底直連](https://raw.githubusercontent.com/eepsjo/s/refs/heads/c/d)
 
 ### mihomo
 
@@ -43,8 +55,6 @@ sub-rules:
   PROXYblockQUIC: ['AND,((NETWORK,UDP),(DST-PORT,443)),REJECT', 'MATCH,PROXY']
 ```
 
-## 🛡️ “誤殺”的規則
+### singbox
 
-| | 集 | 收錄原因 | 狀態 | 備註 |
-| :--- | :--- | :--- | :--- | :--- |
-| `+.dataflow.biliapi.com` | `R` | bilibili 的一个 PCDN 域名。攔截后手機客戶端“緩存視頻”功能失效 | ❌不處理 | 手機客戶端會使用其他域名來“緩存視頻” |
+bro just use mihomo 🤞🏻🥀
