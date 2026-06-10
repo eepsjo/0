@@ -1,4 +1,4 @@
-# 8 - STUN
+# 8 - stun @
 DST-PORT,3478
 DOMAIN-WILDCARD,stun.*
 DOMAIN-WILDCARD,stun?.l.google.com
