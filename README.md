@@ -7,25 +7,23 @@
   update: &update {interval: 28800, proxy: PROXY}
 
 rule-providers:
-  # 兜底代理
+  R: {type: http, behavior: domain, format: yaml, url: "https://anti-ad.net/clash.yaml", path: ./rule/R.yaml, <<: [*update]}
   r: {type: http, behavior: classical, format: text, url: "https://raw.githubusercontent.com/eepsjo/0/refs/heads/0/r", path: ./rule/r.txt, <<: [*update]}
+  # 兜底代理
   d: {type: http, behavior: classical, format: text, url: "https://raw.githubusercontent.com/eepsjo/0/refs/heads/0/d", path: ./rule/d.txt, <<: [*update]}
   p: {type: http, behavior: classical, format: text, url: "https://raw.githubusercontent.com/eepsjo/0/refs/heads/0/p", path: ./rule/p.txt, <<: [*update]}
-  R: {type: http, behavior: domain, format: yaml, url: "https://anti-ad.net/clash.yaml", path: ./rule/R.yaml, <<: [*update]}
   D: {type: http, behavior: domain, format: yaml, url: "https://raw.githubusercontent.com/Loyalsoldier/clash-rules/refs/heads/release/direct.txt", path: ./rule/p/D.yaml, <<: [*update]}
   I: {type: http, behavior: ipcidr, format: yaml, url: "https://raw.githubusercontent.com/Loyalsoldier/clash-rules/refs/heads/release/cncidr.txt", path: ./rule/p/I.yaml, <<: [*update]}
   # 兜底直連
-  # r: {type: http, behavior: classical, format: text, url: "https://raw.githubusercontent.com/eepsjo/0/refs/heads/0/r", path: ./rule/r.txt, <<: [*update]}
   # p: {type: http, behavior: classical, format: text, url: "https://raw.githubusercontent.com/eepsjo/0/refs/heads/0/p", path: ./rule/p.txt, <<: [*update]}
   # d: {type: http, behavior: classical, format: text, url: "https://raw.githubusercontent.com/eepsjo/0/refs/heads/0/d", path: ./rule/d.txt, <<: [*update]}
-  # R: {type: http, behavior: domain, format: yaml, url: "https://anti-ad.net/clash.yaml", path: ./rule/R.yaml, <<: [*update]}
   # T: {type: http, behavior: domain, format: yaml, url: "https://raw.githubusercontent.com/Loyalsoldier/clash-rules/refs/heads/release/tld-not-cn.txt", path: ./rule/d/T.yaml, <<: [*update]}
   # G: {type: http, behavior: domain, format: yaml, url: "https://raw.githubusercontent.com/Loyalsoldier/clash-rules/refs/heads/release/gfw.txt", path: ./rule/d/G.yaml, <<: [*update]}
 
 rules:
-  # 兜底代理
   - RULE-SET,R,REJECT
   - RULE-SET,r,REJECT
+  # 兜底代理
   - RULE-SET,d,DIRECT
   - SUB-RULE,(RULE-SET,p),PROXYblockQUIC
   - RULE-SET,D,DIRECT
@@ -33,8 +31,6 @@ rules:
   - AND,((NETWORK,UDP),(DST-PORT,443)),REJECT
   - MATCH,PROXY
   # 兜底直連
-  # - RULE-SET,R,REJECT
-  # - RULE-SET,r,REJECT
   # - SUB-RULE,(RULE-SET,p),PROXYblockQUIC
   # - RULE-SET,d,DIRECT
   # - SUB-RULE,(RULE-SET,T),PROXYblockQUIC
