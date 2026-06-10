@@ -1,7 +1,23 @@
-# 122 - Taipei_260610
+# 119 - Taipei_260610
 
 # 1
 DOMAIN-SUFFIX,ping0.cc
+
+# 5 - AD
+# > 3 - anti-AD
+DOMAIN-SUFFIX,shouji.sogou.com
+DOMAIN-SUFFIX,activity.windows.com
+DOMAIN-SUFFIX,mmstat.com
+# > 2 - ToolzAD
+DOMAIN-SUFFIX,browser.sentry-cdn.com
+DOMAIN-SUFFIX,metrics.icloud.com
+
+# 1 - FUCK
+# > 1 - bili
+DOMAIN-SUFFIX,2x.nz
+
+# 1 - PCDN
+DOMAIN-WILDCARD,*pcdn*.biliapi.net
 
 # 8 - STUN
 DST-PORT,3478
@@ -13,26 +29,7 @@ DOMAIN-SUFFIX,stun.twilio.com
 DOMAIN-SUFFIX,mcdn.bilivideo.cn
 DOMAIN-SUFFIX,stunserver.stunprotocol.org
 
-# 1 - PCDN
-DOMAIN-WILDCARD,*pcdn*.biliapi.net
-
-# 1 - FUCK
-# # 1 - bili
-DOMAIN-SUFFIX,2x.nz
-
-# 8 - AD
-# # 3- anti-AD
-DOMAIN-SUFFIX,shouji.sogou.com
-DOMAIN-SUFFIX,activity.windows.com
-DOMAIN-SUFFIX,mmstat.com
-# # 5 - ToolzAD
-DOMAIN-SUFFIX,metrics.icloud.com
-DOMAIN-SUFFIX,browser.sentry-cdn.com
-DOMAIN-SUFFIX,app.getsentry.com
-DOMAIN-SUFFIX,appmetrica.yandex.ru
-DOMAIN-SUFFIX,adfstat.yandex.ru
-
-# 30 - pcdn @ privacy-protection-tools/anti-AD
+# 30 - PCDN @ privacy-protection-tools/anti-AD
 DOMAIN,bsccdn.net
 DOMAIN,dyp2p-ali.douyucdn.cn
 DOMAIN,dyp2p-hw.douyucdn.cn
@@ -64,7 +61,7 @@ DOMAIN,szbdyd.com
 DOMAIN,uhabo.com
 DOMAIN,xycdn.com
 
-# 73 - dns @ privacy-protection-tools/anti-AD
+# 73 - DNS @ privacy-protection-tools/anti-AD
 DOMAIN,api.yuedu.dns.iqiyi.com
 DOMAIN,apidns.kwd.inkuai.com
 DOMAIN,bj.vip.waf.dns.iqiyi.com

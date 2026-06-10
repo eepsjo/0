@@ -1,9 +1,16 @@
 # 159 - Taipei_260610
 
-# 3
-DOMAIN-SUFFIX,discord.media
+# 2
 DOMAIN-SUFFIX,iios.fun
 DOMAIN-SUFFIX,iios.club
+
+# 1 - FORCE
+DOMAIN-SUFFIX,discord.media
+
+# 3 - GAME
+DOMAIN,mc.bsdayo.moe
+DOMAIN-SUFFIX,maj-soul.com
+DOMAIN-SUFFIX,jingjianx.vip
 
 # 5 - TOOL
 DOMAIN,time.windows.com
@@ -12,12 +19,7 @@ DOMAIN-SUFFIX,msftncsi.com
 DOMAIN-SUFFIX,msftconnecttest.com
 DOMAIN-SUFFIX,update.microsoft.com
 
-# 3 - GAME
-DOMAIN,mc.bsdayo.moe
-DOMAIN-SUFFIX,maj-soul.com
-DOMAIN-SUFFIX,jingjianx.vip
-
-# 18 - lancidr @ Loyalsoldier/clash-rules
+# 18 - LANCIDR @ Loyalsoldier/clash-rules
 IP-CIDR,0.0.0.0/8,no-resolve
 IP-CIDR,10.0.0.0/8,no-resolve
 IP-CIDR,100.64.0.0/10,no-resolve
@@ -37,7 +39,7 @@ IP-CIDR,fc00::/7,no-resolve
 IP-CIDR,fe80::/10,no-resolve
 IP-CIDR,ff00::/8,no-resolve
 
-# 130 - private @ Loyalsoldier/clash-rules
+# 130 - PRIVATE @ Loyalsoldier/clash-rules
 DOMAIN,instant.arubanetworks.com
 DOMAIN,setmeup.arubanetworks.com
 DOMAIN,asusrouter.com
