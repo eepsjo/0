@@ -6,7 +6,7 @@
 
 ```yaml
 .:
-  update: &update {interval: 28800, proxy: PROXY}
+  update: &update {interval: 28799, proxy: PROXY}
 
 rule-providers:
   R: {type: http, behavior: domain, format: yaml, url: "https://anti-ad.net/clash.yaml", path: ./rule/R.yaml, <<: [*update]}
