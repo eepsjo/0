@@ -7,28 +7,28 @@ DOMAIN,raw.githubusercontent.com
 # 1
 DOMAIN-SUFFIX,amiami.com
 
-# 5 - FORCE
+# 5 - force @
 DOMAIN-SUFFIX,spotify.com
 DOMAIN-SUFFIX,discord.com
 DOMAIN-SUFFIX,discord.gg
 DOMAIN-SUFFIX,discordapp.com
 DOMAIN-SUFFIX,discordapp.net
 
-# 5 - GAME
+# 5 - game @
 DOMAIN-SUFFIX,zi0.cc
 DOMAIN-SUFFIX,kungal.com
 DOMAIN-SUFFIX,wen-ware.com
 DOMAIN-SUFFIX,minecraft.net
 DOMAIN-SUFFIX,cubecraft.net
 
-# 5 - NSFW
+# 5 - nsfw @
 DOMAIN-SUFFIX,asmr.one
 DOMAIN-SUFFIX,kiko-play-niptan.one
 DOMAIN-WILDCARD,api.asmr-?00.com
 DOMAIN-SUFFIX,18comic.vip
 DOMAIN-SUFFIX,8se.me
 
-# 6 - TOOL
+# 6 - tool @
 DOMAIN-SUFFIX,ippure.com
 DOMAIN-SUFFIX,ipcheck.ing
 DOMAIN-SUFFIX,saucenao.com

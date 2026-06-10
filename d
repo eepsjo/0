@@ -4,15 +4,15 @@
 DOMAIN-SUFFIX,iios.fun
 DOMAIN-SUFFIX,iios.club
 
-# 1 - FORCE
+# 1 - force @
 DOMAIN-SUFFIX,discord.media
 
-# 3 - GAME
+# 3 - game @
 DOMAIN,mc.bsdayo.moe
 DOMAIN-SUFFIX,maj-soul.com
 DOMAIN-SUFFIX,jingjianx.vip
 
-# 5 - TOOL
+# 5 - tool @
 DOMAIN,time.windows.com
 DOMAIN,definitionupdates.microsoft.com
 DOMAIN-SUFFIX,msftncsi.com

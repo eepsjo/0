@@ -3,7 +3,7 @@
 # 1
 DOMAIN-SUFFIX,ping0.cc
 
-# 5 - AD
+# 5 - ad @
 # > 3 - anti-AD
 DOMAIN-SUFFIX,shouji.sogou.com
 DOMAIN-SUFFIX,activity.windows.com
@@ -12,14 +12,14 @@ DOMAIN-SUFFIX,mmstat.com
 DOMAIN-SUFFIX,browser.sentry-cdn.com
 DOMAIN-SUFFIX,metrics.icloud.com
 
-# 1 - FUCK
+# 1 - fuck @
 # > 1 - bili
 DOMAIN-SUFFIX,2x.nz
 
-# 1 - PCDN
+# 1 - pcdn @
 DOMAIN-WILDCARD,*pcdn*.biliapi.net
 
-# 8 - STUN
+# 8 - stun @
 DST-PORT,3478
 DOMAIN-WILDCARD,stun.*
 DOMAIN-WILDCARD,stun?.l.google.com
