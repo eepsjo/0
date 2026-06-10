@@ -26,29 +26,38 @@ fn main() {
 
     let tasks = vec![
         Task {
-            target: "r",
-            base: "base/r",
-            sources: vec![
-                Source { name: "FUCK @", url: "https://raw.githubusercontent.com/eepsjo/0/refs/heads/0/oth/r/fuck" },
-                Source { name: "AD @", url: "https://raw.githubusercontent.com/eepsjo/0/refs/heads/0/oth/r/ad" },
-                Source { name: "pcdn @ privacy-protection-tools/anti-AD", url: "https://raw.githubusercontent.com/privacy-protection-tools/anti-AD/refs/heads/master/discretion/pcdn.txt" },
-                Source { name: "dns @ privacy-protection-tools/anti-AD", url: "https://raw.githubusercontent.com/privacy-protection-tools/anti-AD/refs/heads/master/discretion/dns.txt" },
-            ],
-        },
-        Task {
             target: "d",
             base: "base/d",
             sources: vec![
-                Source { name: "lancidr @ Loyalsoldier/clash-rules", url: "https://raw.githubusercontent.com/Loyalsoldier/clash-rules/refs/heads/release/lancidr.txt" },
-                Source { name: "private @ Loyalsoldier/clash-rules", url: "https://raw.githubusercontent.com/Loyalsoldier/clash-rules/refs/heads/release/private.txt" },
+                Source { name: "force @", url: "https://raw.githubusercontent.com/eepsjo/0/refs/heads/0/oth/d/force" },
+                Source { name: "game @", url: "https://raw.githubusercontent.com/eepsjo/0/refs/heads/0/oth/d/game" },
+                Source { name: "tool @", url: "https://raw.githubusercontent.com/eepsjo/0/refs/heads/0/oth/d/tool" },
+                Source { name: "LANCIDR @ Loyalsoldier/clash-rules", url: "https://raw.githubusercontent.com/Loyalsoldier/clash-rules/refs/heads/release/lancidr.txt" },
+                Source { name: "PRIVATE @ Loyalsoldier/clash-rules", url: "https://raw.githubusercontent.com/Loyalsoldier/clash-rules/refs/heads/release/private.txt" },
             ],
         },
         Task {
             target: "p",
             base: "base/p",
             sources: vec![
-                Source { name: "telegramcidr @ Loyalsoldier/clash-rules", url: "https://raw.githubusercontent.com/Loyalsoldier/clash-rules/refs/heads/release/telegramcidr.txt" },
-                Source { name: "deepseek @ LOWERTOP/Shadowrocket-First", url: "https://raw.githubusercontent.com/LOWERTOP/Shadowrocket-First/main/DeepSeek.list" },
+                Source { name: "force @", url: "https://raw.githubusercontent.com/eepsjo/0/refs/heads/0/oth/p/force" },
+                Source { name: "game @", url: "https://raw.githubusercontent.com/eepsjo/0/refs/heads/0/oth/p/game" },
+                Source { name: "nsfw @", url: "https://raw.githubusercontent.com/eepsjo/0/refs/heads/0/oth/p/nsfw" },
+                Source { name: "tool @", url: "https://raw.githubusercontent.com/eepsjo/0/refs/heads/0/oth/p/tool" },
+                Source { name: "TELEGRAMCIDR @ Loyalsoldier/clash-rules", url: "https://raw.githubusercontent.com/Loyalsoldier/clash-rules/refs/heads/release/telegramcidr.txt" },
+                Source { name: "DEEPSEEK @ LOWERTOP/Shadowrocket-First", url: "https://raw.githubusercontent.com/LOWERTOP/Shadowrocket-First/main/DeepSeek.list" },
+            ],
+        },
+        Task {
+            target: "r",
+            base: "base/r",
+            sources: vec![
+                Source { name: "ad @", url: "https://raw.githubusercontent.com/eepsjo/0/refs/heads/0/oth/r/ad" },
+                Source { name: "fuck @", url: "https://raw.githubusercontent.com/eepsjo/0/refs/heads/0/oth/r/fuck" },
+                Source { name: "pcdn @", url: "https://raw.githubusercontent.com/eepsjo/0/refs/heads/0/oth/r/pcdn" },
+                Source { name: "stun @", url: "https://raw.githubusercontent.com/eepsjo/0/refs/heads/0/oth/r/stun" },
+                Source { name: "PCDN @ privacy-protection-tools/anti-AD", url: "https://raw.githubusercontent.com/privacy-protection-tools/anti-AD/refs/heads/master/discretion/pcdn.txt" },
+                Source { name: "DNS @ privacy-protection-tools/anti-AD", url: "https://raw.githubusercontent.com/privacy-protection-tools/anti-AD/refs/heads/master/discretion/dns.txt" },
             ],
         },
     ];

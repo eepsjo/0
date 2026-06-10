@@ -1,17 +1,4 @@
-# 10
+# 1
 
 # 1
 DOMAIN-SUFFIX,ping0.cc
-
-# 8 - STUN
-DST-PORT,3478
-DOMAIN-WILDCARD,stun.*
-DOMAIN-WILDCARD,stun?.l.google.com
-DOMAIN,hw-v2-web-player-tracker.biliapi.net
-DOMAIN-SUFFIX,freestun.net
-DOMAIN-SUFFIX,stun.twilio.com
-DOMAIN-SUFFIX,mcdn.bilivideo.cn
-DOMAIN-SUFFIX,stunserver.stunprotocol.org
-
-# 1 - PCDN
-DOMAIN-WILDCARD,*pcdn*.biliapi.net

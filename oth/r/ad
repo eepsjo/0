@@ -1,11 +1,8 @@
-# 8 - AD
-# # 3- anti-AD
+# 5 - AD
+# > 3 - anti-AD
 DOMAIN-SUFFIX,shouji.sogou.com
 DOMAIN-SUFFIX,activity.windows.com
 DOMAIN-SUFFIX,mmstat.com
-# # 5 - ToolzAD
-DOMAIN-SUFFIX,metrics.icloud.com
+# > 2 - ToolzAD
 DOMAIN-SUFFIX,browser.sentry-cdn.com
-DOMAIN-SUFFIX,app.getsentry.com
-DOMAIN-SUFFIX,appmetrica.yandex.ru
-DOMAIN-SUFFIX,adfstat.yandex.ru
+DOMAIN-SUFFIX,metrics.icloud.com
