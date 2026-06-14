@@ -1,4 +1,4 @@
-# 47 - Taipei_260614
+# 47 - Taipei_260615
 
 # 2 - UPDATE
 DOMAIN,anti-ad.net
