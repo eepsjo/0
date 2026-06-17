@@ -1,4 +1,4 @@
-# 159 - Taipei_260617
+# 160 - Taipei_260617
 
 # 2
 DOMAIN-SUFFIX,iios.fun
@@ -7,8 +7,9 @@ DOMAIN-SUFFIX,iios.club
 # 1 - force @
 DOMAIN-SUFFIX,discord.media
 
-# 3 - game @
+# 4 - game @
 DOMAIN,mc.bsdayo.moe
+DOMAIN,aime.my-aqua.net
 DOMAIN-SUFFIX,maj-soul.com
 DOMAIN-SUFFIX,jingjianx.vip
 
