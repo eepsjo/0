@@ -1,4 +1,4 @@
-# 48 - Taipei_260623
+# 47 - Taipei_260623
 
 # 6
 DOMAIN-SUFFIX,amiami.com
@@ -22,8 +22,7 @@ DOMAIN-WILDCARD,api.asmr-?00.com
 DOMAIN-SUFFIX,18comic.vip
 DOMAIN-SUFFIX,8se.me
 
-# 9 - tool @
-DOMAIN-SUFFIX,lencr.org
+# 8 - tool @
 DOMAIN,anti-ad.net
 DOMAIN,raw.githubusercontent.com
 DOMAIN-SUFFIX,ippure.com
