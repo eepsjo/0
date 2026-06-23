@@ -1,10 +1,8 @@
 # 161 - Taipei_260623
 
-# 2
+# 3
 DOMAIN-SUFFIX,iios.fun
 DOMAIN-SUFFIX,iios.club
-
-# 1 - force @
 DOMAIN-SUFFIX,discord.media
 
 # 5 - game @

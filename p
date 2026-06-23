@@ -1,13 +1,7 @@
-# 47 - Taipei_260623
+# 48 - Taipei_260623
 
-# 2 - UPDATE
-DOMAIN,anti-ad.net
-DOMAIN,raw.githubusercontent.com
-
-# 1
+# 6
 DOMAIN-SUFFIX,amiami.com
-
-# 5 - force @
 DOMAIN-SUFFIX,spotify.com
 DOMAIN-SUFFIX,discord.com
 DOMAIN-SUFFIX,discord.gg
@@ -28,7 +22,10 @@ DOMAIN-WILDCARD,api.asmr-?00.com
 DOMAIN-SUFFIX,18comic.vip
 DOMAIN-SUFFIX,8se.me
 
-# 6 - tool @
+# 9 - tool @
+DOMAIN-SUFFIX,lencr.org
+DOMAIN,anti-ad.net
+DOMAIN,raw.githubusercontent.com
 DOMAIN-SUFFIX,ippure.com
 DOMAIN-SUFFIX,ipcheck.ing
 DOMAIN-SUFFIX,saucenao.com
