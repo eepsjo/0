@@ -1,8 +1,9 @@
-# 3
+# 6
 
-# 2 - UPDATE
-DOMAIN,anti-ad.net
-DOMAIN,raw.githubusercontent.com
-
-# 1
+# 6
 DOMAIN-SUFFIX,amiami.com
+DOMAIN-SUFFIX,spotify.com
+DOMAIN-SUFFIX,discord.com
+DOMAIN-SUFFIX,discord.gg
+DOMAIN-SUFFIX,discordapp.com
+DOMAIN-SUFFIX,discordapp.net

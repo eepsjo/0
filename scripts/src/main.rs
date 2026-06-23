@@ -29,7 +29,6 @@ fn main() {
             target: "d",
             base: "base/d",
             sources: vec![
-                Source { name: "force @", url: "https://raw.githubusercontent.com/eepsjo/0/refs/heads/0/oth/d/force" },
                 Source { name: "game @", url: "https://raw.githubusercontent.com/eepsjo/0/refs/heads/0/oth/d/game" },
                 Source { name: "tool @", url: "https://raw.githubusercontent.com/eepsjo/0/refs/heads/0/oth/d/tool" },
                 Source { name: "LANCIDR @ Loyalsoldier/clash-rules", url: "https://raw.githubusercontent.com/Loyalsoldier/clash-rules/refs/heads/release/lancidr.txt" },
@@ -40,7 +39,6 @@ fn main() {
             target: "p",
             base: "base/p",
             sources: vec![
-                Source { name: "force @", url: "https://raw.githubusercontent.com/eepsjo/0/refs/heads/0/oth/p/force" },
                 Source { name: "game @", url: "https://raw.githubusercontent.com/eepsjo/0/refs/heads/0/oth/p/game" },
                 Source { name: "nsfw @", url: "https://raw.githubusercontent.com/eepsjo/0/refs/heads/0/oth/p/nsfw" },
                 Source { name: "tool @", url: "https://raw.githubusercontent.com/eepsjo/0/refs/heads/0/oth/p/tool" },
