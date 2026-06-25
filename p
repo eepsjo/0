@@ -1,4 +1,4 @@
-# 45 - Taipei_260625
+# 44 - Taipei_260625
 
 # 6
 DOMAIN-SUFFIX,amiami.com
@@ -22,12 +22,11 @@ DOMAIN-WILDCARD,api.asmr-?00.com
 DOMAIN-SUFFIX,18comic.vip
 DOMAIN-SUFFIX,8se.me
 
-# 6 - tool @
+# 5 - tool @
 DOMAIN-SUFFIX,ippure.com
 DOMAIN-SUFFIX,ipcheck.ing
 DOMAIN-SUFFIX,saucenao.com
 DOMAIN-SUFFIX,ascii2d.net
-DOMAIN-SUFFIX,dpdns.org
 DOMAIN-SUFFIX,digitalplat.org
 
 # 12 - TELEGRAMCIDR @ Loyalsoldier/clash-rules
