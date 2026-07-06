@@ -5,12 +5,12 @@ DOMAIN-SUFFIX,ping0.cc
 
 # 5 - ad @
 # > 3 - anti-AD
+DOMAIN-SUFFIX,mmstat.com
 DOMAIN-SUFFIX,shouji.sogou.com
 DOMAIN-SUFFIX,activity.windows.com
-DOMAIN-SUFFIX,mmstat.com
 # > 2 - ToolzAD
-DOMAIN-SUFFIX,browser.sentry-cdn.com
 DOMAIN-SUFFIX,metrics.icloud.com
+DOMAIN-SUFFIX,browser.sentry-cdn.com
 
 # 1 - fuck @
 # > 1 - bili

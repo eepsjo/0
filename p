@@ -1,4 +1,4 @@
-# 44 - Taipei_260706
+# 46 - Taipei_260706
 
 # 6
 DOMAIN-SUFFIX,amiami.com
@@ -15,18 +15,23 @@ DOMAIN-SUFFIX,wen-ware.com
 DOMAIN-SUFFIX,minecraft.net
 DOMAIN-SUFFIX,cubecraft.net
 
-# 5 - nsfw @
+# 7 - nsfw @
+DOMAIN-SUFFIX,8se.me
+# > 2 - jm
+DOMAIN-KEYWORD,18comic
+DOMAIN-KEYWORD,jmcomic
+# > 3 - ASMR Online
 DOMAIN-SUFFIX,asmr.one
 DOMAIN-SUFFIX,kiko-play-niptan.one
 DOMAIN-WILDCARD,api.asmr-?00.com
-DOMAIN-SUFFIX,18comic.vip
-DOMAIN-SUFFIX,8se.me
+# > 1 - asmrgay
+DOMAIN-KEYWORD,asmrgay
 
 # 5 - tool @
 DOMAIN-SUFFIX,ippure.com
 DOMAIN-SUFFIX,ipcheck.ing
-DOMAIN-SUFFIX,saucenao.com
 DOMAIN-SUFFIX,ascii2d.net
+DOMAIN-SUFFIX,saucenao.com
 DOMAIN-SUFFIX,digitalplat.org
 
 # 12 - TELEGRAMCIDR @ Loyalsoldier/clash-rules
