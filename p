@@ -20,12 +20,12 @@ DOMAIN-SUFFIX,8se.me
 # > 2 - jm
 DOMAIN-KEYWORD,18comic
 DOMAIN-KEYWORD,jmcomic
+# > 1 - asmrgay
+DOMAIN-KEYWORD,asmrgay
 # > 3 - ASMR Online
 DOMAIN-SUFFIX,asmr.one
 DOMAIN-SUFFIX,kiko-play-niptan.one
 DOMAIN-WILDCARD,api.asmr-?00.com
-# > 1 - asmrgay
-DOMAIN-KEYWORD,asmrgay
 
 # 5 - tool @
 DOMAIN-SUFFIX,ippure.com

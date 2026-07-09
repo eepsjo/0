@@ -1,14 +1,15 @@
-# 119 - Taipei_260709
+# 120 - Taipei_260709
 
 # 1
 DOMAIN-SUFFIX,ping0.cc
 
-# 5 - ad @
+# 6 - ad @
 # > 3 - anti-AD
 DOMAIN-SUFFIX,mmstat.com
 DOMAIN-SUFFIX,shouji.sogou.com
 DOMAIN-SUFFIX,activity.windows.com
-# > 2 - ToolzAD
+# > 3 - ToolzAD
+DOMAIN-SUFFIX,app.getsentry.com
 DOMAIN-SUFFIX,metrics.icloud.com
 DOMAIN-SUFFIX,browser.sentry-cdn.com
 
