@@ -18,8 +18,8 @@ DOMAIN-SUFFIX,browser.sentry-cdn.com
 DOMAIN-SUFFIX,2x.nz
 
 # 5 - gdid @
-# > !!!WARNING!!! RULESET STILL IN THE EXPERIMENTAL STAGE, MAY DISRUPT NORMAL NETWORK BEHAVIOR
-# > Learn more here: https://github.com/Korben00/no-gdid
+# !!!WARNING!!! RULESET STILL IN THE EXPERIMENTAL STAGE, MAY DISRUPT NORMAL NETWORK BEHAVIOR
+# Learn more here: https://github.com/Korben00/no-gdid
 DOMAIN,dds.microsoft.com
 DOMAIN,fd.dds.microsoft.com
 DOMAIN,aad.cs.dds.microsoft.com
