@@ -52,6 +52,7 @@ fn main() {
             sources: vec![
                 Source { name: "ad @", url: "https://raw.githubusercontent.com/eepsjo/0/refs/heads/0/oth/r/ad" },
                 Source { name: "fuck @", url: "https://raw.githubusercontent.com/eepsjo/0/refs/heads/0/oth/r/fuck" },
+                Source { name: "gdid @", url: "https://raw.githubusercontent.com/eepsjo/0/refs/heads/0/oth/r/gdid" },
                 Source { name: "pcdn @", url: "https://raw.githubusercontent.com/eepsjo/0/refs/heads/0/oth/r/pcdn" },
                 Source { name: "stun @", url: "https://raw.githubusercontent.com/eepsjo/0/refs/heads/0/oth/r/stun" },
                 Source { name: "PCDN @ privacy-protection-tools/anti-AD", url: "https://raw.githubusercontent.com/privacy-protection-tools/anti-AD/refs/heads/master/discretion/pcdn.txt" },
