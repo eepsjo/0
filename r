@@ -1,4 +1,4 @@
-# 120 - Taipei_260711
+# 125 - Taipei_260711
 
 # 1
 DOMAIN-SUFFIX,ping0.cc
@@ -16,6 +16,15 @@ DOMAIN-SUFFIX,browser.sentry-cdn.com
 # 1 - fuck @
 # > 1 - bili
 DOMAIN-SUFFIX,2x.nz
+
+# 5 - gdid @
+# > !!!WARNING!!! RULESET STILL IN THE EXPERIMENTAL STAGE, MAY DISRUPT NORMAL NETWORK BEHAVIOR
+# > Learn more here: https://github.com/Korben00/no-gdid
+DOMAIN,dds.microsoft.com
+DOMAIN,fd.dds.microsoft.com
+DOMAIN,aad.cs.dds.microsoft.com
+DOMAIN,cdpcs.access.microsoft.com
+DOMAIN,geo.prod.do.dsp.mp.microsoft.com
 
 # 1 - pcdn @
 DOMAIN-WILDCARD,*pcdn*.biliapi.net
