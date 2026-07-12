@@ -1,4 +1,4 @@
-# 160 - Taipei_260712
+# 161 - Taipei_260712
 
 # 3
 DOMAIN-SUFFIX,iios.fun
@@ -10,6 +10,18 @@ DOMAIN,mc.bsdayo.moe
 DOMAIN,aime.my-aqua.net
 DOMAIN,aqua.naominet.live
 DOMAIN-SUFFIX,maj-soul.com
+
+# 1 - tailscale @
+# !!!WARNING!!! RULESET STILL IN THE EXPERIMENTAL STAGE, MAY DISRUPT NORMAL NETWORK BEHAVIOR
+# this website needs to be DIRECT for tailscale to work properly, otherwise it will not be able to connect to the tailscale network
+# you may also need to add the following rules to your proxy tools, such as mihomo, LOCALLY, to make tailscale work:
+# ```yaml
+# IP-CIDR,100.64.0.0/10,TAILSCALE,no-resolve
+# DOMAIN-SUFFIX,ts.net,TAILSCALE
+# ```
+# the TAILSCALE above is the name of the proxy(group) you want to use for tailscale
+# you can change it to any name you want just make sure to change it in the rules above as well
+DOMAIN-SUFFIX,tailscale.com
 
 # 5 - tool @
 DOMAIN,time.windows.com
