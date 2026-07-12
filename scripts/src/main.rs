@@ -30,6 +30,7 @@ fn main() {
             base: "base/d",
             sources: vec![
                 Source { name: "game @", url: "https://raw.githubusercontent.com/eepsjo/0/refs/heads/0/oth/d/game" },
+                Source { name: "tailscale @", url: "https://raw.githubusercontent.com/eepsjo/0/refs/heads/0/oth/d/tailscale" },
                 Source { name: "tool @", url: "https://raw.githubusercontent.com/eepsjo/0/refs/heads/0/oth/d/tool" },
                 Source { name: "LANCIDR @ Loyalsoldier/clash-rules", url: "https://raw.githubusercontent.com/Loyalsoldier/clash-rules/refs/heads/release/lancidr.txt" },
                 Source { name: "PRIVATE @ Loyalsoldier/clash-rules", url: "https://raw.githubusercontent.com/Loyalsoldier/clash-rules/refs/heads/release/private.txt" },
