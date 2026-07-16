@@ -1,5 +1,5 @@
-# 8 - stun @
-DST-PORT,3478
+# 7 - stun @
+# DST-PORT,3478
 DOMAIN-WILDCARD,stun.*
 DOMAIN-WILDCARD,stun?.l.google.com
 DOMAIN,hw-v2-web-player-tracker.biliapi.net
