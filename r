@@ -1,4 +1,4 @@
-# 125 - Taipei_260716
+# 124 - Taipei_260717
 
 # 1
 DOMAIN-SUFFIX,ping0.cc
@@ -29,8 +29,8 @@ DOMAIN,geo.prod.do.dsp.mp.microsoft.com
 # 1 - pcdn @
 DOMAIN-WILDCARD,*pcdn*.biliapi.net
 
-# 8 - stun @
-DST-PORT,3478
+# 7 - stun @
+# DST-PORT,3478
 DOMAIN-WILDCARD,stun.*
 DOMAIN-WILDCARD,stun?.l.google.com
 DOMAIN,hw-v2-web-player-tracker.biliapi.net
