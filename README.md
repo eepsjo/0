@@ -6,6 +6,8 @@
 | :--- | :--- | :--- | :--- | :--- |
 | `+.dataflow.biliapi.com` | `R` | bilibili 的一个 PCDN 域名。攔截后手機客戶端“緩存視頻”功能失效 | ❌不處理 | 手機客戶端會使用其他域名來“緩存視頻” |
 
+> “集”具体内容参考使用例
+
 ## 📝 使用例
 
 ### shadowrocket
@@ -17,6 +19,7 @@
 ### mihomo
 
 ```yaml
+# mihomo v1.19.28+
 .:
   update: &update {interval: 28799, proxy: PROXY}
 
@@ -39,22 +42,28 @@ rules:
   - RULE-SET,r,REJECT
   # 兜底代理
   - RULE-SET,d,DIRECT
-  - SUB-RULE,(RULE-SET,p),PROXYblockQUIC
+  - RULE-SET,p,PbQ
   - RULE-SET,D,DIRECT
   - RULE-SET,I,DIRECT,no-resolve
-  - AND,((NETWORK,UDP),(DST-PORT,443)),REJECT
-  - MATCH,PROXY
+  - MATCH,PbQ
   # 兜底直連
-  # - SUB-RULE,(RULE-SET,p),PROXYblockQUIC
+  # - RULE-SET,p,PbQ
   # - RULE-SET,d,DIRECT
-  # - SUB-RULE,(RULE-SET,T),PROXYblockQUIC
-  # - SUB-RULE,(RULE-SET,G),PROXYblockQUIC
+  # - RULE-SET,T,PbQ
+  # - RULE-SET,G,PbQ
   # - MATCH,DIRECT
 
 sub-rules:
   PROXYblockQUIC: ['AND,((NETWORK,UDP),(DST-PORT,443)),REJECT', 'MATCH,PROXY']
+
+proxies:
+  - {name: PbQ, type: rematch, target-sub-rule: "PROXYblockQUIC"}
 ```
 
 ### singbox
 
-bro just use mihomo 🤞🏻🥀
+why did i even mention it 🥀 bro just use mihomo 🤞🏻
+
+### xray
+
+GET OUT 🗣🔥🔥🔥
