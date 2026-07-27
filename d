@@ -1,4 +1,4 @@
-# 161 - Taipei_260727
+# 162 - Taipei_260727
 
 # 3
 DOMAIN-SUFFIX,iios.fun
@@ -23,12 +23,13 @@ DOMAIN-SUFFIX,maj-soul.com
 # you can change it to any name you want just make sure to change it in the rules above as well
 DOMAIN-SUFFIX,tailscale.com
 
-# 5 - tool @
+# 6 - tool @
 DOMAIN,time.windows.com
 DOMAIN,definitionupdates.microsoft.com
 DOMAIN-SUFFIX,msftncsi.com
 DOMAIN-SUFFIX,msftconnecttest.com
 DOMAIN-SUFFIX,update.microsoft.com
+DOMAIN-SUFFIX,test-ipv6.com
 
 # 18 - LANCIDR @ Loyalsoldier/clash-rules
 IP-CIDR,0.0.0.0/8,no-resolve
