@@ -1,4 +1,4 @@
-# 124 - Taipei_260728
+# 125 - Taipei_260728
 
 # 1
 DOMAIN-SUFFIX,ping0.cc
@@ -18,7 +18,6 @@ DOMAIN-SUFFIX,browser.sentry-cdn.com
 DOMAIN-SUFFIX,2x.nz
 
 # 5 - gdid @
-# !!!WARNING!!! RULESET STILL IN THE EXPERIMENTAL STAGE, MAY DISRUPT NORMAL NETWORK BEHAVIOR
 # Learn more here: https://github.com/Korben00/no-gdid
 DOMAIN,dds.microsoft.com
 DOMAIN,fd.dds.microsoft.com
@@ -29,8 +28,8 @@ DOMAIN,geo.prod.do.dsp.mp.microsoft.com
 # 1 - pcdn @
 DOMAIN-WILDCARD,*pcdn*.biliapi.net
 
-# 7 - stun @
-# DST-PORT,3478
+# 8 - stun @
+DST-PORT,3478
 DOMAIN-WILDCARD,stun.*
 DOMAIN-WILDCARD,stun?.l.google.com
 DOMAIN,hw-v2-web-player-tracker.biliapi.net
