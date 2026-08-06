@@ -18,12 +18,14 @@ DOMAIN-SUFFIX,browser.sentry-cdn.com
 DOMAIN-SUFFIX,2x.nz
 
 # 5 - gdid @
+# !!!WARNING!!! RULES STILL IN THE EXPERIMENTAL STAGE; MAY DISRUPT NORMAL NETWORK BEHAVIOR
 # Learn more here: https://github.com/Korben00/no-gdid
-DOMAIN,dds.microsoft.com
-DOMAIN,fd.dds.microsoft.com
-DOMAIN,aad.cs.dds.microsoft.com
-DOMAIN,cdpcs.access.microsoft.com
-DOMAIN,geo.prod.do.dsp.mp.microsoft.com
+# UPDATE: based on https://github.com/Korben00/no-gdid/issues/6
+DOMAIN-SUFFIX,dds.microsoft.com
+DOMAIN-SUFFIX,cdpcs.access.microsoft.com
+DOMAIN-SUFFIX,prod.do.dsp.mp.microsoft.com
+DOMAIN-SUFFIX,settings-win.data.microsoft.com
+DOMAIN-KEYWORD,watson
 
 # 1 - pcdn @
 DOMAIN-WILDCARD,*pcdn*.biliapi.net

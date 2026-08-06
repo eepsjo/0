@@ -12,17 +12,14 @@ DOMAIN,aqua.naominet.live
 DOMAIN-SUFFIX,maj-soul.com
 
 # 1 - tailscale @
-# This DOMAIN needs to be set to DIRECT (or just use real IP) for Tailscale to work properly; 
-# otherwise, it will not be able to connect to the Tailscale network.
+# !!!WARNING!!! RULES STILL IN THE EXPERIMENTAL STAGE; MAY DISRUPT NORMAL NETWORK BEHAVIOR
+# Tailscale DOMAIN must be routed DIRECTly (or via real IP).
 DOMAIN-SUFFIX,tailscale.com
-# For Shadowrocket, the above rule is sufficient for Tailscale to work as expected.
-# If you use other proxy tools, such as mihomo, you may also need to add the following rule(s):
-#
-# ```yaml
+# For Shadowrocket, make sure to remove subnet 100.64.0.0/10 in tun-excluded-routes, then the above rule is sufficient for Tailscale to work as expected.
+# For other proxy tools, such as mihomo, you need to add the following rule(s):
 # IP-CIDR,100.64.0.0/10,TAILSCALE,no-resolve
-# ```
-#
 # The "TAILSCALE" above is the name of the proxy or proxy-group you want to use. Ensure this name matches the one used in your other rules.
+# NOTE: Standard proxy setups only support outgoing traffic, full mesh functionality requires inbound tunnel support/enabled in your proxy tool, which means if you do not configure your tools to allow inbound traffic, Tailscale will only works as a "client" and not as a "server".
 
 # 6 - tool @
 DOMAIN,time.windows.com
