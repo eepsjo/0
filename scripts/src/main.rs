@@ -29,6 +29,7 @@ fn main() {
             target: "d",
             base: "base/d",
             sources: vec![
+                Source { name: "bark @", url: "https://raw.githubusercontent.com/eepsjo/0/refs/heads/0/oth/d/bark" },
                 Source { name: "game @", url: "https://raw.githubusercontent.com/eepsjo/0/refs/heads/0/oth/d/game" },
                 Source { name: "tailscale @", url: "https://raw.githubusercontent.com/eepsjo/0/refs/heads/0/oth/d/tailscale" },
                 Source { name: "tool @", url: "https://raw.githubusercontent.com/eepsjo/0/refs/heads/0/oth/d/tool" },
