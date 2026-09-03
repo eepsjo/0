@@ -1,4 +1,4 @@
-# 164 - Taipei_260903
+# 163 - Taipei_260903
 
 # 3
 DOMAIN-SUFFIX,iios.fun
@@ -8,12 +8,11 @@ DOMAIN-SUFFIX,discord.media
 # 1 - bark @
 DOMAIN,api.day.app
 
-# 5 - game @
+# 4 - game @
 DOMAIN,mc.bsdayo.moe
 DOMAIN,aime.my-aqua.net
 DOMAIN,aqua.naominet.live
 DOMAIN-SUFFIX,maj-soul.com
-DOMAIN-SUFFIX,game-hololive-dreams.com
 
 # 1 - tailscale @
 # !!!WARNING!!! RULES STILL IN THE EXPERIMENTAL STAGE; MAY DISRUPT NORMAL NETWORK BEHAVIOR
