@@ -1,4 +1,4 @@
-# 163 - Taipei_260903
+# 164 - Taipei_260903
 
 # 3
 DOMAIN-SUFFIX,iios.fun
@@ -8,21 +8,16 @@ DOMAIN-SUFFIX,discord.media
 # 1 - bark @
 DOMAIN,api.day.app
 
-# 4 - game @
+# 5 - game @
 DOMAIN,mc.bsdayo.moe
 DOMAIN,aime.my-aqua.net
 DOMAIN,aqua.naominet.live
 DOMAIN-SUFFIX,maj-soul.com
+DOMAIN-SUFFIX,game-hololive-dreams.com
 
 # 1 - tailscale @
 # !!!WARNING!!! RULES STILL IN THE EXPERIMENTAL STAGE; MAY DISRUPT NORMAL NETWORK BEHAVIOR
-# Tailscale DOMAINs must be routed DIRECTly (or via real-ip).
 DOMAIN-SUFFIX,tailscale.com
-# For Shadowrocket, make sure to remove subnet 100.64.0.0/10 in the tun-excluded-routes, then the above rule is sufficient for Tailscale to work as expected.
-# For other proxy tools, such as mihomo, you need to add the following rule(s):
-# IP-CIDR,100.64.0.0/10,TAILSCALE,no-resolve
-# The "TAILSCALE" above is the name of the proxy or proxy-group you want to use. Ensure this name matches the one used in your other rules.
-# NOTE: Standard proxy setups only support outgoing traffic, but full mesh functionality requires inbound tunnel support/enabled, which means if you do not configure your tools to allow inbound traffic and route those traffic correctly, Tailscale will only works as a "client" but a "server" or a "peer".
 
 # 6 - tool @
 DOMAIN,time.windows.com
