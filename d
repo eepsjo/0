@@ -1,12 +1,9 @@
-# 163 - Taipei_260903
+# 162 - Taipei_260903
 
 # 3
 DOMAIN-SUFFIX,iios.fun
 DOMAIN-SUFFIX,iios.club
 DOMAIN-SUFFIX,discord.media
-
-# 1 - bark @
-DOMAIN,api.day.app
 
 # 4 - game @
 DOMAIN,mc.bsdayo.moe
@@ -14,13 +11,10 @@ DOMAIN,aime.my-aqua.net
 DOMAIN,aqua.naominet.live
 DOMAIN-SUFFIX,maj-soul.com
 
-# 1 - tailscale @
-# !!!WARNING!!! RULES STILL IN THE EXPERIMENTAL STAGE; MAY DISRUPT NORMAL NETWORK BEHAVIOR
-DOMAIN-SUFFIX,tailscale.com
-
-# 6 - tool @
+# 7 - tool @
 DOMAIN,time.windows.com
 DOMAIN,definitionupdates.microsoft.com
+DOMAIN,api.day.app
 DOMAIN-SUFFIX,msftncsi.com
 DOMAIN-SUFFIX,msftconnecttest.com
 DOMAIN-SUFFIX,update.microsoft.com

@@ -20,12 +20,11 @@ DOMAIN-SUFFIX,2x.nz
 # 5 - gdid @
 # !!!WARNING!!! RULES STILL IN THE EXPERIMENTAL STAGE; MAY DISRUPT NORMAL NETWORK BEHAVIOR
 # Learn more here: https://github.com/Korben00/no-gdid
-# UPDATE: based on https://github.com/Korben00/no-gdid/issues/6
+DOMAIN-KEYWORD,watson
 DOMAIN-SUFFIX,dds.microsoft.com
 DOMAIN-SUFFIX,cdpcs.access.microsoft.com
 DOMAIN-SUFFIX,prod.do.dsp.mp.microsoft.com
 DOMAIN-SUFFIX,settings-win.data.microsoft.com
-DOMAIN-KEYWORD,watson
 
 # 1 - pcdn @
 DOMAIN-WILDCARD,*pcdn*.biliapi.net
