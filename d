@@ -1,15 +1,16 @@
-# 162 - Taipei_260913
+# 163 - Taipei_260913
 
 # 3
 DOMAIN-SUFFIX,iios.fun
 DOMAIN-SUFFIX,iios.club
 DOMAIN-SUFFIX,discord.media
 
-# 4 - game @
+# 5 - game @
 DOMAIN,mc.bsdayo.moe
 DOMAIN,aime.my-aqua.net
 DOMAIN,aqua.naominet.live
 DOMAIN-SUFFIX,maj-soul.com
+DOMAIN-SUFFIX,game-hololive-dreams.com
 
 # 7 - tool @
 DOMAIN,time.windows.com
