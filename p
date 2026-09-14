@@ -1,4 +1,4 @@
-# 46 - Taipei_260914
+# 47 - Taipei_260914
 
 # 6
 DOMAIN-SUFFIX,amiami.com
@@ -15,15 +15,15 @@ DOMAIN-SUFFIX,wen-ware.com
 DOMAIN-SUFFIX,minecraft.net
 DOMAIN-SUFFIX,cubecraft.net
 
-# 7 - nsfw @
+# 8 - nsfw @
 DOMAIN-SUFFIX,8se.me
 DOMAIN-KEYWORD,hanime
 DOMAIN-KEYWORD,18comic
 DOMAIN-KEYWORD,jmcomic
 DOMAIN-KEYWORD,asmrgay
-# > 2 - ASMR.ONE
+# > 3 - ASMR.ONE
 DOMAIN-SUFFIX,asmr.one
-# DOMAIN-SUFFIX,kiko-play-niptan.one
+DOMAIN-SUFFIX,kiko-play-niptan.one
 DOMAIN-WILDCARD,api.asmr-?00.com
 
 # 5 - tool @
