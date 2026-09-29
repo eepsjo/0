@@ -59,11 +59,3 @@ sub-rules:
 proxies:
   - {name: PbQ, type: rematch, target-sub-rule: "PROXYblockQUIC"}
 ```
-
-### singbox
-
-why did i even mention it 🥀 bro just use mihomo 🤞🏻
-
-### xray
-
-GET OUT 🗣🔥🔥🔥
