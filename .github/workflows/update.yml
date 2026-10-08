@@ -1,0 +1,44 @@
+name: Update Rules
+
+on:
+  workflow_dispatch:
+  push:
+    branches: ['0']
+    paths: ['base/**', 'oth/**', 'scripts/**']
+  schedule:
+    - cron: '0 */8 * * *'
+
+permissions:
+  contents: write
+  actions: write
+
+jobs:
+  build_and_clean:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Checkout codebase
+      uses: actions/checkout@v4
+
+    - name: Rust Cache
+      uses: Swatinem/rust-cache@v2
+      with:
+        workspaces: "scripts -> target"
+
+    - name: Run update script
+      run: cargo run --manifest-path scripts/Cargo.toml
+
+    - name: Commit and Push changes
+      uses: stefanzweifel/git-auto-commit-action@v5
+      with:
+        commit_message: "Auto update rule sets"
+        branch: '0'
+        file_pattern: 'r d p'
+
+    - name: Delete old workflow runs
+      uses: Mattraks/delete-workflow-runs@v2
+      with:
+        token: ${{ github.token }}
+        repository: ${{ github.repository }}
+        retain_days: 1
+        # keep_minimum_runs: 3
