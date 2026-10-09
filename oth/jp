@@ -1,11 +1,8 @@
 # 5
-# should BLOCK following domains for anti-ad purposes before this rule set is applied
-# DOMAIN-SUFFIX,mkmree.dmm.co.jp
-# DOMAIN-SUFFIX,tracking.cds.dmm.co.jp
+# > 2 - DLsite
+DOMAIN-SUFFIX,dlsite.com
+DOMAIN-SUFFIX,dlsite.jp
 # > 3 - FANZA / DMM
 DOMAIN-SUFFIX,fanza.jp
 DOMAIN-SUFFIX,dmm.com
 DOMAIN-SUFFIX,dmm.co.jp
-# > 2 - DLsite
-DOMAIN-SUFFIX,dlsite.com
-DOMAIN-SUFFIX,dlsite.jp
