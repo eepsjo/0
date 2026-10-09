@@ -1,0 +1,13 @@
+# 5 - Taipei_261009 (MANUAL_UPDATE)
+# !!!WARNING!!! RULES STILL IN THE EXPERIMENTAL STAGE; MAY DISRUPT NORMAL NETWORK BEHAVIOR
+# use a Japan proxy exit node for this rule set to access DLsite etc. below
+# > 2 - DLsite
+DOMAIN-SUFFIX,dlsite.com
+DOMAIN-SUFFIX,dlsite.jp
+# > 3 - FANZA / DMM
+DOMAIN-SUFFIX,fanza.jp
+DOMAIN-SUFFIX,dmm.com
+DOMAIN-SUFFIX,dmm.co.jp
+# should BLOCK following domains for anti-ad purposes before this rule set is applied
+# DOMAIN-SUFFIX,mkmree.dmm.co.jp
+# DOMAIN-SUFFIX,tracking.cds.dmm.co.jp
