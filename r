@@ -1,11 +1,9 @@
 # 126 - Taipei_261017
 
 # === BASE START ===
-
 # 2
 DOMAIN-SUFFIX,ping0.cc
 DOMAIN-SUFFIX,optimizationguide-pa.googleapis.com
-
 # ===  BASE END  ===
 
 # 6 - ad @
