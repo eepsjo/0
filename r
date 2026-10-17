@@ -1,7 +1,8 @@
-# 125 - Taipei_261017
+# 126 - Taipei_261017
 
-# 1
+# 2
 DOMAIN-SUFFIX,ping0.cc
+DOMAIN-SUFFIX,optimizationguide-pa.googleapis.com
 
 # 6 - ad @
 # > 3 - anti-AD

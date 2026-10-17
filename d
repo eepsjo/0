@@ -1,9 +1,7 @@
-# 161 - Taipei_261017
+# 159 - Taipei_261017
 
-# 3
+# 1
 DOMAIN-SUFFIX,iios.fun
-DOMAIN-SUFFIX,iios.club
-DOMAIN-SUFFIX,discord.media
 
 # 3 - game @
 DOMAIN,aime.my-aqua.net

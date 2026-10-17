@@ -2,9 +2,9 @@
 
 # 6
 DOMAIN-SUFFIX,amiami.com
-DOMAIN-SUFFIX,spotify.com
 DOMAIN-SUFFIX,discord.com
 DOMAIN-SUFFIX,discord.gg
+DOMAIN-SUFFIX,discord.media
 DOMAIN-SUFFIX,discordapp.com
 DOMAIN-SUFFIX,discordapp.net
 
