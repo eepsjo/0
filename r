@@ -1,8 +1,12 @@
 # 126 - Taipei_261017
 
+# === BASE START ===
+
 # 2
 DOMAIN-SUFFIX,ping0.cc
 DOMAIN-SUFFIX,optimizationguide-pa.googleapis.com
+
+# ===  BASE END  ===
 
 # 6 - ad @
 # > 3 - anti-AD
@@ -19,7 +23,6 @@ DOMAIN-SUFFIX,browser.sentry-cdn.com
 DOMAIN-SUFFIX,2x.nz
 
 # 5 - gdid @
-# !!!WARNING!!! RULES STILL IN THE EXPERIMENTAL STAGE; MAY DISRUPT NORMAL NETWORK BEHAVIOR
 # Learn more here: https://github.com/Korben00/no-gdid
 DOMAIN-KEYWORD,watson
 DOMAIN-SUFFIX,dds.microsoft.com

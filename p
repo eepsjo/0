@@ -1,11 +1,15 @@
 # 47 - Taipei_261017
 
+# === BASE START ===
+
 # 5
 DOMAIN-SUFFIX,amiami.com
 DOMAIN-SUFFIX,discord.com
 DOMAIN-SUFFIX,discord.gg
 DOMAIN-SUFFIX,discordapp.com
 DOMAIN-SUFFIX,discordapp.net
+
+# ===  BASE END  ===
 
 # 6 - game @
 DOMAIN-SUFFIX,zi0.cc

@@ -1,7 +1,15 @@
-# 159 - Taipei_261017
+# 160 - Taipei_261017
+
+# === BASE START ===
 
 # 1
 DOMAIN-SUFFIX,iios.fun
+
+# 1 - Discord Call
+# !!!WARNING!!! This domain does not belong to cn network services. Since using proxies would damage its functionality, direct route were applied, but direct connections may expose the use of proxies
+DOMAIN-SUFFIX,discord.media
+
+# ===  BASE END  ===
 
 # 3 - game @
 DOMAIN,aime.my-aqua.net
