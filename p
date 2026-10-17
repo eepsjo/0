@@ -1,10 +1,9 @@
-# 48 - Taipei_261017
+# 47 - Taipei_261017
 
-# 6
+# 5
 DOMAIN-SUFFIX,amiami.com
 DOMAIN-SUFFIX,discord.com
 DOMAIN-SUFFIX,discord.gg
-DOMAIN-SUFFIX,discord.media
 DOMAIN-SUFFIX,discordapp.com
 DOMAIN-SUFFIX,discordapp.net
 
