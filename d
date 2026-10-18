@@ -1,4 +1,4 @@
-# 159 - Taipei_261018
+# 161 - Taipei_261018
 
 # === BASE START ===
 # 1
@@ -39,7 +39,7 @@ IP-CIDR,fc00::/7,no-resolve
 IP-CIDR,fe80::/10,no-resolve
 IP-CIDR,ff00::/8,no-resolve
 
-# 130 - PRIVATE @ Loyalsoldier/clash-rules
+# 132 - PRIVATE @ Loyalsoldier/clash-rules
 DOMAIN,instant.arubanetworks.com
 DOMAIN,setmeup.arubanetworks.com
 DOMAIN,asusrouter.com
@@ -48,6 +48,8 @@ DOMAIN,www.asusrouter.com
 DOMAIN,oasisauth.h3c.com
 DOMAIN,routerlogin.com
 DOMAIN,www.routerlogin.com
+DOMAIN,localhost.weixin.qq.com
+DOMAIN,localhost.work.weixin.qq.com
 DOMAIN,tplogin.cn
 DOMAIN,miwifi.com
 DOMAIN,www.miwifi.com
