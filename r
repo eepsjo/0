@@ -8,17 +8,17 @@ DOMAIN-SUFFIX,optimizationguide-pa.googleapis.com
 
 # 18 - ad @
 # > anti-ad
-# > Learn more here: https://github.com/privacy-protection-tools/anti-AD/blob/master/discretion/README.md
+# >> Learn more here: https://github.com/privacy-protection-tools/anti-AD/blob/master/discretion/README.md
 DOMAIN-SUFFIX,mmstat.com
 DOMAIN-SUFFIX,shouji.sogou.com
 DOMAIN-SUFFIX,activity.windows.com
 # > ToolzAD
-# > Learn more here: https://github.com/Turtlecute33/adblocktest
+# >> Learn more here: https://github.com/Turtlecute33/adblocktest
 DOMAIN-SUFFIX,app.getsentry.com
 DOMAIN-SUFFIX,metrics.icloud.com
 DOMAIN-SUFFIX,browser.sentry-cdn.com
 # > ipcheck.ing
-# > Learn more here: https://docs.ipcheck.ing/knowledge-base/lookup-privacy/ad-and-tracker-blocking-test
+# >> Learn more here: https://docs.ipcheck.ing/knowledge-base/lookup-privacy/ad-and-tracker-blocking-test
 DOMAIN-SUFFIX,ads.microsoft.com
 DOMAIN-SUFFIX,api16-access-sg.pangle.io
 DOMAIN-SUFFIX,pangolin16.isnssdk.com
