@@ -1,4 +1,4 @@
-# 138 - Taipei_261023
+# 140 - Taipei_261023
 
 # === BASE START ===
 # 2
@@ -6,7 +6,7 @@ DOMAIN-SUFFIX,ping0.cc
 DOMAIN-SUFFIX,optimizationguide-pa.googleapis.com
 # ===  BASE END  ===
 
-# 18 - ad @
+# 20 - ad @
 # > anti-ad
 # >> Learn more here: https://github.com/privacy-protection-tools/anti-AD/blob/master/discretion/README.md
 DOMAIN-SUFFIX,mmstat.com
@@ -31,6 +31,8 @@ DOMAIN-SUFFIX,js-cdn.dynatrace.com
 DOMAIN-SUFFIX,ads.roku.com
 DOMAIN-WILDCARD,*device-metrics-us*.amazon.com
 DOMAIN-SUFFIX,mads-eu.amazon.com
+DOMAIN-SUFFIX,connect.facebook.net
+DOMAIN-SUFFIX,ngfts.lge.com
 
 # 1 - fuck @
 # > bili
