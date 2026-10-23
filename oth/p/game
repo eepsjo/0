@@ -1,7 +1,26 @@
-# 6 - game @
+# 21 - game @
 DOMAIN-SUFFIX,zi0.cc
 DOMAIN-SUFFIX,kungal.com
 DOMAIN-SUFFIX,wen-ware.com
-DOMAIN-SUFFIX,minecraft.net
-DOMAIN-SUFFIX,cubecraft.net
 DOMAIN-SUFFIX,ndemiccreations.com
+# > Minecraft
+DOMAIN-SUFFIX,mojang.com
+DOMAIN-SUFFIX,minecraft.net
+DOMAIN-SUFFIX,minecraftservices.com
+# >> launcher
+DOMAIN-SUFFIX,prismlauncher.org
+DOMAIN-SUFFIX,fjordlauncher.org
+# >> mod & java
+DOMAIN-SUFFIX,minecraftforge.net
+DOMAIN-SUFFIX,neoforged.net
+DOMAIN-SUFFIX,fabricmc.net
+DOMAIN-SUFFIX,quiltmc.org
+DOMAIN-SUFFIX,liteloader.com
+DOMAIN-SUFFIX,optifine.net
+DOMAIN-SUFFIX,modrinth.com
+DOMAIN-SUFFIX,forgecdn.net
+DOMAIN-SUFFIX,curseforge.com
+DOMAIN-SUFFIX,adoptium.net
+DOMAIN-SUFFIX,azul.com
+# >> servers
+DOMAIN-SUFFIX,cubecraft.net
