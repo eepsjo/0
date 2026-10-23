@@ -1,17 +1,36 @@
-# 43 - Taipei_261023
+# 58 - Taipei_261023
 
 # === BASE START ===
 # 1
 DOMAIN-SUFFIX,amiami.com
 # ===  BASE END  ===
 
-# 6 - game @
+# 21 - game @
 DOMAIN-SUFFIX,zi0.cc
 DOMAIN-SUFFIX,kungal.com
 DOMAIN-SUFFIX,wen-ware.com
-DOMAIN-SUFFIX,minecraft.net
-DOMAIN-SUFFIX,cubecraft.net
 DOMAIN-SUFFIX,ndemiccreations.com
+# > Minecraft
+DOMAIN-SUFFIX,mojang.com
+DOMAIN-SUFFIX,minecraft.net
+DOMAIN-SUFFIX,minecraftservices.com
+# >> launcher
+DOMAIN-SUFFIX,prismlauncher.org
+DOMAIN-SUFFIX,fjordlauncher.org
+# >> mod & java
+DOMAIN-SUFFIX,minecraftforge.net
+DOMAIN-SUFFIX,neoforged.net
+DOMAIN-SUFFIX,fabricmc.net
+DOMAIN-SUFFIX,quiltmc.org
+DOMAIN-SUFFIX,liteloader.com
+DOMAIN-SUFFIX,optifine.net
+DOMAIN-SUFFIX,modrinth.com
+DOMAIN-SUFFIX,forgecdn.net
+DOMAIN-SUFFIX,curseforge.com
+DOMAIN-SUFFIX,adoptium.net
+DOMAIN-SUFFIX,azul.com
+# >> servers
+DOMAIN-SUFFIX,cubecraft.net
 
 # 8 - nsfw @
 DOMAIN-SUFFIX,8se.me
@@ -19,7 +38,7 @@ DOMAIN-KEYWORD,hanime
 DOMAIN-KEYWORD,18comic
 DOMAIN-KEYWORD,jmcomic
 DOMAIN-KEYWORD,asmrgay
-# > 3 - ASMR.ONE
+# > ASMR.ONE
 DOMAIN-SUFFIX,asmr.one
 DOMAIN-SUFFIX,kiko-play-niptan.one
 DOMAIN-WILDCARD,api.asmr-?00.com

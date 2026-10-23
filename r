@@ -7,17 +7,17 @@ DOMAIN-SUFFIX,optimizationguide-pa.googleapis.com
 # ===  BASE END  ===
 
 # 6 - ad @
-# > 3 - anti-AD
+# > anti-AD
 DOMAIN-SUFFIX,mmstat.com
 DOMAIN-SUFFIX,shouji.sogou.com
 DOMAIN-SUFFIX,activity.windows.com
-# > 3 - ToolzAD
+# > ToolzAD
 DOMAIN-SUFFIX,app.getsentry.com
 DOMAIN-SUFFIX,metrics.icloud.com
 DOMAIN-SUFFIX,browser.sentry-cdn.com
 
 # 1 - fuck @
-# > 1 - bili
+# > bili
 DOMAIN-SUFFIX,2x.nz
 
 # 5 - gdid @
