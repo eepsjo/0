@@ -1,4 +1,4 @@
-# 140 - Taipei_261026
+# 147 - Taipei_261026
 
 # === BASE START ===
 # 2
@@ -91,7 +91,8 @@ DOMAIN,szbdyd.com
 DOMAIN,uhabo.com
 DOMAIN,xycdn.com
 
-# 73 - DNS @ privacy-protection-tools/anti-AD
+# 80 - DNS @ privacy-protection-tools/anti-AD
+DOMAIN,aedns.weixin.qq.com
 DOMAIN,api.yuedu.dns.iqiyi.com
 DOMAIN,apidns.kwd.inkuai.com
 DOMAIN,bj.vip.waf.dns.iqiyi.com
@@ -130,6 +131,7 @@ DOMAIN,httpdns.cctv.com
 DOMAIN,httpdns.danuoyi.tbcache.com
 DOMAIN,httpdns.gslb.yy.com
 DOMAIN,httpdns.huaweicloud.com
+DOMAIN,httpdns.immomo.com
 DOMAIN,httpdns.kg.qq.com
 DOMAIN,httpdns.kwd.inkuai.com
 DOMAIN,httpdns.meituan.com
@@ -151,6 +153,9 @@ DOMAIN,httpdns.yunxinfw.com
 DOMAIN,httpdns.zhihu.com
 DOMAIN,httpdns.zybang.com
 DOMAIN,httpdns1.cc.cdnhwc5.com
+DOMAIN,httpdnsmultiapi.meituan.com
+DOMAIN,httpdnsmultiapivip.meituan.com
+DOMAIN,httpdnsvip.meituan.com
 DOMAIN,httpsdns.baidu.com
 DOMAIN,iface2.dns.iqiyi.com
 DOMAIN,ipv6-static.dns.iqiyi.com
@@ -162,6 +167,8 @@ DOMAIN,resolver.gslb.mi-idc.com
 DOMAIN,resolver.mi.xiaomi.com
 DOMAIN,resolver.msg.global.xiaomi.net
 DOMAIN,resolver.msg.xiaomi.net
+DOMAIN,resolvers-cn.httpdns.aliyuncs.com
 DOMAIN,static.dns.qiyipic.iqiyi.com
 DOMAIN,union-httpdns.gslb.yy.com
 DOMAIN,v6-data.video.dns.iqiyi.com
+DOMAIN,yuyin-httpdns.gslb.yy.com
