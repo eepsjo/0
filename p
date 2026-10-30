@@ -1,4 +1,4 @@
-# 59 - Taipei_261030
+# 60 - Taipei_261030
 
 # === BASE START ===
 # 2
@@ -33,8 +33,9 @@ DOMAIN-SUFFIX,azul.com
 # >> servers
 DOMAIN-SUFFIX,cubecraft.net
 
-# 8 - nsfw @
+# 9 - nsfw @
 DOMAIN-SUFFIX,8se.me
+DOMAIN-SUFFIX,xsnvshen.com
 DOMAIN-KEYWORD,hanime
 DOMAIN-KEYWORD,18comic
 DOMAIN-KEYWORD,jmcomic
