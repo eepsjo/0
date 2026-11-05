@@ -1,4 +1,4 @@
-# 60 - Taipei_261105
+# 49 - Taipei_261105
 
 # === BASE START ===
 # 2
@@ -65,16 +65,3 @@ IP-CIDR,2001:67c:4e8::/48,no-resolve
 IP-CIDR,2001:b28:f23c::/47,no-resolve
 IP-CIDR,2001:b28:f23f::/48,no-resolve
 IP-CIDR,2a0a:f280::/32,no-resolve
-
-# 11 - DEEPSEEK @ LOWERTOP/Shadowrocket-First
-DOMAIN-KEYWORD,deepseek
-DOMAIN-SUFFIX,deepseek.com
-DOMAIN-SUFFIX,fengkongcloud.cn
-DOMAIN-SUFFIX,fengkongcloud.com
-DOMAIN-SUFFIX,portal101.cn
-DOMAIN-SUFFIX,portal101.com
-DOMAIN-SUFFIX,sentry.io
-DOMAIN-SUFFIX,volces.com
-DOMAIN-SUFFIX,intercom.io
-DOMAIN-SUFFIX,intercom.com
-DOMAIN-SUFFIX,intercomcdn.com

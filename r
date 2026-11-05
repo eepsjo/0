@@ -1,4 +1,4 @@
-# 147 - Taipei_261105
+# 148 - Taipei_261105
 
 # === BASE START ===
 # 2
@@ -58,6 +58,11 @@ DOMAIN-SUFFIX,freestun.net
 DOMAIN-SUFFIX,stun.twilio.com
 DOMAIN-SUFFIX,mcdn.bilivideo.cn
 DOMAIN-SUFFIX,stunserver.stunprotocol.org
+
+# 1 - wo @
+# > !!!WARNING!!! RULES STILL IN THE EXPERIMENTAL STAGE; MAY DISRUPT NORMAL NETWORK BEHAVIOR
+# > Learn more here: https://x.com/MeTerminator666/status/2116504516317376942
+DOMAIN-SUFFIX,dm.wo.com.cn
 
 # 30 - PCDN @ privacy-protection-tools/anti-AD
 DOMAIN,bsccdn.net
