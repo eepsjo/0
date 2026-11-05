@@ -43,7 +43,7 @@ fn main() {
                 Source { name: "nsfw @", url: "https://raw.githubusercontent.com/eepsjo/0/refs/heads/0/oth/p/nsfw" },
                 Source { name: "tool @", url: "https://raw.githubusercontent.com/eepsjo/0/refs/heads/0/oth/p/tool" },
                 Source { name: "TELEGRAMCIDR @ Loyalsoldier/clash-rules", url: "https://raw.githubusercontent.com/Loyalsoldier/clash-rules/refs/heads/release/telegramcidr.txt" },
-                Source { name: "DEEPSEEK @ LOWERTOP/Shadowrocket-First", url: "https://raw.githubusercontent.com/LOWERTOP/Shadowrocket-First/main/DeepSeek.list" },
+                // Source { name: "DEEPSEEK @ LOWERTOP/Shadowrocket-First", url: "https://raw.githubusercontent.com/LOWERTOP/Shadowrocket-First/main/DeepSeek.list" },
             ],
         },
         Task {
@@ -55,6 +55,7 @@ fn main() {
                 Source { name: "gdid @", url: "https://raw.githubusercontent.com/eepsjo/0/refs/heads/0/oth/r/gdid" },
                 Source { name: "pcdn @", url: "https://raw.githubusercontent.com/eepsjo/0/refs/heads/0/oth/r/pcdn" },
                 Source { name: "stun @", url: "https://raw.githubusercontent.com/eepsjo/0/refs/heads/0/oth/r/stun" },
+                Source { name: "wo @", url: "https://raw.githubusercontent.com/eepsjo/0/refs/heads/0/oth/r/wo" },
                 Source { name: "PCDN @ privacy-protection-tools/anti-AD", url: "https://raw.githubusercontent.com/privacy-protection-tools/anti-AD/refs/heads/master/discretion/pcdn.txt" },
                 Source { name: "DNS @ privacy-protection-tools/anti-AD", url: "https://raw.githubusercontent.com/privacy-protection-tools/anti-AD/refs/heads/master/discretion/dns.txt" },
             ],
