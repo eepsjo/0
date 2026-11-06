@@ -42,6 +42,7 @@ fn main() {
                 Source { name: "game @", url: "https://raw.githubusercontent.com/eepsjo/0/refs/heads/0/oth/p/game" },
                 Source { name: "nsfw @", url: "https://raw.githubusercontent.com/eepsjo/0/refs/heads/0/oth/p/nsfw" },
                 Source { name: "tool @", url: "https://raw.githubusercontent.com/eepsjo/0/refs/heads/0/oth/p/tool" },
+                Source { name: "PROTONMAIL @ blackmatrix7/ios_rule_script", url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/Protonmail/Protonmail.yaml" },
                 Source { name: "TELEGRAMCIDR @ Loyalsoldier/clash-rules", url: "https://raw.githubusercontent.com/Loyalsoldier/clash-rules/refs/heads/release/telegramcidr.txt" },
                 // Source { name: "DEEPSEEK @ LOWERTOP/Shadowrocket-First", url: "https://raw.githubusercontent.com/LOWERTOP/Shadowrocket-First/main/DeepSeek.list" },
             ],
