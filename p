@@ -1,4 +1,4 @@
-# 49 - Taipei_261106
+# 54 - Taipei_261106
 
 # === BASE START ===
 # 2
@@ -51,6 +51,13 @@ DOMAIN-SUFFIX,ipcheck.ing
 DOMAIN-SUFFIX,ascii2d.net
 DOMAIN-SUFFIX,saucenao.com
 DOMAIN-SUFFIX,digitalplat.org
+
+# 5 - PROTONMAIL @ blackmatrix7/ios_rule_script
+DOMAIN-SUFFIX,pm.me
+DOMAIN-SUFFIX,proton.me
+DOMAIN-SUFFIX,protonmail.ch
+DOMAIN-SUFFIX,protonmail.com
+DOMAIN-SUFFIX,protonstatus.com
 
 # 12 - TELEGRAMCIDR @ Loyalsoldier/clash-rules
 IP-CIDR,91.105.192.0/23,no-resolve
