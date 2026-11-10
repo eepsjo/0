@@ -9,6 +9,7 @@ DOMAIN-SUFFIX,activity.windows.com
 DOMAIN-SUFFIX,app.getsentry.com
 DOMAIN-SUFFIX,metrics.icloud.com
 DOMAIN-SUFFIX,browser.sentry-cdn.com
+DOMAIN-SUFFIX,appmetrica.yandex.ru
 # > ipcheck.ing
 # >> Learn more here: https://docs.ipcheck.ing/knowledge-base/lookup-privacy/ad-and-tracker-blocking-test
 DOMAIN-SUFFIX,ads.microsoft.com
