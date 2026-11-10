@@ -1,4 +1,4 @@
-# 148 - Taipei_261110
+# 149 - Taipei_261110
 
 # === BASE START ===
 # 2
@@ -6,7 +6,7 @@ DOMAIN-SUFFIX,ping0.cc
 DOMAIN-SUFFIX,optimizationguide-pa.googleapis.com
 # ===  BASE END  ===
 
-# 20 - ad @
+# 21 - ad @
 # > anti-ad
 # >> Learn more here: https://github.com/privacy-protection-tools/anti-AD/blob/master/discretion/README.md
 DOMAIN-SUFFIX,mmstat.com
