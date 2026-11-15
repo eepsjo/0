@@ -26,7 +26,7 @@ fn main() {
 
     let tasks = vec![
         Task {
-            target: "d.txt",
+            target: "d",
             base: "base/d",
             sources: vec![
                 Source { name: "game @", url: "https://raw.githubusercontent.com/eepsjo/0/refs/heads/0/oth/d/game" },
@@ -36,7 +36,7 @@ fn main() {
             ],
         },
         Task {
-            target: "p.txt",
+            target: "p",
             base: "base/p",
             sources: vec![
                 Source { name: "game @", url: "https://raw.githubusercontent.com/eepsjo/0/refs/heads/0/oth/p/game" },
@@ -48,7 +48,7 @@ fn main() {
             ],
         },
         Task {
-            target: "r.txt",
+            target: "r",
             base: "base/r",
             sources: vec![
                 Source { name: "ad @", url: "https://raw.githubusercontent.com/eepsjo/0/refs/heads/0/oth/r/ad" },
@@ -125,7 +125,9 @@ fn process_task(client: &Client, task: &Task) -> Result<(), Box<dyn std::error::
     
     let final_output = output.trim_end().to_string() + &external_rules_text + "\n";
     
-    fs::write(task.target, final_output)?;
+    let output_path = format!("{}.txt", task.target);
+    fs::write(&output_path, final_output)?;
+    // fs::write(task.target, final_output)?;
     println!("Done. Total: {} (Base: {} + External: {})", final_count, base_count, total_external_count);
     Ok(())
 }
