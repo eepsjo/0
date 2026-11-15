@@ -1,0 +1,75 @@
+# 53 - Taipei_261115
+
+# === BASE START ===
+# 2
+DOMAIN-SUFFIX,amiami.com
+DOMAIN-SUFFIX,nocturne.ltd
+# ===  BASE END  ===
+
+# 22 - game @
+DOMAIN-SUFFIX,zi0.cc
+DOMAIN-SUFFIX,kungal.com
+DOMAIN-SUFFIX,wen-ware.com
+DOMAIN-SUFFIX,nariyume.com
+DOMAIN-SUFFIX,ndemiccreations.com
+# > Minecraft
+DOMAIN-SUFFIX,mojang.com
+DOMAIN-SUFFIX,minecraft.net
+DOMAIN-SUFFIX,minecraftservices.com
+# >> launcher
+DOMAIN-SUFFIX,prismlauncher.org
+DOMAIN-SUFFIX,fjordlauncher.org
+# >> mod & java
+DOMAIN-SUFFIX,minecraftforge.net
+DOMAIN-SUFFIX,neoforged.net
+DOMAIN-SUFFIX,fabricmc.net
+DOMAIN-SUFFIX,quiltmc.org
+DOMAIN-SUFFIX,liteloader.com
+DOMAIN-SUFFIX,optifine.net
+DOMAIN-SUFFIX,modrinth.com
+DOMAIN-SUFFIX,forgecdn.net
+DOMAIN-SUFFIX,curseforge.com
+DOMAIN-SUFFIX,adoptium.net
+DOMAIN-SUFFIX,azul.com
+# >> servers
+DOMAIN-SUFFIX,cubecraft.net
+
+# 9 - nsfw @
+DOMAIN-SUFFIX,8se.me
+DOMAIN-SUFFIX,xsnvshen.com
+DOMAIN-KEYWORD,hanime
+DOMAIN-KEYWORD,18comic
+DOMAIN-KEYWORD,jmcomic
+DOMAIN-KEYWORD,asmrgay
+# > ASMR.ONE
+DOMAIN-SUFFIX,asmr.one
+DOMAIN-SUFFIX,kiko-play-niptan.one
+DOMAIN-WILDCARD,api.asmr-?00.com
+
+# 5 - tool @
+DOMAIN-SUFFIX,ippure.com
+DOMAIN-SUFFIX,ipcheck.ing
+DOMAIN-SUFFIX,ascii2d.net
+DOMAIN-SUFFIX,saucenao.com
+DOMAIN-SUFFIX,digitalplat.org
+
+# 5 - PROTONMAIL @ blackmatrix7/ios_rule_script
+DOMAIN-SUFFIX,pm.me
+DOMAIN-SUFFIX,proton.me
+DOMAIN-SUFFIX,protonmail.ch
+DOMAIN-SUFFIX,protonmail.com
+DOMAIN-SUFFIX,protonstatus.com
+
+# 12 - TELEGRAMCIDR @ Loyalsoldier/clash-rules
+IP-CIDR,91.105.192.0/23,no-resolve
+IP-CIDR,91.108.4.0/22,no-resolve
+IP-CIDR,91.108.8.0/21,no-resolve
+IP-CIDR,91.108.16.0/21,no-resolve
+IP-CIDR,91.108.56.0/22,no-resolve
+IP-CIDR,95.161.64.0/20,no-resolve
+IP-CIDR,149.154.160.0/20,no-resolve
+IP-CIDR,185.76.151.0/24,no-resolve
+IP-CIDR,2001:67c:4e8::/48,no-resolve
+IP-CIDR,2001:b28:f23c::/47,no-resolve
+IP-CIDR,2001:b28:f23f::/48,no-resolve
+IP-CIDR,2a0a:f280::/32,no-resolve
