@@ -26,7 +26,7 @@ fn main() {
 
     let tasks = vec![
         Task {
-            target: "d",
+            target: "d.txt",
             base: "base/d",
             sources: vec![
                 Source { name: "game @", url: "https://raw.githubusercontent.com/eepsjo/0/refs/heads/0/oth/d/game" },
@@ -36,7 +36,7 @@ fn main() {
             ],
         },
         Task {
-            target: "p",
+            target: "p.txt",
             base: "base/p",
             sources: vec![
                 Source { name: "game @", url: "https://raw.githubusercontent.com/eepsjo/0/refs/heads/0/oth/p/game" },
@@ -48,7 +48,7 @@ fn main() {
             ],
         },
         Task {
-            target: "r",
+            target: "r.txt",
             base: "base/r",
             sources: vec![
                 Source { name: "ad @", url: "https://raw.githubusercontent.com/eepsjo/0/refs/heads/0/oth/r/ad" },
