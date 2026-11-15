@@ -1,8 +1,11 @@
-# 171 - Taipei_261115
+# 173 - Taipei_261115
 
 # === BASE START ===
 # 1
 DOMAIN-SUFFIX,iios.fun
+# 2
+DOMAIN-SUFFIX,crdc.com
+DOMAIN-SUFFIX,zztlj.com
 # ===  BASE END  ===
 
 # 3 - game @
