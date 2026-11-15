@@ -33,7 +33,7 @@ jobs:
       with:
         commit_message: "Auto update rule sets"
         branch: '0'
-        file_pattern: 'r d p'
+        file_pattern: 'r.txt d.txt p.txt'
 
     - name: Delete old workflow runs
       uses: Mattraks/delete-workflow-runs@v2
