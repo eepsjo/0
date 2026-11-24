@@ -1,4 +1,4 @@
-# 173 - Taipei_261124
+# 174 - Taipei_261124
 
 # === BASE START ===
 # 1
@@ -8,10 +8,12 @@ DOMAIN-SUFFIX,crdc.com
 DOMAIN-SUFFIX,zztlj.com
 # ===  BASE END  ===
 
-# 3 - game @
+# 4 - game @
 DOMAIN,aime.my-aqua.net
 DOMAIN,aqua.naominet.live
+# > Maj-soul
 DOMAIN-SUFFIX,maj-soul.com
+DOMAIN-SUFFIX,catmjstudio.com
 
 # 7 - tool @
 DOMAIN,time.windows.com
