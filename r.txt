@@ -1,4 +1,4 @@
-# 149 - Taipei_261127
+# 149 - Taipei_261128
 
 # === BASE START ===
 # 2
@@ -8,18 +8,18 @@ DOMAIN-SUFFIX,optimizationguide-pa.googleapis.com
 
 # 21 - ad @
 # > anti-ad
-# >> Learn more here: https://github.com/privacy-protection-tools/anti-AD/blob/master/discretion/README.md
+# Learn more here: https://github.com/privacy-protection-tools/anti-AD/blob/master/discretion/README.md
 DOMAIN-SUFFIX,mmstat.com
 DOMAIN-SUFFIX,shouji.sogou.com
 DOMAIN-SUFFIX,activity.windows.com
 # > ToolzAD
-# >> Learn more here: https://github.com/Turtlecute33/adblocktest
+# Learn more here: https://github.com/Turtlecute33/adblocktest
 DOMAIN-SUFFIX,app.getsentry.com
 DOMAIN-SUFFIX,metrics.icloud.com
 DOMAIN-SUFFIX,browser.sentry-cdn.com
 DOMAIN-SUFFIX,appmetrica.yandex.ru
 # > ipcheck.ing
-# >> Learn more here: https://docs.ipcheck.ing/knowledge-base/lookup-privacy/ad-and-tracker-blocking-test
+# Learn more here: https://docs.ipcheck.ing/knowledge-base/lookup-privacy/ad-and-tracker-blocking-test
 DOMAIN-SUFFIX,ads.microsoft.com
 DOMAIN-SUFFIX,api16-access-sg.pangle.io
 DOMAIN-SUFFIX,pangolin16.isnssdk.com
@@ -61,8 +61,8 @@ DOMAIN-SUFFIX,mcdn.bilivideo.cn
 DOMAIN-SUFFIX,stunserver.stunprotocol.org
 
 # 1 - wo @
-# > !!!WARNING!!! RULES STILL IN THE EXPERIMENTAL STAGE; MAY DISRUPT NORMAL NETWORK BEHAVIOR
-# > Learn more here: https://x.com/MeTerminator666/status/2116504516317376942
+# !!!WARNING!!! RULES STILL IN THE EXPERIMENTAL STAGE; MAY DISRUPT NORMAL NETWORK BEHAVIOR
+# Learn more here: https://x.com/MeTerminator666/status/2116504516317376942
 DOMAIN-SUFFIX,dm.wo.com.cn
 
 # 30 - PCDN @ privacy-protection-tools/anti-AD
