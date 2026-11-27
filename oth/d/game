@@ -1,7 +1,11 @@
-# 3 - game @
+# 5 - game @
 DOMAIN,aime.my-aqua.net
 DOMAIN,aqua.naominet.live
 # > Maj-soul
 DOMAIN-SUFFIX,maj-soul.com
 # >> update
 # DOMAIN-SUFFIX,catmjstudio.com
+# > rmj
+# Learn more here: https://rmj.club/browser/article/15277d40b64c939198cadb3b22dcc637
+DOMAIN-SUFFIX,rmj.club
+DOMAIN-SUFFIX,langsu.club
