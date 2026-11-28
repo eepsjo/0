@@ -17,7 +17,7 @@ SOURCES_MAP = {
         {"name": "game @", "url": "https://raw.githubusercontent.com/eepsjo/0/refs/heads/0/oth/p/game"},
         {"name": "nsfw @", "url": "https://raw.githubusercontent.com/eepsjo/0/refs/heads/0/oth/p/nsfw"},
         {"name": "tool @", "url": "https://raw.githubusercontent.com/eepsjo/0/refs/heads/0/oth/p/tool"},
-        {"name": "PROTONMAIL @ blackmatrix7/ios_rule_script", "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/Protonmail/Protonmail.yaml"},
+        {"name": "PROTONMAIL @ MetaCubeX/meta-rules-dat", "url": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/refs/heads/meta/geo/geosite/protonmail.list"},
         {"name": "TELEGRAMCIDR @ Loyalsoldier/clash-rules", "url": "https://raw.githubusercontent.com/Loyalsoldier/clash-rules/refs/heads/release/telegramcidr.txt"},
     ],
     "r": [
@@ -29,6 +29,16 @@ SOURCES_MAP = {
         {"name": "wo @", "url": "https://raw.githubusercontent.com/eepsjo/0/refs/heads/0/oth/r/wo"},
         {"name": "PCDN @ privacy-protection-tools/anti-AD", "url": "https://raw.githubusercontent.com/privacy-protection-tools/anti-AD/refs/heads/master/discretion/pcdn.txt"},
         {"name": "DNS @ privacy-protection-tools/anti-AD", "url": "https://raw.githubusercontent.com/privacy-protection-tools/anti-AD/refs/heads/master/discretion/dns.txt"},
+    ],
+    "jp": [
+        #
+    ],
+    "no_jp": [
+        #
+    ],
+    "ai": [
+        {"name": "GEMINI @ MetaCubeX/meta-rules-dat", "url": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/refs/heads/meta/geo/geosite/google-gemini.list"},
+        {"name": "OPENAI @ MetaCubeX/meta-rules-dat", "url": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/refs/heads/meta/geo/geosite/openai.list"},
     ],
 }
 
