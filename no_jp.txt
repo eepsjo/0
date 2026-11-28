@@ -1,0 +1,12 @@
+# 7 - Taipei_261128
+
+# === BASE START ===
+# 7 - no_jp
+DOMAIN-KEYWORD,18comic
+DOMAIN-KEYWORD,jmcomic
+DOMAIN-KEYWORD,hanime
+DOMAIN-SUFFIX,8se.me
+DOMAIN-SUFFIX,xchina.io
+DOMAIN-SUFFIX,xchina.co
+DOMAIN-SUFFIX,dakiheaven.com
+# ===  BASE END  ===
