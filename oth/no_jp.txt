@@ -1,0 +1,6 @@
+# 5 - no_jp @
+DOMAIN-KEYWORD,18comic
+DOMAIN-KEYWORD,jmcomic
+DOAMIN-SUFFIX,8se.me
+DOMAIN-KEYWORD,xchina
+DOMAIN-SUFFIX,dakiheaven.com
