@@ -13,27 +13,42 @@ permissions:
   actions: write
 
 jobs:
-  build_and_clean:
+  build_and_release:
     runs-on: ubuntu-latest
-    
     steps:
     - name: Checkout codebase
       uses: actions/checkout@v4
 
-    - name: Rust Cache
-      uses: Swatinem/rust-cache@v2
+    - name: Setup Python
+      uses: actions/setup-python@v5
       with:
-        workspaces: "scripts -> target"
+        python-version: '3.11'
+
+    - name: Install dependencies
+      run: pip install requests pyyaml
 
     - name: Run update script
-      run: cargo run --manifest-path scripts/Cargo.toml
+      run: python scripts/main.py
 
-    - name: Commit and Push changes
-      uses: stefanzweifel/git-auto-commit-action@v5
-      with:
-        commit_message: "Auto update rule sets"
-        branch: '0'
-        file_pattern: 'r.txt d.txt p.txt'
+    - name: Deploy to release branch
+      run: |
+        git config --local user.email "action@github.com"
+        git config --local user.name "GitHub Action"
+        
+        # 暂存生成的文件
+        mkdir -p /tmp/output
+        mv output/*.txt /tmp/output/
+        
+        # 切换到 release 分支（如果不存在则创建孤儿分支）
+        git checkout --orphan release || git checkout release
+        git rm -rf .
+        git clean -fd
+        
+        # 移回生成的文件并提交推送
+        mv /tmp/output/*.txt .
+        git add *.txt
+        git commit -m "Auto update rule sets (release branch)"
+        git push -f origin release
 
     - name: Delete old workflow runs
       uses: Mattraks/delete-workflow-runs@v2
@@ -41,4 +56,3 @@ jobs:
         token: ${{ github.token }}
         repository: ${{ github.repository }}
         retain_days: 1
-        # keep_minimum_runs: 3
